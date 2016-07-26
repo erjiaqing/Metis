@@ -15,3 +15,5 @@ pow(a, b)会调用c++自带函数
 MOD的时候：(a - b + MOD)%MOD (a + b * c % MOD) % MOD
 
 stack里有时存的边，这种时候大小不要开错了
+
+选择性段错误: 没return 没赋初值
