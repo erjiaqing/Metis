@@ -24,6 +24,8 @@ stack里有时存的边，这种时候大小不要开错了
 
 (int)x != round(x)
 
+nbcji的个性坑点:
+vector<int> v; for(int i = 0; i <(没有=) v.size(); ++i)
 
 做法向
 博弈题做法：1.由最终态BFS（类似构了一颗树）2.打表找sg函数规律
