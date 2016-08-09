@@ -24,6 +24,10 @@ stack里有时存的边，这种时候大小不要开错了
 
 (int)x != round(x)
 
+hash字符串：t = t * 27(!) + s[i] - 'A' + 1
+
+有些dfs里用到的数组开全局会跪
+
 nbcji的个性坑点:
 vector<int> v; for(int i = 0; i <(没有=) v.size(); ++i)
 
