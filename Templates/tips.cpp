@@ -28,6 +28,8 @@ hash字符串：t = t * 27(!) + s[i] - 'A' + 1
 
 有些dfs里用到的数组开全局会跪
 
+n = 1e4 时明摆着要 n^2 bitset压位
+
 nbcji的个性坑点:
 vector<int> v; for(int i = 0; i <(没有=) v.size(); ++i)
 
