@@ -28,6 +28,7 @@ public class Main{
 			int p = cin.nextInt();
 			n = cin.nextBigInteger();
 			m = cin.nextBigInteger();
+			n.multiply(m);
 			M.clear();
 			if(n.compareTo(BigInteger.ZERO)==0)break;			
 			if(n.compareTo(m)<=0){
