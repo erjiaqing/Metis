@@ -25,6 +25,7 @@ public class Main{
 	public static void main(String []arg){
 		Scanner cin = new Scanner(System.in);
 		while(true){
+			int p = cin.nextInt();
 			n = cin.nextBigInteger();
 			m = cin.nextBigInteger();
 			M.clear();
