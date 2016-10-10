@@ -38,3 +38,5 @@ vector<int> v; for(int i = 0; i <(没有=) v.size(); ++i)
 没辙时想dp和网络流
 启发式合并 nlgn
 n / 1 + n / 2 + ... = nlgn
+
+fact[0] = 1
