@@ -25,7 +25,8 @@ long long China_Remainder(long long a[], long long b[], int n, long long &cir) {
 	return (cir + ans % cir) % cir;
 }
 
-//-------------------------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------
+
 
 bool merge(long long &a1, long long &b1, long long a2, long long b2) { //num = b1(mod a1), num = b2(mod a2)
 	long long x, y;

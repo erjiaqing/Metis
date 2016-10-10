@@ -40,14 +40,14 @@ struct sam{
 			int q = nd[p].indx[c];
 			if(nd[p].lnth + 1 == nd[q].lnth) nd[newp].fa = q;
 			else{
-				int newq = newnode();
-				nd[newq] = nd[q];
-				nd[newq].lnth = nd[p].lnth + 1;
-				nd[q].fa = nd[newp].fa = newq;
-				while(p != -1 && nd[p].indx[c] == q){
-					nd[p].indx[c] = newq;
-					p = nd[p].fa;
-				}
+            int newq = newnode();
+            nd[newq] = nd[q];
+            nd[newq].lnth = nd[p].lnth + 1;
+            nd[q].fa = nd[newp].fa = newq;
+            while(p != -1 && nd[p].indx[c] == q){
+                nd[p].indx[c] = newq;
+                p = nd[p].fa;
+            }
 			}
 		}
 		lst = newp;

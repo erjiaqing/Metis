@@ -1,0 +1,233 @@
+\documentclass[11pt]{article}
+\usepackage[nocap]{ctex}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{amsmath}
+\usepackage{titletoc}
+\floatname{algorithm}
+
+\usepackage{graphicx}
+\usepackage{pdfpages}
+%%%%%%%%%%%%% C++ Code
+\usepackage{color}
+\usepackage{xcolor}
+\definecolor{keywordcolor}{rgb}{0.8,0.1,0.5}
+\usepackage{listings}
+\lstset{breaklines}%这条命令可以让LaTeX自动将长的代码行换行排版
+\lstset{extendedchars=false}%这一条命令可以解决代码跨页时，章节标题，页眉等汉字不显示的问题
+\lstset{language=C++, %用于设置语言为C++
+	keywordstyle=\color{keywordcolor} \bfseries, 
+	identifierstyle=,
+	basicstyle=\ttfamily, 
+	commentstyle=\color{blue} \textit,
+	stringstyle=\ttfamily, 
+	showstringspaces=false,
+	%frame=shadowbox, %边框
+	captionpos=b
+}
+%%%%%%%%%%%%% C++ Code
+
+
+
+
+
+\title{Metis \\ for Algorithm Design and Analysis}
+\author{Aha Group}
+\date{Oct 8, 2016}
+
+\begin{document}
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\center
+\textsc{\LARGE Templates}\\[1.5cm] 
+\textsc{\Large Shanghai Jiaotong University}\\[0.5cm]
+%\textsc{\large ACM Class}\\[0.5cm]
+\HRule \\[0.4cm]
+{ \huge \bfseries Metis}\\[0.4cm] 
+\HRule \\[1.5cm]
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Member:}\\
+ \textsc{Sishan Long \\ Yutong Xie \\ Jingyi Cai}
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Coach:} \\
+\textsc{Yunqi Li \\ Xueyuan Zhao}
+\end{flushright}
+\end{minipage}\\[4cm]
+
+
+{\large \today}\\[3cm] 
+%\includegraphics{frontpage.jpeg}
+
+\vfill
+
+\end{titlepage}
+	\newpage	
+	
+	\tableofcontents
+	\newpage
+	
+%\begin{lstlisting}
+%#include <stdio.h>
+%#include <string.h>
+%#include <stdlib.h>
+%int main(void)
+%{
+%       return 0;
+%}
+%\end{lstlisting}
+	\section{数学}
+		\subsection{FFT}
+		\lstinputlisting{FFT_xxxxxyt.cpp}
+		\subsection{高斯消元}
+		\lstinputlisting{高斯消元算行列式.cpp}
+		\subsection{中国剩余定理}
+		\lstinputlisting{中国剩余定理.cpp}
+		\subsection{Polya寻找等价类}
+		\lstinputlisting{Polya寻找等价类.cpp}
+		\subsection{拉格朗日插值}
+		\includegraphics{拉格朗日插值1.jpg}\\
+		\includegraphics{拉格朗日插值2.jpg} 
+		\subsection{欧拉公式}
+		\lstinputlisting{欧拉公式.cpp}
+		\subsection{求行列式的值}
+			行列式有很多性质，第$a$行$*k$加到第$b$行上去，行列式的值不变。\\
+			三角行列式的值等于对角线元素之积。\\
+			第$a$行与第$b$行互换，行列式的值取反。\\
+			常数＊行列式，可以把常数乘到某一行里去。\\
+			注意：全是整数并取模的话当然需要求逆元
+		\subsection{莫比乌斯}
+		$$\sum_{d|n}\mu(d)=[n==1]$$ 
+		$$ \mu(m)=\left\{
+		\begin{array}{rcl}
+		(-1)^r      &      & {m=p_1p_2...p_r}\\
+		0  &      & {p^2|n}
+		\end{array} \right.
+		$$
+		某个Mobius推倒：\\
+		\includegraphics{Mobius.png}
+		\subsection{Cayley公式与森林计数}
+		Cayley公式是说，一个完全图$K_n$有$n^{n-2}$棵生成树，换句话说$n$个节点的带标号的无根树有$n^{n-2}$个。
+
+令$g[i]$表示点数为$i$的森林个数，$f[i]$表示点数为$i$的生成树计数$（f[i]=i^{i-2})$
+那么便有$$g[i]=\sum (g[i-j] \times cnr[i-1][j-1] \times f[j])$$
+$$g[i]=\sum \frac{g[i-j] \times fac[i-1] \times f[j]}{fac[j-1] \times fac[i-j]}=fac[i-1] \times \sum (\frac{f[j]}{fac[j-1]} \times \frac{g[i-j]}{fac[i-j]})$$
+	
+	\section{数据结构}
+		\subsection{Splay by xyt}
+		\lstinputlisting{Splay_xxxxxyt.cpp}
+		\subsection{SteinerTree by cjy}
+		\lstinputlisting{SteinerTree_cjy.cpp}
+		\subsection{主席树 by cjy}
+		\lstinputlisting{主席树_cjy.cpp}
+		\subsection{主席树 by xyt}
+		\lstinputlisting{主席树_xxxxxyt.cpp}
+		\subsection{树分治 by xyt}
+		\lstinputlisting{树分治_xxxxxyt.cpp}
+		\subsection{树链剖分 by cjy}
+		\lstinputlisting{树链剖分_cjy.cpp}
+		\subsection{树链剖分 by xyt}
+		\lstinputlisting{树链剖分_xxxxxyt.cpp}
+		\subsection{点分治 by xyt}
+		\lstinputlisting{点分治_xxxxxyt.cpp}
+		\subsection{LCT by xyt}
+		\lstinputlisting{LCT_xxxxxyt.cpp}
+	\section{计算几何}
+		\subsection{向量旋转}
+		\lstinputlisting{向量旋转.cpp}
+		\subsection{至少被i个圆覆盖的面积}
+		时间复杂度: $n^2logn$
+		\lstinputlisting{圆的面积.cpp}
+		\subsection{计算几何杂}
+		\lstinputlisting{计算几何杂.cpp}
+	\section{字符串}
+		\subsection{AC-Automachine by cjy}
+		\lstinputlisting{AC-Automachine_cjy.cpp}
+		\subsection{AC-Automachine by xyt}
+		\lstinputlisting{AC-Automachine_xxxxxyt.cpp}
+		\subsection{后缀数组}
+		\lstinputlisting{后缀数组.cpp}
+		\subsection{扩展KMP}
+		\lstinputlisting{扩展KMP.cpp}
+		\subsection{回文树}
+		\lstinputlisting{回文树.cpp}
+		\subsection{SAM by lss}
+		\lstinputlisting{SAM_lss.cpp}
+		\subsection{SAM by xyt}
+		\lstinputlisting{SAM_xxxxxyt.cpp}
+	\section{图论}
+		\subsection{图论相关}
+		
+		1. 差分约束系统\\
+  （1）以 x[i] - x[j] <= c 为约束条件，j -> i : c，求最短路得到的是 x[i] <= x[s] 的最大解，存在负权回路无解\\
+  （2）以 x[i] - x[j] >= c 为约束条件，j -> i : c，求最长路得到的时 x[i] >= x[s] 的最小解，存在正权回路无解
+  // 若有 x[i] = x[j] 则 i <-0-> j\\
+2. 最大闭合权子图\\
+  s 向正权点连边，负权点向 t 连边，边权为点权绝对值，再按原图连边，边权为INF\\
+3. 最大密度子图：max{$\frac{|E'|}{|V'|}$}\\
+  （1）猜测答案 g 若最大流大于 EPS 则 g 合法\\
+  （2）s -> v: INF, u -> t : INF + g - deg[u], u -> v : 1.00\\
+4. 2-SAT\\
+  利用对称性建图，若 u 与 u' 在同一强连通分量中，则无解，若有解输出方案，拓扑排序后自底向上（从 ind = 0 到 otd = 0）选择删除\\
+5. 最小割\\
+  （1）二分图最小点权覆盖集：s -> u : w[u], u -> v : INF, v -> t : w[v]\\
+
+		\subsection{LCA by xyt}
+		\lstinputlisting{LCA_xxxxxyt.cpp}
+		\subsection{KM}
+		\lstinputlisting{KM.cpp}
+		\subsection{KM三次方}
+		\lstinputlisting{KM-N^3.cpp}
+		\subsection{Dinic by cjy}
+		\lstinputlisting{Dinic_cjy.cpp}
+		\subsection{最大密度子图}
+		\lstinputlisting{最大密度子图.cpp}
+		\subsection{强联通分量}
+		\lstinputlisting{强联通分量.cpp}
+		\subsection{边双联通分量}
+		\lstinputlisting{边双联通分量.cpp}
+		\subsection{点双联通分量加构造森林块}
+		\lstinputlisting{点双联通分量加构造森林块.cpp}
+		\subsection{K短路}
+		\lstinputlisting{k短路.cpp}
+	\section{其他}
+		\subsection{Dancing Links(精确覆盖)}
+		\lstinputlisting{DancingLinksX_xxxxxyt.cpp}
+		\subsection{序列莫队}
+		\lstinputlisting{序列莫队_xxxxxyt.cpp}
+		\subsection{模拟退火}
+		\lstinputlisting{模拟退火.cpp}
+		\subsection{Java}
+		\lstinputlisting{Main.java}
+	\section{Tips}
+		判斜率(x/gcd, y/gcd)直接丢map里unique\\
+		无方案和答案 \% MOD 为 0 是有区别的\\
+		打标记使用时间戳\\
+		a = 10 * a + 1 可以用矩乘加速\\
+		数组要开1e5 [+ 5]!\\
+		pow(a, b)会调用c++自带函数\\
+		强联通、双联通要考虑一个孤立点\\
+		MOD的时候：(a - b + MOD) \% MOD (a + b * c \% MOD) \% MOD\\
+		stack里有时存的边，这种时候大小不要开错了\\
+		选择性段错误: 没return 没赋初值\\
+		凸包排序后数组顺序会改变，不可以在这之后求重心\\
+		位运算优先级小于 ==\\
+		(int)x != round(x)\\
+		hash字符串：t = t * 27(!) + s[i] - 'A' + 1\\
+		有些dfs里用到的数组开全局会跪\\
+		$n = 1e4$ 时明摆着要 $n^2$ bitset压位\\
+		博弈题做法：1.由最终态BFS（类似构了一颗树）2.打表找sg函数规律\\
+		没辙时想dp和网络流\\
+		启发式合并 $nlogn$\\
+		$\frac{n}{1}+\frac{n}{2} + ... = nlogn$\\
+		$fact[0] = 1$
+
+	
+
+\end{document}

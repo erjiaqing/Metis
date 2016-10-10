@@ -42,10 +42,10 @@ int KM()
 			
 			int inc = len * len;
 			for (int i = 0; i < n; i++)
-				if (sx[i])
-					for (int j = 0; j < n; j++)
-						if (!sy[j] && ((lx[i] + ly[j] - weight[i][j]) < inc))
-							inc = lx[i] + ly[j] - weight[i][j];
+            if (sx[i])
+            for (int j = 0; j < n; j++)
+            if (!sy[j] && ((lx[i] + ly[j] - weight[i][j]) < inc))
+                inc = lx[i] + ly[j] - weight[i][j];
 			for (int i = 0; i < n; i++)
 			{
 				if (sx[i]) lx[i] -= inc;
@@ -56,8 +56,8 @@ int KM()
 	
 	int sum = 0;
 	for (int i = 0; i < n; i++)
-		if (match[i] >= 0)
-			sum += weight[match[i]][i];
+    if (match[i] >= 0)
+        sum += weight[match[i]][i];
 	return sum;
 }
 
