@@ -1,3 +1,5 @@
+// 这个有些地方有点问题… // 标注部分
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -17,12 +19,12 @@ struct Lct{
 	void push_up(int i){
 		nd[i].sum = nd[nd[i].lson].sum + nd[nd[i].rson].sum + 1;
 	}
-	void reverse(int i){
+	void reverse(int i){ //
 		if(!i) return;
 		swap(nd[i].lson, nd[i].rson);
 		nd[i].lazy = true;
 	}
-	void push_down(int i){
+	void push_down(int i){ //
 		if(!i || !nd[i].lazy) return;
 		reverse(nd[i].lson);
 		reverse(nd[i].rson);
@@ -56,7 +58,7 @@ struct Lct{
 		push_up(j);
 		push_up(i);
 	}
-	void down_path(int i){
+	void down_path(int i){ //
 		if(nd[i].fath) down_path(nd[i].fath);
 		push_down(i);
 	}
@@ -95,12 +97,12 @@ struct Lct{
 			i = nd[i].ance;
 		}
 	}
-	void set_root(int i){
+	void set_root(int i){ //
 		access(i);
 		splay(i);
 		reverse(i);
 	}
-	int find_root(int i){
+	int find_root(int i){ //
 		access(i);
 		splay(i);
 		while(nd[i].lson) i = nd[i].lson;
