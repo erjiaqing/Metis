@@ -66,9 +66,6 @@ int main(){
 // 原根 蝶型
 const int p = 7340033;
 const int g = 3;
-int powmod(int x, int y){
-    // 我又要乱写啦>w< (那为了压行我可都删掉啦！
-}
 void fft(int xx[], int n, int type){
     // 这里在对二进制位对称的位置进行交换
     for(int i = 0; i < n; ++i){ // i枚举每一个下表
