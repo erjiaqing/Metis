@@ -1,16 +1,7 @@
-#include <iostream>
-#include <cstdio>
-#include <cstring>
-#include <algorithm>
-#include <cmath>
-
-using namespace std;
-
 int n, r, t;
 const int pp=10007;
 int e[333][333];
 int fa[333];
-
 struct Point{
     int x, y;
     int num;
@@ -28,15 +19,12 @@ Point operator + (const Point &a, const Point &b) {
 Point operator - (const Point &a, const Point &b) {
     return Point(a.x - b.x, a.y - b.y);
 }
-
 int dot(Point a, Point b) {
     return a.x * b.x + a.y * b.y;
 }
-
 int cross(Point a, Point b) {
     return a.x * b.y - a.y * b.x;
 }
-
 int find(int x) {
     if (fa[x] == x) return x;
     else {
@@ -44,7 +32,6 @@ int find(int x) {
         return fa[x];
     }
 }
-
 void addedge(int x, int y) {
     e[x][x]++;
     e[x][y] = -1;
@@ -52,7 +39,6 @@ void addedge(int x, int y) {
     int fay=find(fa[y]);
     if (fax != fay) fa[fax] = fay;
 }
-
 int P(int x, int k) {
     if (k == 0) return 0;
     if (k == 1) return x;
@@ -90,7 +76,6 @@ void Guass() {
     if (ans < 0) ans += pp;
     cout << ans << endl;
 }
-
 void doit(int k) {
     Point a[333];
     int m = 0;
@@ -107,7 +92,6 @@ void doit(int k) {
             if (flag) addedge(k, i);
         }
 }
-
 void solve() {
     cin >> n >> r;
     for (int i = 1; i <= n; i++) {

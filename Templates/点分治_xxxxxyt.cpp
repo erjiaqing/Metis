@@ -1,23 +1,12 @@
 // POJ 1741
 // 询问一棵树中有多少对点距离不超过 k
-
-#include <vector>
-#include <cstdio>
-#include <iostream>
-#include <algorithm>
-#include <cstring>
-using namespace std;
-
 typedef pair<int, int> pii;
-
 const int maxn = 1e4 + 5;
-
 vector<pii> mp[maxn];
 void add_edge(int u, int v, int d){
 	mp[u].push_back(make_pair(v, d));
 	mp[v].push_back(make_pair(u, d));
 }
-
 int n, ans, limit, gra, min_maxx;
 int sz[maxn];
 bool flag[maxn];
@@ -67,7 +56,6 @@ void devide(int u, int nowsize){
 		devide(v, sz[v] > sz[u] ? nowsize - sz[u] : sz[v]);
 	}
 }
-
 void init(){
 	ans = 0;
 	for(int i = 1; i <= n; ++i) mp[i].clear();
@@ -84,7 +72,6 @@ void work(){
 	devide(1, n);
 	printf("%d\n", ans);
 }
-
 int main(){
 	while(true){
 		scanf("%d%d", &n, &limit);

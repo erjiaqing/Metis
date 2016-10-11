@@ -1,11 +1,3 @@
-#include<cstdio>
-#include<cstring>
-#include<cstdlib>
-#include<iostream>
-#include<algorithm>
-using namespace std;
-
-typedef long long LL;
 const int N = 400010;
 int ch[N][26], fail[N], len[N], tot, cnt1[N], cnt2[N];
 char s[200010];
@@ -34,7 +26,6 @@ void Insert(char *s, int *cnt){
 		cnt[now] ++;
 	}
 }
-
 int main(){
 	int T, tests = 0;
 	scanf("%d", &T);

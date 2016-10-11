@@ -57,14 +57,14 @@ struct Splay{
 				if(i == nd[j].lson) zig(i);
 				else zag(i);
 			}else{
-				int k = nd[j].fath;
-				if(j == nd[k].lson){
-					if(i == nd[j].lson) zig(j), zig(i);
-					else zag(i), zig(i);
-				}else{
-					if(i == nd[j].rson) zag(j), zag(i);
-					else zig(i), zag(i);
-				}
+            int k = nd[j].fath;
+            if(j == nd[k].lson){
+                if(i == nd[j].lson) zig(j), zig(i);
+                else zag(i), zig(i);
+            }else{
+                if(i == nd[j].rson) zag(j), zag(i);
+                else zig(i), zag(i);
+            }
 			}
 		}
 		rt = i;
@@ -82,17 +82,17 @@ struct Splay{
 		while(i){
 			++nd[i].sz;
 			if(stat < nd[i].data){
-				if(nd[i].lson) i = nd[i].lson;
-				else{
-					nd[i].lson = tot;
-					break;
-				}
+            if(nd[i].lson) i = nd[i].lson;
+            else{
+            nd[i].lson = tot;
+            break;
+            }
 			}else{
-				if(nd[i].rson) i = nd[i].rson;
-				else{
-					nd[i].rson = tot;
-					break;
-				}
+            if(nd[i].rson) i = nd[i].rson;
+            else{
+            nd[i].rson = tot;
+            break;
+            }
 			}
 		}
 		nd[tot].fath = i;
@@ -137,7 +137,7 @@ struct Splay{
 		while(i){
 			if(k <= nd[nd[i].rson].sz) i = nd[i].rson;
 			else if(k > nd[nd[i].rson].sz + 1) k -= nd[nd[i].rson].sz + 1, i = nd[i].lson;
-				 else return i;
+            else return i;
 		}
 		return i;
 	}

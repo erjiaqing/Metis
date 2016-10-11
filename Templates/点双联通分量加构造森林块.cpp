@@ -17,7 +17,6 @@ void tarjan(int x, int cur)
         low[x] = min(low[x], dfn[v]);
         continue;
     }
-		
     tarjan(v, cur);
     low[x] = min(low[x], low[v]);
     
@@ -38,7 +37,6 @@ void tarjan(int x, int cur)
     }
     }
 }
-
 bool vis[N << 1];
 long long val[N << 1], son[N << 1];
 void dfs(int x)
