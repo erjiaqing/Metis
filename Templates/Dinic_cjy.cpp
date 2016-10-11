@@ -1,21 +1,12 @@
-#include<cstdio>
-#include<cstring>
-#include<iostream>
-#include<algorithm>
-#include<queue>
-using namespace std;
-
 const int N = 20000;
 const int inf = 100000;
 int tot, id[N], nxt[N], lst[N], cap[N];
 int d[N];
 queue<int> Q;
-
 void Add(int x, int y, int z) {
 	id[++tot] = y; nxt[tot] = lst[x]; lst[x] = tot; cap[tot] = z;
 	id[++tot] = x; nxt[tot] = lst[y]; lst[y] = tot; cap[tot] = 0;
 }
-
 bool bfs() {
 	while (!Q.empty()) Q.pop();
 	Q.push(S);
@@ -33,7 +24,6 @@ bool bfs() {
 	}
 	return false;
 }
-
 int find(int x, int flow) {
 	if (x == T) return flow;
 	int res = 0;
@@ -47,15 +37,13 @@ int find(int x, int flow) {
 	}
 	if (!res) d[x] = -1;
 	return res;
-} 
-
+}
 int dinic() {
 	int ans = 0;
 	while (bfs())
 		ans += find(S, inf);
 	return ans; 
 }
-
 int main() {
 	tot = 1; memset(lst, 0, sizeof(lst));
 	

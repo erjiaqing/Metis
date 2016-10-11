@@ -85,14 +85,12 @@ bool equal(circle a,circle b){
 P p[4];
 double cub(double x){return x*x*x;}
 
-int main()
-{
+int main(){
     n = 0;
     cin>>n;
     for(int i = 0; i < n; ++i) cir[i].o.scan(), cin>>cir[i].r;
     for(int i = 0; i <= n; ++i) ans[i] = 0.0;
     for(int i = 0; i <= n; ++i) centre[i] = P(0, 0);
-		
     for(int i=0;i<n;i++){
     dvd=cir[i].o-P(cir[i].r,0);
     nV=0;
@@ -123,7 +121,6 @@ int main()
             combine(cnt,vec[j].p*vec[j+1].p*0.5,1.0/3*(vec[j].p+vec[j+1].p));
         }
     }
-		
     printf("Case %d: ", Case);
     printf("%.3f\n\n",ans[1] );//ans[i]：至少被i个圆覆盖的面积
 	return 0;

@@ -1,5 +1,4 @@
 struct Splay{
-	
 	int tot, rt;
 	struct Node{
 		int lson, rson, fath, sz;
@@ -7,7 +6,6 @@ struct Splay{
 		bool lazy;
 	};
 	Node nd[MAXN];
-	
 	void reverse(int i){
 		if(!i) return;
 		swap(nd[i].lson, nd[i].rson);
@@ -141,5 +139,4 @@ struct Splay{
 		}
 		return i;
 	}
-};
-Splay sp;
+}sp;

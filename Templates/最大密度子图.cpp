@@ -1,6 +1,3 @@
-#include<iostream>
-#include<cstdio>
-#include<cstring>
 #define rep(i, l, r) for(int i = l; i <= r; ++i)
 using namespace std;
 const double INF = 1e7;
@@ -9,14 +6,12 @@ const int maxm = 2e5 + 10;
 int h[maxn], head[maxn], nex[maxm], to[maxm], last[maxn], lastedge[maxn], tot, s, t;
 int gap[maxn], cur[maxn], d[maxn], n;
 double maxflow;
-double flow[maxm]; 
-
+double flow[maxm];
 void clear(){
 	rep(i, 1, tot) head[i] = 0;
 	tot = 1;
 	maxflow = 0;
 }
-
 void add(int l, int r, double f){
 	nex[++tot] = head[l]; head[l] = tot; to[tot] = r; flow[tot] = f;
 	nex[++tot] = head[r]; head[r] = tot; to[tot] = l; flow[tot] = 0;
@@ -60,21 +55,17 @@ void isap(){
 bool check(double v){
 	clear();
 	int sum = n;
-	
 	rep(i, 2, n)
 		rep(j, 1, i - 1)
 			if(h[j] > h[i]) {
-		//		printf("add(%d %d %d)\n", sum, i, j);
-				add(++sum, i, INF);
+                add(++sum, i, INF);
 				add(sum, j, INF);
 			}
 	s = sum + 1;
 	t = s + 1;
-	//printf("sum = %d\n", sum);
 	rep(i, n + 1, sum) add(s, i, 1.0);
 	rep(i, 1, n) add(i, t, v);
 	isap();
-	//printf("maxflow = %f\n", maxflow);
 	return sum - n - maxflow > 1e-10;
 }
 int main(){
@@ -87,7 +78,6 @@ int main(){
 		double l = 0, r = n, ans = 0;
 		while(r - l > 1e-9){
 			double mid = (l + r) / 2;
-			//printf("l = %.8f r = %.8f\n", l, r);
 			if(check(mid)){
 				if(mid > ans) ans = mid;
 				l = mid;
@@ -99,19 +89,10 @@ int main(){
 	return 0;
 }
 
-
-
-
-
-
-#include <bits/stdc++.h>
-using namespace std;
-
 const int maxn = 1e2 + 5;
 const double eps = 1e-10;
 const double d = 1e2;
 const double inf = 1e9;
-
 struct edge{
 	int r, v;
 	double flow;
@@ -122,13 +103,10 @@ void add_edge(int u, int v, double flow){
 	mp[u].push_back(edge(v, mp[v].size(), flow));
 	mp[v].push_back(edge(u, mp[u].size() - 1, 0.00));
 }
-
 int n, m, S, T, a[maxn], deg[maxn];
 int dist[maxn], disq[maxn];
 double sap(int u, double nowflow){
-	
 	if(u == T || nowflow < eps) return nowflow;
-	
 	double tempflow, deltaflow = 0.00;
 	for(int l = 0; l < mp[u].size(); ++l){
 		int v = mp[u][l].v;
@@ -141,7 +119,6 @@ double sap(int u, double nowflow){
 			if(deltaflow == nowflow || dist[S] == T) return deltaflow;
 		}
 	}
-	
 	disq[dist[u]]--;
 	if(!disq[dist[u]]) dist[S] = T;
 	dist[u]++;
@@ -149,14 +126,11 @@ double sap(int u, double nowflow){
 	return deltaflow;
 }
 double value(){
-	
 	double maxflow = 0.00;
 	while(dist[S] <= T) maxflow += sap(S, inf);
 	return -0.50 * (maxflow - d * n);
 }
-
 void build(double g){
-
 	g *= 2.00;
 	for(int i = 1; i <= n; ++i) add_edge(S, i, d); // s -> v : INF
 	for(int i = 1; i <= n; ++i) add_edge(i, T, d + g - deg[i]); // u -> t : INF + g - deg[u] 其中 deg[u] 为点 u 的度数（双向边）
@@ -172,9 +146,7 @@ void clear(){
 	memset(disq, 0, sizeof disq);
 	for(int i = 1; i <= T; ++i) mp[i].clear();
 }
-
 double binary(double left, double rght){ // 猜测答案 g [1 / n, m / 1]
-
 	int step = 0;
 	while(left + eps < rght && step <= 50){
 		++step;
@@ -187,9 +159,7 @@ double binary(double left, double rght){ // 猜测答案 g [1 / n, m / 1]
 	}
 	return left;
 }
-
 void work(){
-	
 	m = 0;
 	scanf("%d", &n);
 	S = n + 1, T = n + 2;
@@ -204,15 +174,12 @@ void work(){
 		}
 	printf("%.12f\n", binary(0.00, m));
 }
-
 int main(){
-	
 	int case_number;
 	scanf("%d", &case_number);
 	for(int cs = 1; cs <= case_number; ++cs){
 		printf("Case #%d: ", cs);
 		work();
 	}
-
 	return 0;
 }

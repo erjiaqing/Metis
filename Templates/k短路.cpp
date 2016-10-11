@@ -14,94 +14,58 @@ f(p)就是当前路径从s走到p在从p到t的所走距离。
 否则遍历p相邻的边，加入优先队列中
 注意:如果s==t，那么求得k短路应该变成k++;
 ******************************************/
-
-#include<iostream>
-#include<cstdio>
-#include<queue>
 #define MAXN 1005
 #define MAXM 200100
-using namespace std;
-
 struct Node{
        int v,c,nxt;
 }Edge[MAXM];
-
-int head[MAXN];
-int tail[MAXN];
-int h[MAXN];
-
-struct Statement
-{
+int head[MAXN], tail[MAXN], h[MAXN];
+struct Statement{
        int v,d,h;
        bool operator <( Statement a )const
        {    return a.d+a.h<d+h;   }
 };
-
-void addEdge( int u,int v,int c,int e )
-{
-     Edge[e<<1].v=v;
-     Edge[e<<1].c=c;
-     Edge[e<<1].nxt=head[u];
-     head[u]=e<<1;
-     
-     Edge[e<<1|1].v=u;
-     Edge[e<<1|1].c=c;
-     Edge[e<<1|1].nxt=tail[v];
-     tail[v]=e<<1|1;
-     return ;
+void addEdge( int u,int v,int c,int e ){
+     Edge[e<<1].v=v; Edge[e<<1].c=c; Edge[e<<1].nxt=head[u]; head[u]=e<<1;
+     Edge[e<<1|1].v=u; Edge[e<<1|1].c=c; Edge[e<<1|1].nxt=tail[v]; tail[v]=e<<1|1;
 }
 
-void Dijstra( int n,int s,int t )
-{
+void Dijstra( int n,int s,int t ){
      bool vis[MAXN];
      memset( vis,0,sizeof(vis) );
      memset( h,0x7F,sizeof(h) );
      h[t]=0;
-     for( int i=1;i<=n;i++ )
-     {
+     for( int i=1;i<=n;i++ ){
           int min=0x7FFF;
           int k=-1;
-          for( int j=1;j<=n;j++ )
-          {
+          for( int j=1;j<=n;j++ ){
                if( vis[j]==false && min>h[j] )
                    min=h[j],k=j;
           }
           if( k==-1 )break;
           vis[k]=true;
-          for( int temp=tail[k];temp!=-1;temp=Edge[temp].nxt )
-          {
+          for( int temp=tail[k];temp!=-1;temp=Edge[temp].nxt ){
                int v=Edge[temp].v;
                if( h[v]>h[k]+Edge[temp].c )
                    h[v]=h[k]+Edge[temp].c;
           }
      }
 }
-
-int Astar_Kth( int n,int s,int t,int K )
-{
+int Astar_Kth( int n,int s,int t,int K ){
     Statement cur,nxt;
     //priority_queue<Q>q;
     priority_queue<Statement>FstQ;
-    
     int cnt[MAXN];
     memset( cnt,0,sizeof(cnt) );
-    cur.v=s;
-    cur.d=0;
-    cur.h=h[s];
-    
+    cur.v=s; cur.d=0; cur.h=h[s];
     FstQ.push(cur);
-    
-    while( !FstQ.empty() )
-    {
+    while( !FstQ.empty() ){
            cur=FstQ.top();
            FstQ.pop();
-           
            cnt[cur.v]++;
            if( cnt[cur.v]>K ) continue;
            if( cnt[t]==K )return cur.d;
-           
-           for( int temp=head[cur.v];temp!=-1;temp=Edge[temp].nxt )
-           {
+           for( int temp=head[cur.v];temp!=-1;temp=Edge[temp].nxt ){
                 int v=Edge[temp].v;
                 nxt.d=cur.d+Edge[temp].c;
                 nxt.v=v;
@@ -111,18 +75,14 @@ int Astar_Kth( int n,int s,int t,int K )
     }
     return -1;
 }
-
 int main()
 {
     int n,m;
-    while( scanf( "%d %d",&n,&m )!=EOF )
-    {
+    while( scanf( "%d %d",&n,&m )!=EOF ){
            int u,v,c;
            memset( head,0xFF,sizeof(head) );
            memset( tail,0xFF,sizeof(tail) );
-           
-           for( int i=0;i<m;i++ )
-           {
+           for( int i=0;i<m;i++ ){
                 scanf( "%d %d %d",&u,&v,&c );
                 addEdge( u,v,c,i );
            }

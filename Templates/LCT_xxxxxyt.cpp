@@ -1,21 +1,13 @@
 // 这个有些地方有点问题… // 标注部分
-
-#include <bits/stdc++.h>
-using namespace std;
-
 const int MAXN = 2e5 + 5;
-
 int n, m;
-
 struct Lct{
-	
 	struct Node{
 		int sum;
 		int lson, rson, fath, ance;
 		bool lazy;
 	};
 	Node nd[MAXN];
-	
 	void push_up(int i){
 		nd[i].sum = nd[nd[i].lson].sum + nd[nd[i].rson].sum + 1;
 	}
@@ -124,20 +116,15 @@ struct Lct{
 	}
 };
 Lct lct;
-
 void query(){
-	
 	int pos;
 	scanf("%d", &pos);
 	++pos;
-	
 	lct.access(pos);
 	lct.splay(pos);
 	printf("%d\n", lct.nd[pos].sum - 1);
 }
-
 void modify(){
-	
 	int pos, fath;
 	scanf("%d%d", &pos, &fath);
 	++pos, fath += pos;
@@ -150,9 +137,7 @@ void modify(){
 	}
 	lct.nd[pos].ance = fath;
 }
-
 int main(){
-	
 	scanf("%d", &n);
 	for(int i = 1; i <= n; ++i){
 		int k;
@@ -169,6 +154,5 @@ int main(){
 		if(k == 1) query();
 		else modify();
 	}
-
 	return 0;
 }

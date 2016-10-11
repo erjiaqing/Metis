@@ -1,16 +1,9 @@
-#include<cstdio>
-#include<cstring>
-#include<iostream>
-#include<algorithm>
-using namespace std;
-
 const int N = 100005;
 struct Tree {
 	int l, r, L, R, x;
 } h[(int)3e6];
 int n, m, q, a[N], b[N];
 int root[N], tot;
-
 void Build(int x, int l, int r) {
 	h[x].l = l; h[x].r = r; h[x].x = 0;
 	if (l < r) {
@@ -19,7 +12,6 @@ void Build(int x, int l, int r) {
 		h[x].R = ++tot; Build(tot, m + 1, r);
 	}
 }
-
 void build(int x, int y, int num) {
 	int l = h[y].l, r = h[y].r;
 	h[x].l = l; h[x].r = r;
@@ -37,14 +29,12 @@ void build(int x, int y, int num) {
 		h[x].x = h[h[x].L].x + h[h[x].R].x;
 	}
 }
-
 int find(int x, int y, int k) {
 	if (h[x].l == h[x].r) return h[x].l;
 	int t = h[h[y].L].x - h[h[x].L].x;
 	if (t >= k) return find(h[x].L, h[y].L, k);
 	else return find(h[x].R, h[y].R, k - t);
 }
-
 int main() {
 	scanf("%d%d", &n, &q);
 	for (int i = 1; i <= n; i++) {
@@ -55,14 +45,12 @@ int main() {
 	m = unique(b + 1, b + n + 1) - (b + 1);
 	for (int i = 1; i <= n; i++)
 		a[i] = lower_bound(b + 1, b + m + 1, a[i]) - (b + 1) + 1;
-	
 	root[0] = tot = 1;
 	Build(1, 1, m); //------------------ 
 	for (int i = 1; i <= n; i++) {
 		root[i] = ++tot;
 		build(tot, root[i - 1], a[i]);
 	}
-	
 	for(int i = 1; i <= q; i++) {
 		int l, r, k;
 		scanf("%d%d%d", &l, &r, &k);

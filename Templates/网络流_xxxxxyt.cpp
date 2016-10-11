@@ -1,23 +1,16 @@
 // sap
-
 struct edge{
-
     int v, r, flow;
     edge(int v, int flow, int r) : v(v), flow(flow), r(r) {}
 };
 vector<edge> mp[maxn];
-
 void add_edge(int u, int v, int flow){
-
     mp[u].push_back(edge(v, flow, mp[v].size()));
     mp[v].push_back(edge(u, 0, mp[u].size() - 1));
 }
-
 int maxflow, disq[maxn], dist[maxn]; 
 int sap(int u, int nowflow){
-
     if(nowflow == 0 || u == T) return nowflow;
-
     int tempflow, deltaflow = 0;
     for(int l = 0; l < mp[u].size(); ++l){
         int v = mp[u][l].v;
@@ -35,34 +28,24 @@ int sap(int u, int nowflow){
     disq[dist[u]]++;
     return deltaflow;
 }
-
 int main(){
-
     while(dist[S] < T) maxflow += sap(S, inf);
 }
-
-
 // 费用流
-
 struct edge{
-
     int v, r, cost, flow;
     edge(int v, int flow, int cost, int r) : v(v), flow(flow), cost(cost), r(r) {}
 };
 vector<edge> mp[maxn];
-
 void add_edge(int u, int v, int flow, int cost){
-
     mp[u].push_back(edge(v, flow, cost, mp[v].size()));
     mp[v].push_back(edge(u, 0, -cost, mp[u].size() - 1));
 }
-
 int S, T, maxflow, mincost;
 int dist[maxn], pth[maxn], lnk[maxn];
 bool inq[maxn];
 queue<int> que;
 bool find_path(){
-
     for(int i = 1; i <= T; ++i) dist[i] = inf;
     dist[S] = 0;
     que.push(S);
@@ -86,7 +69,6 @@ bool find_path(){
     if(dist[T] < inf) return true;
     else return false;
 }
-
 void adjust(){
     int deltaflow = inf, deltacost = 0;
     for(int v = T; v != S; v = pth[v]){
@@ -100,9 +82,4 @@ void adjust(){
         mp[mp[pth[v]][lnk[v]].v][mp[pth[v]][lnk[v]].r].flow += deltaflow;
     }
 }
-
-int main(){
-
-    while(find_path()) adjust();
-
-}
+int main(){while(find_path()) adjust();}

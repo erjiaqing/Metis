@@ -7,9 +7,7 @@ public class Main{
 //	public static BigInteger dfs(BigInteger x){
 //		if(M.get(x)!=null)return M.get(x);
 //		if(x.mod(BigInteger.valueOf(2))==1){
-//		
 //		}else{
-//		
 //		}
 //		M.put();		
 //	}
@@ -21,7 +19,6 @@ public class Main{
     static BigInteger Zero = new BigInteger("0");
     static BigInteger[] queue = new BigInteger[NNN];
     static BigInteger[] num_step = new BigInteger[NNN];
-    
 	public static void main(String []arg){
 		Scanner cin = new Scanner(System.in);
 		while(true){
@@ -35,12 +32,9 @@ public class Main{
 				System.out.println(m.subtract(n));
 				continue;
 			}
-			
         BigInteger[] QB = new BigInteger[5000*20];
         Integer[] QD = new Integer[5000*20];
-        
         int head=0,tail=0;
-        
         QB[tail]=n;
         QD[tail]=0;
         tail++;
@@ -48,12 +42,9 @@ public class Main{
         while(head<tail){
             BigInteger now = QB[head],nxt;
             int dep = QD[head];
-            
             //System.out.println("now is "+now+" dep is "+dep);
-            
             if(ans.compareTo(BigInteger.valueOf(dep).add(m.subtract(now).abs()))>0)
                 ans=BigInteger.valueOf(dep).add(m.subtract(now).abs());
-            
             head++;
             if(now.mod(BigInteger.valueOf(2)).compareTo(BigInteger.ONE)!=0){
                 nxt=now.divide(BigInteger.valueOf(2));
@@ -84,9 +75,6 @@ public class Main{
     }
 }
 }
-
-
-
 还有这样的hashset用法:
 static Collection c = new HashSet();
 if(c.contains(p) == false)

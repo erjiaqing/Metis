@@ -7,7 +7,6 @@ int f[101];
 long long mul[101];
 bool vis[101];
 int pos[101];
-
 int n, m, k;
 long long ans = 0, K;
 int a[301], b[301];
@@ -24,13 +23,11 @@ long long check()
 				vis[j] = true;
 			++ cnt;
 		}
-
 	for (int i = 1; i <= n; i ++)
 		for (int j = 1; j <= n; j ++)
 			if (g[i][j] != g[pos[i]][pos[j]]) return 0;
 	return mul[cnt];
 }
-
 void dfs(int x)
 {
 	if (x == n + 1)

@@ -1,5 +1,4 @@
 struct qtree{
-	
 	int tot;
 	struct node{
 		int hson, top, size, dpth, papa, newid;
@@ -23,7 +22,6 @@ struct qtree{
 			}
 		}
 	}
-	
 	void connect(int u, int t){
 		nd[u].top = t;
 		nd[u].newid = ++tot;
@@ -34,7 +32,6 @@ struct qtree{
 			connect(v, v);
 		}
 	}
-	
 	int query(int u, int v){
 		int rtn = -inf;
 		while(nd[u].top != nd[v].top){
@@ -46,7 +43,6 @@ struct qtree{
 		rtn = max(rtn, st.query(1, 1, n, nd[u].newid , nd[v].newid));
 		return rtn;
 	}
-	
 	void modify(int u, int v){
 		while(nd[u].top != nd[v].top){
 			if(nd[nd[u].top].dpth < nd[nd[v].top].dpth) swap(u, v);
@@ -56,7 +52,6 @@ struct qtree{
 		if(nd[u].dpth > nd[v].dpth) swap(u, v);
 		st.modify(1, 1, n, nd[u].newid + 1, nd[v].newid);
 	}
-	
 	void clear(){
 		tot = 0;
 		nd[0].hson = nd[0].top = nd[0].size = nd[0].dpth = nd[0].papa = nd[0].newid = 0;

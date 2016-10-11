@@ -1,0 +1,3209 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.2)  11 OCT 2016 14:28
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**Metis.tex
+(./Metis.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/ctex/ctex.sty (/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2016/05/18 v6512 L3 programming layer (loader) 
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2016/05/18 v6512 L3 programming layer (code)
+L3 Module: l3bootstrap 2016/02/12 v6412 L3 Bootstrap code
+L3 Module: l3names 2016/03/11 v6433 L3 Namespace for primitives
+L3 Module: l3basics 2015/11/22 v6315 L3 Basic definitions
+L3 Module: l3expan 2015/09/10 v5983 L3 Argument expansion
+L3 Module: l3tl 2016/03/26 v6465 L3 Token lists
+L3 Module: l3str 2016/03/24 v6441 L3 Strings
+L3 Module: l3seq 2015/08/05 v5777 L3 Sequences and stacks
+L3 Module: l3int 2016/03/24 v6441 L3 Integers
+\c_max_int=\count87
+\l_tmpa_int=\count88
+\l_tmpb_int=\count89
+\g_tmpa_int=\count90
+\g_tmpb_int=\count91
+L3 Module: l3quark 2015/08/17 v5855 L3 Quarks
+L3 Module: l3prg 2015/11/01 v6216 L3 Control structures
+\g__prg_map_int=\count92
+L3 Module: l3clist 2015/09/02 v5901 L3 Comma separated lists
+L3 Module: l3token 2016/04/03 v6470 L3 Experimental token manipulation
+L3 Module: l3prop 2016/01/05 v6366 L3 Property lists
+L3 Module: l3msg 2016/03/26 v6464 L3 Messages
+L3 Module: l3file 2016/03/25 v6458 L3 File and I/O operations
+\l_iow_line_count_int=\count93
+\l__iow_target_count_int=\count94
+\l__iow_current_line_int=\count95
+\l__iow_current_word_int=\count96
+\l__iow_current_indentation_int=\count97
+L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
+\c_zero_dim=\dimen103
+\c_max_dim=\dimen104
+\l_tmpa_dim=\dimen105
+\l_tmpb_dim=\dimen106
+\g_tmpa_dim=\dimen107
+\g_tmpb_dim=\dimen108
+\c_zero_skip=\skip43
+\c_max_skip=\skip44
+\l_tmpa_skip=\skip45
+\l_tmpb_skip=\skip46
+\g_tmpa_skip=\skip47
+\g_tmpb_skip=\skip48
+\c_zero_muskip=\muskip10
+\c_max_muskip=\muskip11
+\l_tmpa_muskip=\muskip12
+\l_tmpb_muskip=\muskip13
+\g_tmpa_muskip=\muskip14
+\g_tmpb_muskip=\muskip15
+L3 Module: l3keys 2015/11/17 v6284 L3 Key-value interfaces
+\g__keyval_level_int=\count98
+\l_keys_choice_int=\count99
+L3 Module: l3fp 2016/03/26 v6465 L3 Floating points
+\c__fp_leading_shift_int=\count100
+\c__fp_middle_shift_int=\count101
+\c__fp_trailing_shift_int=\count102
+\c__fp_big_leading_shift_int=\count103
+\c__fp_big_middle_shift_int=\count104
+\c__fp_big_trailing_shift_int=\count105
+\c__fp_Bigg_leading_shift_int=\count106
+\c__fp_Bigg_middle_shift_int=\count107
+\c__fp_Bigg_trailing_shift_int=\count108
+L3 Module: l3box 2015/08/09 v5822 L3 Experimental boxes
+\c_empty_box=\box26
+\l_tmpa_box=\box27
+\l_tmpb_box=\box28
+\g_tmpa_box=\box29
+\g_tmpb_box=\box30
+L3 Module: l3coffins 2016/05/17 v6508 L3 Coffin code layer
+\l__coffin_internal_box=\box31
+\l__coffin_internal_dim=\dimen109
+\l__coffin_offset_x_dim=\dimen110
+\l__coffin_offset_y_dim=\dimen111
+\l__coffin_x_dim=\dimen112
+\l__coffin_y_dim=\dimen113
+\l__coffin_x_prime_dim=\dimen114
+\l__coffin_y_prime_dim=\dimen115
+\c_empty_coffin=\box32
+\l__coffin_aligned_coffin=\box33
+\l__coffin_aligned_internal_coffin=\box34
+\l_tmpa_coffin=\box35
+\l_tmpb_coffin=\box36
+\l__coffin_display_coffin=\box37
+\l__coffin_display_coord_coffin=\box38
+\l__coffin_display_pole_coffin=\box39
+\l__coffin_display_offset_dim=\dimen116
+\l__coffin_display_x_dim=\dimen117
+\l__coffin_display_y_dim=\dimen118
+L3 Module: l3color 2014/08/23 v5354 L3 Experimental color support
+L3 Module: l3sys 2015/09/25 v6087 L3 Experimental system/runtime functions
+L3 Module: l3candidates 2016/05/13 v6484 L3 Experimental additions to l3kernel
+\l__box_top_dim=\dimen119
+\l__box_bottom_dim=\dimen120
+\l__box_left_dim=\dimen121
+\l__box_right_dim=\dimen122
+\l__box_top_new_dim=\dimen123
+\l__box_bottom_new_dim=\dimen124
+\l__box_left_new_dim=\dimen125
+\l__box_right_new_dim=\dimen126
+\l__box_internal_box=\box40
+\l__coffin_bounding_shift_dim=\dimen127
+\l__coffin_left_corner_dim=\dimen128
+\l__coffin_right_corner_dim=\dimen129
+\l__coffin_bottom_corner_dim=\dimen130
+\l__coffin_top_corner_dim=\dimen131
+\l__coffin_scaled_total_height_dim=\dimen132
+\l__coffin_scaled_width_dim=\dimen133
+L3 Module: l3luatex 2016/03/26 v6465 L3 Experimental LuaTeX-specific functions
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+File: l3pdfmode.def 2016/03/26 v6465 L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count109
+\l__driver_tmp_box=\box41
+))
+Package: ctex 2016/05/16 v2.4.2 Chinese adapter in LaTeX (CTEX)
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2016/05/18 v6512 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count110
+\l__xparse_m_args_int=\count111
+\l__xparse_mandatory_args_int=\count112
+\l__xparse_processor_int=\count113
+\l__xparse_v_nesting_int=\count114
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2016/05/18 v6512 LaTeX2e option processing using LaTeX3 keys
+)
+\g__file_internal_ior=\read1
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/ctex/ctexhook.sty
+Package: ctexhook 2016/05/16 v2.4.2 Document and package hooks (CTEX)
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/ctex/ctexpatch.sty
+Package: ctexpatch 2016/05/16 v2.4.2 Patching commands (CTEX)
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/base/fix-cm.sty
+Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)) (/usr/local/texlive/2016/texmf-dist/tex/latex/ms/everysel.sty
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+)
+\l__ctex_tmp_int=\count115
+\l__ctex_tmp_dim=\dimen134
+\l__ctex_tmp_box=\box42
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
+File: ctexopts.cfg 2016/05/16 v2.4.2 Option configuration file (CTEX)
+)
+*************************************************
+* ctex warning: "deprecated-option"
+* 
+* Option `nocap' is deprecated.
+* Option `scheme=plain' is set.
+*************************************************
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \ctexset with sig. '' on line 366.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \CTEXsetup with sig. '+o>{\TrimSpaces }m' on line 372.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \CTEXoptions with sig. '+o' on line 378.
+.................................................
+(/usr/local/texlive/2016/texmf-dist/tex/latex/ctex/engine/ctex-engine-pdftex.def
+File: ctex-engine-pdftex.def 2016/05/16 v2.4.2 (pdf)LaTeX adapter (CTEX)
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/cjk/texinput/CJK.sty
+Package: CJK 2015/04/18 4.8.4
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/cjk/texinput/mule/MULEenc.sty
+Package: MULEenc 2015/04/18 4.8.4
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/cjk/texinput/CJK.enc
+File: CJK.enc 2015/04/18 4.8.4
+)
+LaTeX Info: Redefining \selectfont on input line 755.
+\CJK@indent=\box43
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/cjkpunct/CJKpunct.sty
+Package: CJKpunct 2016/05/14 4.8.4
+\CJKpunct@cnta=\count116
+\CJKpunct@cntb=\count117
+\CJKpunct@cntc=\count118
+\CJKpunct@cntd=\count119
+\CJKpunct@cnte=\count120
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/cjkpunct/CJKpunct.spa)) (/usr/local/texlive/2016/texmf-dist/tex/latex/cjk/texinput/CJKspace.sty
+Package: CJKspace 2015/04/18 3.8.0
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/cjk/texinput/standard.bdg
+File: standard.bdg 2015/04/18 4.8.4
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/ctex/ctexspa.def
+File: ctexspa.def 2016/05/16 v2.4.2 Space info for CJKpunct (CTEX)
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/cjk/texinput/CJKfntef.sty
+Package: CJKfntef 2015/04/18 4.8.4
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/cjk/texinput/CJKulem.sty
+Package: CJKulem 2015/04/18 4.8.4
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box44
+\UL@hyphenbox=\box45
+\UL@skip=\skip49
+\UL@hook=\toks14
+\UL@height=\dimen135
+\UL@pe=\count121
+\UL@pixel=\dimen136
+\ULC@box=\box46
+Package: ulem 2012/05/18
+\ULdepth=\dimen137
+)
+\UL@lastkern=\dimen138
+\CJK@skip=\skip50
+)
+\CJK@fntefSkip=\skip51
+\CJK@nest=\count122
+\CJK@fntefDimen=\dimen139
+\CJK@underdotBox=\box47
+\CJK@ULbox=\box48
+\CJK@underanyskip=\dimen140
+)
+\ccwd=\dimen141
+\l__ctex_ccglue_skip=\skip52
+)
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \CTEXsetfont with sig. '' on line 406.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \ziju with sig. 'm' on line 478.
+.................................................
+\l__ctex_ziju_dim=\dimen142
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \CTEXindent with sig. '' on line 519.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \CTEXnoindent with sig. '' on line 525.
+.................................................
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/zhnumber/zhnumber.sty
+Package: zhnumber 2016/05/14 v2.4 Typesetting numbers with Chinese glyphs
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \zhnumber with sig. '+o+m' on line 50.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \zhnumberwithoptions with sig. '+m+m' on line 57.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \zhnum with sig. '+o+m' on line 111.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \zhnumwithoptions with sig. '+m+m' on line 118.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \zhdig with sig. '+o+m' on line 297.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \zhdigwithoptions with sig. '+m+m' on line 304.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \zhdigits with sig. '+s+o+m' on line 318.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \zhdigitswithoptions with sig. '+m+m+m' on line 325.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \zhdate with sig. '+s+m' on line 384.
+.................................................
+\l__zhnum_scale_int=\count123
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \zhnumExtendScaleMap with sig. '>{\TrimSpaces }+o+m' on
+. line 506.
+.................................................
+\l__zhnum_byte_min_int=\count124
+\l__zhnum_byte_max_int=\count125
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \zhnumsetup with sig. '+m' on line 938.
+.................................................
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/zhnumber/zhnumber-gbk.cfg
+File: zhnumber-gbk.cfg 2016/05/14 v2.4 Chinese numerals with GBK encoding
+))
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \CTEXnumber with sig. 'mm' on line 542.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \CTEXdigits with sig. 'mm' on line 544.
+.................................................
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-plain.def
+File: ctex-scheme-plain.def 2016/05/16 v2.4.2 Plain scheme for generic (CTEX)
+)
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \zihao with sig. 'm' on line 636.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \CTeX with sig. '' on line 740.
+.................................................
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-mac.def
+File: ctex-fontset-mac.def 2016/05/16 v2.4.2 Mac OS X fonts definition (CTEX)
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!
+/usr/local/texlive/2016/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-mac.def:47: Critical ctex error: "fontset-unavailable"
+! 
+! CTeX fontset `mac' is unavailable in current mode.
+! 
+! See the ctex documentation for further information.
+! 
+! For immediate help type H <return>.
+!...............................................  
+                                                  
+l.47   }
+        
+|'''''''''''''''''''''''''''''''''''''''''''''''
+| Reading the current file 'ctex-fontset-mac.def' will stop.
+|...............................................
+
+)) (/usr/local/texlive/2016/texmf-dist/tex/latex/ctex/config/ctex.cfg
+File: ctex.cfg 2016/05/16 v2.4.2 Configuration file (CTEX)
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count126
+\float@exts=\toks15
+\float@box=\box49
+\@float@everytoks=\toks16
+\@floatcapt=\box50
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks17
+\c@algorithm=\count127
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+)
+\c@ALC@unique=\count128
+\c@ALC@line=\count129
+\c@ALC@rem=\count130
+\c@ALC@depth=\count131
+\ALC@tlm=\skip53
+\algorithmicindent=\skip54
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/10 v2.15b AMS math features
+\@mathmargin=\skip55
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen143
+)) (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen144
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count132
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count133
+\leftroot@=\count134
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count135
+\DOTSCASE@=\count136
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+\big@size=\dimen145
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+\macc@depth=\count137
+\c@MaxMatrixCols=\count138
+\dotsspace@=\muskip16
+\c@parentequation=\count139
+\dspbrk@lvl=\count140
+\tag@help=\toks20
+\row@=\count141
+\column@=\count142
+\maxfields@=\count143
+\andhelp@=\toks21
+\eqnshift@=\dimen146
+\alignsep@=\dimen147
+\tagshift@=\dimen148
+\tagwidth@=\dimen149
+\totwidth@=\dimen150
+\lineht@=\dimen151
+\@envbody=\toks22
+\multlinegap=\skip56
+\multlinetaggap=\skip57
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/titlesec/titletoc.sty
+Package: titletoc 2011/12/15 v1.6 TOC entries
+\ttl@leftsep=\dimen152
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 96.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count144
+))
+\Gin@req@height=\dimen153
+\Gin@req@width=\dimen154
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2016/04/19 v0.5f Insert pages of external PDF documents (AM)
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count145
+\calc@Bcount=\count146
+\calc@Adimen=\dimen155
+\calc@Bdimen=\dimen156
+\calc@Askip=\skip58
+\calc@Bskip=\skip59
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count147
+\calc@Cskip=\skip60
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2016/05/16 v1.17 At begin shipout hook (HO)
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+)) (/usr/local/texlive/2016/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+))
+\AM@pagewidth=\dimen157
+\AM@pageheight=\dimen158
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2016/04/19 v0.5f Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box53
+\AM@global@opts=\toks24
+\AM@toc@title=\toks25
+\c@AM@survey=\count148
+\AM@templatesizebox=\box54
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count149
+\lst@gtempboxa=\box55
+\lst@token=\toks26
+\lst@length=\count150
+\lst@currlwidth=\dimen159
+\lst@column=\count151
+\lst@pos=\count152
+\lst@lostspace=\dimen160
+\lst@width=\dimen161
+\lst@newlines=\count153
+\lst@lineno=\count154
+\lst@maxwidth=\dimen162
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count155
+\lst@skipnumbers=\count156
+\lst@framebox=\box56
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/cjk/texinput/extended.enc
+File: extended.enc 2015/04/18 4.8.4
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/cjk/texinput/extended.chr
+File: extended.chr 2015/04/18 4.8.4
+) (/Users/longsishan/ACM/Metis/Templates/.texpadtmp/Metis.aux)
+\openout1 = `Metis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+ ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 38.
+
+(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count157
+\scratchdimen=\dimen163
+\scratchbox=\box57
+\nofMPsegments=\count158
+\nofMParguments=\count159
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count160
+\MPscratchDim=\dimen164
+\MPnumerator=\count161
+\makeMPintoPDFobject=\count162
+\everyMPtoPDFconversion=\toks28
+) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+)) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+\AtBeginShipoutBox=\box58
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+))
+\c@lstlisting=\count163
+ [1
+
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/longsishan/ACM/Metis/Templates/.texpadtmp/Metis.toc)
+\tf@toc=\write3
+\openout3 = `Metis.toc'.
+
+ [1]
+LaTeX Font Info:    Try loading font information for C19+song on input line 85.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/cjk/texinput/GB/c19song.fd
+File: c19song.fd 2015/04/18 4.8.4
+)<<c1976.cmap>><<c1936.cmap>><<c1934.cmap>> (./FFT_xxxxxyt.cpp
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 1.
+ [2]<<c1975.cmap>><<c1910.cmap>><<c1916.cmap>><<c1978.cmap>><<c1914.cmap>><<c1945.cmap>><<c1977.cmap>><<c1930.cmap>><<c1927.cmap>>
+Package CJKpunct Info: punctuation spaces for family 'song' do not exist. Use family 'def' instead. on input line 56.
+<<c1928.cmap>><<c1974.cmap>><<c1926.cmap>><<c1924.cmap>><<c1911.cmap>><<c1922.cmap>><<c1946.cmap>><<c1942.cmap>><<c1909.cmap>><<c1933.cmap>><<c1939.cmap>><<c1918.cmap>>
+./FFT_xxxxxyt.cpp:56: Undefined control sequence.
+<recently read> �
+                 
+l.56 ...��步长 代码后面举个例子说明一
+                                                  下好了
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./FFT_xxxxxyt.cpp:56: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.56 ...代码后面举个例子说明一下好了
+                                                  
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+<<c1902.cmap>>
+
+./FFT_xxxxxyt.cpp:63: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 ... exp(cpb(0, type * pi / m)); // 求原根 
+                                                  pi / m 其实就是 2 * pi...
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+<<c1940.cmap>><<c1937.cmap>><<c1919.cmap>><<c1935.cmap>><<c1903.cmap>><<c1904.cmap>>
+
+./FFT_xxxxxyt.cpp:66: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 ...0 = xx[i]; // 这个里面是A[0]的内容
+                                                  
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+
+./FFT_xxxxxyt.cpp:67: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67 ...= xx[i+m]; // 这个里面是A[1]的内容
+                                                  
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+[3]<<c1913.cmap>><<c1905.cmap>>
+
+./FFT_xxxxxyt.cpp:76: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.76     // main函数我就乱写了 
+                                      >w<
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+<<c1923.cmap>><<c1901.cmap>><<c1943.cmap>> [4]<<c1947.cmap>><<c1929.cmap>>
+
+./FFT_xxxxxyt.cpp:108: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 ...��二进制位对称的位置进行交换
+                                                  
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+<<c1920.cmap>><<c1912.cmap>><<c1932.cmap>>
+
+./FFT_xxxxxyt.cpp:109: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.109 ...0; i < n; ++i){ // i枚举每一个下表
+                                                  
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+<<c1906.cmap>><<c1908.cmap>>
+
+./FFT_xxxxxyt.cpp:110: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.110 ... j = 0; // j为n位二进制下i的对称
+                                                  
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+<<c1938.cmap>><<c1921.cmap>>
+
+./FFT_xxxxxyt.cpp:112: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.112 ...�又换回来于是只在 i < j 时交换
+                                                  
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+./FFT_xxxxxyt.cpp:116: Undefined control sequence.
+<recently read> �
+                 
+l.116 ...1){ // m为当前讨论区间长度的一
+                                                  半
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./FFT_xxxxxyt.cpp:116: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.116 ... // m为当前讨论区间长度的一半
+                                                  
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+./FFT_xxxxxyt.cpp:119: Undefined control sequence.
+<recently read> �
+                 
+l.119             // 啊这些都和�
+                                      �归一样了
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./FFT_xxxxxyt.cpp:119: Undefined control sequence.
+<recently read> �
+                 
+l.119             // 啊这些都和递归一
+                                             样了
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<<c1941.cmap>><<c1944.cmap>> [5])<<c1917.cmap>><<c1925.cmap>>
+./Metis.tex:89: Improper alphabetic constant.
+<to be read again> 
+                   \count 
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+./Metis.tex:89: Missing = inserted for \ifnum.
+<to be read again> 
+                   \count 
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+./Metis.tex:89: Missing number, treated as zero.
+<to be read again> 
+                   <
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Metis.tex:89: Improper alphabetic constant.
+<to be read again> 
+                   \count 
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+./Metis.tex:89: Missing = inserted for \ifnum.
+<to be read again> 
+                   \count 
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+./Metis.tex:89: Missing number, treated as zero.
+<to be read again> 
+                   >
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Metis.tex:89: Improper alphabetic constant.
+<to be read again> 
+                   \count 
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+./Metis.tex:89: Missing = inserted for \ifnum.
+<to be read again> 
+                   \count 
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+./Metis.tex:89: Missing number, treated as zero.
+<to be read again> 
+                   <
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Metis.tex:89: Improper alphabetic constant.
+<to be read again> 
+                   \count 
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+./Metis.tex:89: Missing = inserted for \ifnum.
+<to be read again> 
+                   \count 
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+./Metis.tex:89: Missing number, treated as zero.
+<to be read again> 
+                   >
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+(/Users/longsishan/ACM/Metis/Templates/.texpadtmp/)
+./Metis.tex:89: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:89: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:89: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:89: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:89: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:89: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:89: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:89: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:89: Improper alphabetic constant.
+<to be read again> 
+                   \CJK@disableMakeUppercase 
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+./Metis.tex:89: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:89: Missing number, treated as zero.
+<to be read again> 
+                   \divide 
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Metis.tex:89: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:89: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:89: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:89: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:89: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.89 ...inputlisting{高斯消元算行列式.cpp}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+<<c1931.cmap>> (/Users/longsishan/ACM/Metis/Templates/.texpadtmp/)
+./Metis.tex:91: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.91 		\lstinputlisting{中国剩余定理.cpp}
+                                               
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:91: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.91 		\lstinputlisting{中国剩余定理.cpp}
+                                               
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:91: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.91 		\lstinputlisting{中国剩余定理.cpp}
+                                               
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:91: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.91 		\lstinputlisting{中国剩余定理.cpp}
+                                               
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:91: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.91 		\lstinputlisting{中国剩余定理.cpp}
+                                               
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:91: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.91 		\lstinputlisting{中国剩余定理.cpp}
+                                               
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:91: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.91 		\lstinputlisting{中国剩余定理.cpp}
+                                               
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:91: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.91 		\lstinputlisting{中国剩余定理.cpp}
+                                               
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:91: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.91 		\lstinputlisting{中国剩余定理.cpp}
+                                               
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+<<c1907.cmap>>
+./Metis.tex:92: Improper alphabetic constant.
+<to be read again> 
+                   \@@par 
+l.92 		\subsection{Polya寻找等价类}
+                                        
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+./Metis.tex:92: Missing = inserted for \ifnum.
+<to be read again> 
+                   \@@par 
+l.92 		\subsection{Polya寻找等价类}
+                                        
+I was expecting to see `<', `=', or `>'. Didn't.
+
+./Metis.tex:92: Missing number, treated as zero.
+<to be read again> 
+                   \@@par 
+l.92 		\subsection{Polya寻找等价类}
+                                        
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Metis.tex:92: Improper alphabetic constant.
+<to be read again> 
+                   \@@par 
+l.92 		\subsection{Polya寻找等价类}
+                                        
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+./Metis.tex:92: Missing = inserted for \ifnum.
+<to be read again> 
+                   \@@par 
+l.92 		\subsection{Polya寻找等价类}
+                                        
+I was expecting to see `<', `=', or `>'. Didn't.
+
+./Metis.tex:92: Missing number, treated as zero.
+<to be read again> 
+                   \@@par 
+l.92 		\subsection{Polya寻找等价类}
+                                        
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Metis.tex:92: Improper alphabetic constant.
+<to be read again> 
+                   \@@par 
+l.92 		\subsection{Polya寻找等价类}
+                                        
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+./Metis.tex:92: Improper alphabetic constant.
+<to be read again> 
+                   \@@par 
+l.92 		\subsection{Polya寻找等价类}
+                                        
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+./Metis.tex:92: Missing = inserted for \ifnum.
+<to be read again> 
+                   \@@par 
+l.92 		\subsection{Polya寻找等价类}
+                                        
+I was expecting to see `<', `=', or `>'. Didn't.
+
+./Metis.tex:92: Missing number, treated as zero.
+<to be read again> 
+                   \@@par 
+l.92 		\subsection{Polya寻找等价类}
+                                        
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Metis.tex:92: Bad character code (-4).
+<argument> \@tempcnta 
+                      
+l.92 		\subsection{Polya寻找等价类}
+                                        
+A character number must be between 0 and 255.
+I changed this one to zero.
+
+./Metis.tex:92: Bad character code (-4).
+<argument> \@tempcnta 
+                      
+l.92 		\subsection{Polya寻找等价类}
+                                        
+A character number must be between 0 and 255.
+I changed this one to zero.
+
+./Metis.tex:92: Bad character code (-4).
+<argument> \@tempcnta 
+                      
+l.92 		\subsection{Polya寻找等价类}
+                                        
+A character number must be between 0 and 255.
+I changed this one to zero.
+
+
+./Metis.tex:93: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.93 		\lstinputlisting{Polya寻找等价类.cpp}
+                                                 
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+./Metis.tex:93: Argument of \CJK@XX has an extra }.
+<inserted text> 
+                \par 
+l.93 		\lstinputlisting{Polya寻找等价类.cpp}
+                                                 
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+./Metis.tex:93: Paragraph ended before \CJK@XX was complete.
+<to be read again> 
+                   \par 
+l.93 		\lstinputlisting{Polya寻找等价类.cpp}
+                                                 
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+Runaway argument?
+{Polya\CJK@disableMakeUppercase {\global \let }\futurelet \CJK@next@token \ETC.
+./Metis.tex:93: Paragraph ended before \lst@MissingFileError was complete.
+<to be read again> 
+                   \par 
+l.93 		\lstinputlisting{Polya寻找等价类.cpp}
+                                                 
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+./Metis.tex:93: Too many }'s.
+\reserved@a ... }\futurelet \CJK@next@token \par }
+                                                  {cpp}
+l.93 		\lstinputlisting{Polya寻找等价类.cpp}
+                                                 
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+./Metis.tex:94: Undefined control sequence.
+<recently read> �
+                 
+l.94 		\subsection{拉格朗日插值}
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Metis.tex:94: Improper alphabetic constant.
+<to be read again> 
+                   \@@par 
+l.94 		\subsection{拉格朗日插值}
+                                      
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+./Metis.tex:94: Missing = inserted for \ifnum.
+<to be read again> 
+                   \@@par 
+l.94 		\subsection{拉格朗日插值}
+                                      
+I was expecting to see `<', `=', or `>'. Didn't.
+
+./Metis.tex:94: Missing number, treated as zero.
+<to be read again> 
+                   \@@par 
+l.94 		\subsection{拉格朗日插值}
+                                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Metis.tex:94: Improper alphabetic constant.
+<to be read again> 
+                   \@@par 
+l.94 		\subsection{拉格朗日插值}
+                                      
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+./Metis.tex:94: Missing = inserted for \ifnum.
+<to be read again> 
+                   \@@par 
+l.94 		\subsection{拉格朗日插值}
+                                      
+I was expecting to see `<', `=', or `>'. Didn't.
+
+./Metis.tex:94: Missing number, treated as zero.
+<to be read again> 
+                   \@@par 
+l.94 		\subsection{拉格朗日插值}
+                                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Metis.tex:94: Improper alphabetic constant.
+<to be read again> 
+                   \@@par 
+l.94 		\subsection{拉格朗日插值}
+                                      
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+./Metis.tex:94: Improper alphabetic constant.
+<to be read again> 
+                   \@@par 
+l.94 		\subsection{拉格朗日插值}
+                                      
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+./Metis.tex:94: Missing = inserted for \ifnum.
+<to be read again> 
+                   \@@par 
+l.94 		\subsection{拉格朗日插值}
+                                      
+I was expecting to see `<', `=', or `>'. Didn't.
+
+./Metis.tex:94: Missing number, treated as zero.
+<to be read again> 
+                   \@@par 
+l.94 		\subsection{拉格朗日插值}
+                                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Metis.tex:94: Improper alphabetic constant.
+<to be read again> 
+                   \@@par 
+l.94 		\subsection{拉格朗日插值}
+                                      
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+./Metis.tex:94: Missing = inserted for \ifnum.
+<to be read again> 
+                   \@@par 
+l.94 		\subsection{拉格朗日插值}
+                                      
+I was expecting to see `<', `=', or `>'. Didn't.
+
+./Metis.tex:94: Missing number, treated as zero.
+<to be read again> 
+                   \@@par 
+l.94 		\subsection{拉格朗日插值}
+                                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Metis.tex:94: Bad character code (-70).
+<argument> \@tempcnta 
+                      
+l.94 		\subsection{拉格朗日插值}
+                                      
+A character number must be between 0 and 255.
+I changed this one to zero.
+
+./Metis.tex:94: Bad character code (-70).
+<argument> \@tempcnta 
+                      
+l.94 		\subsection{拉格朗日插值}
+                                      
+A character number must be between 0 and 255.
+I changed this one to zero.
+
+./Metis.tex:94: Bad character code (-70).
+<argument> \@tempcnta 
+                      
+l.94 		\subsection{拉格朗日插值}
+                                      
+A character number must be between 0 and 255.
+I changed this one to zero.
+
+./Metis.tex:94: Undefined control sequence.
+<argument> ...ion\endcsname }\fi 拉格朗日插�
+                                                  �}{\thepage }}
+l.94 		\subsection{拉格朗日插值}
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Metis.tex:95: Undefined control sequence.
+<argument> ...else \noexpand �\fi ��格朗日插�
+                                                  �1
+l.95 		\includegraphics{拉格朗日插值1.jpg}
+                                                \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Metis.tex:95: Undefined control sequence.
+\GenericError  ...                                
+                                                    #4  \errhelp \@err@     ...
+l.95 		\includegraphics{拉格朗日插值1.jpg}
+                                                \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Metis.tex:95: Undefined control sequence.
+\GenericError  ...                                
+                                                  \let \@err@               ...
+l.95 		\includegraphics{拉格朗日插值1.jpg}
+                                                \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Metis.tex:95: Undefined control sequence.
+\GenericError  ...                                
+                                                  \@empty \def \MessageBreak...
+l.95 		\includegraphics{拉格朗日插值1.jpg}
+                                                \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Metis.tex:95: Undefined control sequence.
+\GenericError  ...                                
+                                                     \endgroup 
+l.95 		\includegraphics{拉格朗日插值1.jpg}
+                                                \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Metis.tex:95: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.95 		\includegraphics{拉格朗日插值1.jpg}
+                                                \\
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:95: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.95 		\includegraphics{拉格朗日插值1.jpg}
+                                                \\
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:95: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.95 		\includegraphics{拉格朗日插值1.jpg}
+                                                \\
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:95: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.95 		\includegraphics{拉格朗日插值1.jpg}
+                                                \\
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:95: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.95 		\includegraphics{拉格朗日插值1.jpg}
+                                                \\
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:95: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.95 		\includegraphics{拉格朗日插值1.jpg}
+                                                \\
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:95: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.95 		\includegraphics{拉格朗日插值1.jpg}
+                                                \\
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:95: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.95 		\includegraphics{拉格朗日插值1.jpg}
+                                                \\
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+
+./Metis.tex:95: Missing { inserted.
+<to be read again> 
+                   \let 
+l.95 		\includegraphics{拉格朗日插值1.jpg}
+                                                \\
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+./Metis.tex:95: Package pdftex.def Error: File `\CJK@disableMakeUppercase {\global \let }\futurelet jpg\CJK@disableMakeUppercase {\global \let }\futurelet jpg\CJK@disableMakeUppercase {\global \let }\futurelet jpg\CJK@disableMakeUppercase {\global \let }\futurelet jpg\CJK@disableMakeUppercase {\global \let }\futurelet jpg\CJK@disableMakeUppercase {\global \let }\futurelet jpg\CJK@disableMakeUppercase {\global \let }\futurelet jpg\CJK@disableMakeUppercase {\global \let }\futurelet jpg\CJK@disableMakeUppercase {\begingroup\immediate \write \@unused   \def 
+ 
+ \let \edef  The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?  \errhelp \let \def 
+ 
+(CJK)                 \def   \errmessage  Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help   \endgroup }\futurelet jpg.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.95 		\includegraphics{拉格朗日插值1.jpg}
+                                                \\
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./Metis.tex:95: Missing } inserted.
+<inserted text> 
+                }
+l.95 		\includegraphics{拉格朗日插值1.jpg}
+                                                \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Metis.tex:95: Missing } inserted.
+<inserted text> 
+                }
+l.95 		\includegraphics{拉格朗日插值1.jpg}
+                                                \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Metis.tex:95: Missing } inserted.
+<inserted text> 
+                }
+l.95 		\includegraphics{拉格朗日插值1.jpg}
+                                                \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Metis.tex:95: Missing } inserted.
+<inserted text> 
+                }
+l.95 		\includegraphics{拉格朗日插值1.jpg}
+                                                \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Metis.tex:95: Missing } inserted.
+<inserted text> 
+                }
+l.95 		\includegraphics{拉格朗日插值1.jpg}
+                                                \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Metis.tex:95: Missing } inserted.
+<inserted text> 
+                }
+l.95 		\includegraphics{拉格朗日插值1.jpg}
+                                                \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Metis.tex:95: Missing } inserted.
+<inserted text> 
+                }
+l.95 		\includegraphics{拉格朗日插值1.jpg}
+                                                \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Metis.tex:95: Missing } inserted.
+<inserted text> 
+                }
+l.95 		\includegraphics{拉格朗日插值1.jpg}
+                                                \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Metis.tex:95: Missing } inserted.
+<inserted text> 
+                }
+l.95 		\includegraphics{拉格朗日插值1.jpg}
+                                                \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Metis.tex:96: Undefined control sequence.
+<argument> ...else \noexpand �\fi ��格朗日插�
+                                                  �2
+l.96 		\includegraphics{拉格朗日插值2.jpg}
+                                                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Metis.tex:96: Undefined control sequence.
+\GenericError  ...                                
+                                                    #4  \errhelp \@err@     ...
+l.96 		\includegraphics{拉格朗日插值2.jpg}
+                                                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Metis.tex:96: Undefined control sequence.
+\GenericError  ...                                
+                                                  \let \@err@               ...
+l.96 		\includegraphics{拉格朗日插值2.jpg}
+                                                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Metis.tex:96: Undefined control sequence.
+\GenericError  ...                                
+                                                  \@empty \def \MessageBreak...
+l.96 		\includegraphics{拉格朗日插值2.jpg}
+                                                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Metis.tex:96: Undefined control sequence.
+\GenericError  ...                                
+                                                     \endgroup 
+l.96 		\includegraphics{拉格朗日插值2.jpg}
+                                                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Metis.tex:96: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.96 		\includegraphics{拉格朗日插值2.jpg}
+                                                
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:96: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.96 		\includegraphics{拉格朗日插值2.jpg}
+                                                
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:96: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.96 		\includegraphics{拉格朗日插值2.jpg}
+                                                
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:96: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.96 		\includegraphics{拉格朗日插值2.jpg}
+                                                
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:96: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.96 		\includegraphics{拉格朗日插值2.jpg}
+                                                
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:96: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.96 		\includegraphics{拉格朗日插值2.jpg}
+                                                
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:96: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.96 		\includegraphics{拉格朗日插值2.jpg}
+                                                
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:96: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.96 		\includegraphics{拉格朗日插值2.jpg}
+                                                
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+
+./Metis.tex:96: Missing { inserted.
+<to be read again> 
+                   \let 
+l.96 		\includegraphics{拉格朗日插值2.jpg}
+                                                
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+./Metis.tex:96: Package pdftex.def Error: File `\CJK@disableMakeUppercase {\global \let }\futurelet jpg\CJK@disableMakeUppercase {\global \let }\futurelet jpg\CJK@disableMakeUppercase {\global \let }\futurelet jpg\CJK@disableMakeUppercase {\global \let }\futurelet jpg\CJK@disableMakeUppercase {\global \let }\futurelet jpg\CJK@disableMakeUppercase {\global \let }\futurelet jpg\CJK@disableMakeUppercase {\global \let }\futurelet jpg\CJK@disableMakeUppercase {\global \let }\futurelet jpg\CJK@disableMakeUppercase {\begingroup\immediate \write \@unused   \def 
+ 
+ \let \edef  The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?  \errhelp \let \def 
+ 
+(CJK)                 \def   \errmessage  Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help   \endgroup }\futurelet jpg.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.96 		\includegraphics{拉格朗日插值2.jpg}
+                                                
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./Metis.tex:96: Missing } inserted.
+<inserted text> 
+                }
+l.96 		\includegraphics{拉格朗日插值2.jpg}
+                                                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Metis.tex:96: Missing } inserted.
+<inserted text> 
+                }
+l.96 		\includegraphics{拉格朗日插值2.jpg}
+                                                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Metis.tex:96: Missing } inserted.
+<inserted text> 
+                }
+l.96 		\includegraphics{拉格朗日插值2.jpg}
+                                                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Metis.tex:96: Missing } inserted.
+<inserted text> 
+                }
+l.96 		\includegraphics{拉格朗日插值2.jpg}
+                                                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Metis.tex:96: Missing } inserted.
+<inserted text> 
+                }
+l.96 		\includegraphics{拉格朗日插值2.jpg}
+                                                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Metis.tex:96: Missing } inserted.
+<inserted text> 
+                }
+l.96 		\includegraphics{拉格朗日插值2.jpg}
+                                                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Metis.tex:96: Missing } inserted.
+<inserted text> 
+                }
+l.96 		\includegraphics{拉格朗日插值2.jpg}
+                                                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Metis.tex:96: Missing } inserted.
+<inserted text> 
+                }
+l.96 		\includegraphics{拉格朗日插值2.jpg}
+                                                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Metis.tex:96: Missing } inserted.
+<inserted text> 
+                }
+l.96 		\includegraphics{拉格朗日插值2.jpg}
+                                                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[6] (/Users/longsishan/ACM/Metis/Templates/.texpadtmp/)
+./Metis.tex:98: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.98 		\lstinputlisting{欧拉公式.cpp}
+                                         
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:98: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.98 		\lstinputlisting{欧拉公式.cpp}
+                                         
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:98: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.98 		\lstinputlisting{欧拉公式.cpp}
+                                         
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:98: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.98 		\lstinputlisting{欧拉公式.cpp}
+                                         
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:98: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.98 		\lstinputlisting{欧拉公式.cpp}
+                                         
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:98: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.98 		\lstinputlisting{欧拉公式.cpp}
+                                         
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:99: Undefined control sequence.
+<recently read> �
+                 
+l.99 		\subsection{求行列式的值}
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Metis.tex:99: Improper alphabetic constant.
+<to be read again> 
+                   \@@par 
+l.99 		\subsection{求行列式的值}
+                                      
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+./Metis.tex:99: Missing = inserted for \ifnum.
+<to be read again> 
+                   \@@par 
+l.99 		\subsection{求行列式的值}
+                                      
+I was expecting to see `<', `=', or `>'. Didn't.
+
+./Metis.tex:99: Missing number, treated as zero.
+<to be read again> 
+                   \@@par 
+l.99 		\subsection{求行列式的值}
+                                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Metis.tex:99: Improper alphabetic constant.
+<to be read again> 
+                   \@@par 
+l.99 		\subsection{求行列式的值}
+                                      
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+./Metis.tex:99: Missing = inserted for \ifnum.
+<to be read again> 
+                   \@@par 
+l.99 		\subsection{求行列式的值}
+                                      
+I was expecting to see `<', `=', or `>'. Didn't.
+
+./Metis.tex:99: Missing number, treated as zero.
+<to be read again> 
+                   \@@par 
+l.99 		\subsection{求行列式的值}
+                                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Metis.tex:99: Improper alphabetic constant.
+<to be read again> 
+                   \@@par 
+l.99 		\subsection{求行列式的值}
+                                      
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+./Metis.tex:99: Improper alphabetic constant.
+<to be read again> 
+                   \@@par 
+l.99 		\subsection{求行列式的值}
+                                      
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+./Metis.tex:99: Missing = inserted for \ifnum.
+<to be read again> 
+                   \@@par 
+l.99 		\subsection{求行列式的值}
+                                      
+I was expecting to see `<', `=', or `>'. Didn't.
+
+./Metis.tex:99: Missing number, treated as zero.
+<to be read again> 
+                   \@@par 
+l.99 		\subsection{求行列式的值}
+                                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Metis.tex:99: Improper alphabetic constant.
+<to be read again> 
+                   \@@par 
+l.99 		\subsection{求行列式的值}
+                                      
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+./Metis.tex:99: Missing = inserted for \ifnum.
+<to be read again> 
+                   \@@par 
+l.99 		\subsection{求行列式的值}
+                                      
+I was expecting to see `<', `=', or `>'. Didn't.
+
+./Metis.tex:99: Missing number, treated as zero.
+<to be read again> 
+                   \@@par 
+l.99 		\subsection{求行列式的值}
+                                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Metis.tex:99: Bad character code (-70).
+<argument> \@tempcnta 
+                      
+l.99 		\subsection{求行列式的值}
+                                      
+A character number must be between 0 and 255.
+I changed this one to zero.
+
+./Metis.tex:99: Bad character code (-70).
+<argument> \@tempcnta 
+                      
+l.99 		\subsection{求行列式的值}
+                                      
+A character number must be between 0 and 255.
+I changed this one to zero.
+
+./Metis.tex:99: Bad character code (-70).
+<argument> \@tempcnta 
+                      
+l.99 		\subsection{求行列式的值}
+                                      
+A character number must be between 0 and 255.
+I changed this one to zero.
+
+./Metis.tex:99: Undefined control sequence.
+<argument> ...ion\endcsname }\fi 求行列式的�
+                                                  �}{\thepage }}
+l.99 		\subsection{求行列式的值}
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<<c1983.cmap>>
+
+./Metis.tex:100: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.100 			行列式有很多性质，第$a$行$
+                                              *k$加到第$b$行上去，行...
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+
+./Metis.tex:100: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.100 ...有很多性质，第$a$行$*k$加到第$
+                                                  b$行上去，行列式的...
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+./Metis.tex:100: Undefined control sequence.
+<recently read> �
+                 
+l.100 ...第$b$行上去，行列式的值不变�
+                                                  �\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<<c1973.cmap>>
+
+./Metis.tex:102: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.102 			第$
+             a$行与第$b$行互换，行列式的值取反。\\
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+
+./Metis.tex:102: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.102 			第$a$行与第$
+                         b$行互换，行列式的值取反。\\
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+./Metis.tex:102: Undefined control sequence.
+<recently read> �
+                 
+l.102 ...第$b$行互换，行列式的值取反�
+                                                  �\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Metis.tex:103: Undefined control sequence.
+<recently read> �
+                 
+l.103 ...，可以把常数乘到某一行里去�
+                                                  �\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<<c1915.cmap>>
+./Metis.tex:104: Undefined control sequence.
+<recently read> �
+                 
+l.104 ...��：全是整数并取模的话当然需
+                                                  要求逆元
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Metis.tex:113: Undefined control sequence.
+<recently read> �
+                 
+l.113 		某个Mobius推�
+                         �：\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<Mobius.png, id=158, 512.91624pt x 348.30125pt>
+File: Mobius.png Graphic file (type png)
+ <use Mobius.png>
+Package pdftex.def Info: Mobius.png used on input line 114.
+(pdftex.def)             Requested size: 512.915pt x 348.3004pt.
+
+Overfull \hbox (152.915pt too wide) in paragraph at lines 112--115
+[] 
+ []
+
+[7]
+./Metis.tex:115: Improper alphabetic constant.
+<to be read again> 
+                   \@@par 
+l.115 		\subsection{Cayley公式与森林计数}
+                                                
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+./Metis.tex:115: Missing = inserted for \ifnum.
+<to be read again> 
+                   \@@par 
+l.115 		\subsection{Cayley公式与森林计数}
+                                                
+I was expecting to see `<', `=', or `>'. Didn't.
+
+./Metis.tex:115: Missing number, treated as zero.
+<to be read again> 
+                   \@@par 
+l.115 		\subsection{Cayley公式与森林计数}
+                                                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Metis.tex:115: Improper alphabetic constant.
+<to be read again> 
+                   \@@par 
+l.115 		\subsection{Cayley公式与森林计数}
+                                                
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+./Metis.tex:115: Missing = inserted for \ifnum.
+<to be read again> 
+                   \@@par 
+l.115 		\subsection{Cayley公式与森林计数}
+                                                
+I was expecting to see `<', `=', or `>'. Didn't.
+
+./Metis.tex:115: Missing number, treated as zero.
+<to be read again> 
+                   \@@par 
+l.115 		\subsection{Cayley公式与森林计数}
+                                                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Metis.tex:115: Improper alphabetic constant.
+<to be read again> 
+                   \@@par 
+l.115 		\subsection{Cayley公式与森林计数}
+                                                
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+./Metis.tex:115: Improper alphabetic constant.
+<to be read again> 
+                   \@@par 
+l.115 		\subsection{Cayley公式与森林计数}
+                                                
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+./Metis.tex:115: Missing = inserted for \ifnum.
+<to be read again> 
+                   \@@par 
+l.115 		\subsection{Cayley公式与森林计数}
+                                                
+I was expecting to see `<', `=', or `>'. Didn't.
+
+./Metis.tex:115: Missing number, treated as zero.
+<to be read again> 
+                   \@@par 
+l.115 		\subsection{Cayley公式与森林计数}
+                                                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Metis.tex:115: Improper alphabetic constant.
+<to be read again> 
+                   \@@par 
+l.115 		\subsection{Cayley公式与森林计数}
+                                                
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+./Metis.tex:115: Missing = inserted for \ifnum.
+<to be read again> 
+                   \@@par 
+l.115 		\subsection{Cayley公式与森林计数}
+                                                
+I was expecting to see `<', `=', or `>'. Didn't.
+
+./Metis.tex:115: Missing number, treated as zero.
+<to be read again> 
+                   \@@par 
+l.115 		\subsection{Cayley公式与森林计数}
+                                                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Metis.tex:115: Bad character code (-46).
+<argument> \@tempcnta 
+                      
+l.115 		\subsection{Cayley公式与森林计数}
+                                                
+A character number must be between 0 and 255.
+I changed this one to zero.
+
+./Metis.tex:115: Bad character code (-46).
+<argument> \@tempcnta 
+                      
+l.115 		\subsection{Cayley公式与森林计数}
+                                                
+A character number must be between 0 and 255.
+I changed this one to zero.
+
+./Metis.tex:115: Bad character code (-46).
+<argument> \@tempcnta 
+                      
+l.115 		\subsection{Cayley公式与森林计数}
+                                                
+A character number must be between 0 and 255.
+I changed this one to zero.
+
+
+./Metis.tex:116: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.116 ...ey公式是说，一个完全图$K_n$有$
+                                                  n^{n-2}$棵生成树，换...
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+./Metis.tex:116: Missing $ inserted.
+<inserted text> 
+                $
+l.116 ...公式是说，一个完全图$K_n$有$n^
+                                                  {n-2}$棵生成树，换�...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./Metis.tex:116: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.116 ...$有$n^{n-2}$棵生成树，换句话说$
+                                                  n$个节点的带标号的...
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+./Metis.tex:116: Missing $ inserted.
+<inserted text> 
+                $
+l.116 ...n$个节点的带标号的无根树有$n^
+                                                  {n-2}$个。
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Metis.tex:116: Undefined control sequence.
+<recently read> �
+                 
+l.116 ...的带标号的无根树有$n^{n-2}$个�
+                                                  �
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Runaway argument?
+./Metis.tex:117: Paragraph ended before \CJK@XX was complete.
+<to be read again> 
+                   \par 
+l.117 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+./Metis.tex:118: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.118 令$
+          g[i]$表示点数为$i$的森林个数，$f[i]$表示点数为$i$�...
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+
+./Metis.tex:118: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.118 令$g[i]$表示点数为$
+                               i$的森林个数，$f[i]$表示点数为$i$�...
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+
+./Metis.tex:118: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.118 ...$的森林个数，$f[i]$表示点数为$
+                                                  i$的生成树计数$（f[...
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+./Metis.tex:118: Missing $ inserted.
+<inserted text> 
+                $
+l.118 ...点数为$i$的生成树计数$（f[i]=i^
+                                                  {i-2})$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (3.14362pt too wide) in paragraph at lines 118--119
+[]\C19/song/m/n/10.95/74 �\OT1/cmr/m/n/10.95 g[i]$[][][][][][][][]\OML/cmm/m/it/10.95 i$\C19/song/m/n/10.95/77 ^^M \C19/song/m/n/10.95/03 �|\C19/song/m/n/10.95/26 �| \C19/song/m/n/10.95/76 S \C19/song/m/n/10.95/17 � \C19/song/m/n/10.95/42 ; \C19/song/m/n/10.95/76 J \C19/song/m/n/10.95/36 � \C19/song/m/n/10.95/45 ^^U$\OML/cmm/m/it/10.95 f\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 i\OT1/cmr/m/n/10.95 ]$\C19/song/m/n/10.95/77 � \C19/song/m/n/10.95/30 � \C19/song/m/n/10.95/27 s \C19/song/m/n/10.95/76 � \C19/song/m/n/10.95/43 5 \C19/song/m/n/10.95/16 G \C19/song/m/n/10.95/74 �\OT1/cmr/m/n/10.95 i$[][][][][][][][][]$\C19/song/m/n/10.95/83 ^^_ \C19/song/m/n/10.95/06 X\OT1/cmr/m/n/10.95 [i]=i$[])$
+ []
+
+
+Overfull \hbox (8.67569pt too wide) detected at line 120
+\OML/cmm/m/it/10.95 g\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 i\OT1/cmr/m/n/10.95 ] = [] [] = \OML/cmm/m/it/10.95 fac\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 i \OMS/cmsy/m/n/10.95 ^^@ \OT1/cmr/m/n/10.95 1] \OMS/cmsy/m/n/10.95 ^^B []\OT1/cmr/m/n/10.95 ([] \OMS/cmsy/m/n/10.95 ^^B []\OT1/cmr/m/n/10.95 )
+ []
+
+[8 <./Mobius.png>] (./kd-tree.cpp [9] [10] [11]) (./Splay_xxxxxyt.cpp [12] [13] [14] [15]
+
+./Splay_xxxxxyt.cpp:122: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.122 ...et_rank(int i){ // 查询节点编号为 
+                                                  i 的 rank
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+
+./Splay_xxxxxyt.cpp:122: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.122 ...k(int i){ // 查询节点编号为 i 的 
+                                                  rank
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+
+./Splay_xxxxxyt.cpp:126: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.126 	int find(int stat){ // 查询信息为 
+                                              stat 的节点编号
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+
+./Splay_xxxxxyt.cpp:126: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.126 ...{ // 查询信息为 stat 的节点编号
+                                                  
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+
+./Splay_xxxxxyt.cpp:135: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.135 	int get_kth_max(int k){ // 查询第 
+                                            k 大 返回其节点编号
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+
+./Splay_xxxxxyt.cpp:135: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.135 	int get_kth_max(int k){ // 查询第 k 大 
+                                                  返回其节点编号
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+
+./Splay_xxxxxyt.cpp:135: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.135 ... // 查询第 k 大 返回其节点编号
+                                                  
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+) (/Users/longsishan/ACM/Metis/Templates/.texpadtmp/)
+./Metis.tex:128: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.128 		\lstinputlisting{主席树_cjy.cpp}
+                                           
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:128: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.128 		\lstinputlisting{主席树_cjy.cpp}
+                                           
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:128: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.128 		\lstinputlisting{主席树_cjy.cpp}
+                                           
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:128: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.128 		\lstinputlisting{主席树_cjy.cpp}
+                                           
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:128: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.128 		\lstinputlisting{主席树_cjy.cpp}
+                                           
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+[16] (/Users/longsishan/ACM/Metis/Templates/.texpadtmp/)
+./Metis.tex:130: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.130 		\lstinputlisting{主席树_xxxxxyt.cpp}
+                                               
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:130: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.130 		\lstinputlisting{主席树_xxxxxyt.cpp}
+                                               
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:130: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.130 		\lstinputlisting{主席树_xxxxxyt.cpp}
+                                               
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:130: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.130 		\lstinputlisting{主席树_xxxxxyt.cpp}
+                                               
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:130: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.130 		\lstinputlisting{主席树_xxxxxyt.cpp}
+                                               
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+(/Users/longsishan/ACM/Metis/Templates/.texpadtmp/)
+./Metis.tex:132: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.132 		\lstinputlisting{树分治_xxxxxyt.cpp}
+                                               
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:132: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.132 		\lstinputlisting{树分治_xxxxxyt.cpp}
+                                               
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:132: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.132 		\lstinputlisting{树分治_xxxxxyt.cpp}
+                                               
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:132: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.132 		\lstinputlisting{树分治_xxxxxyt.cpp}
+                                               
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:132: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.132 		\lstinputlisting{树分治_xxxxxyt.cpp}
+                                               
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+./Metis.tex:134: Missing $ inserted.
+<inserted text> 
+                $
+l.134 		\lstinputlisting{树链剖分_cjy.cpp}
+                                              
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Metis.tex:134: Missing $ inserted.
+<inserted text> 
+                $
+l.134 		\lstinputlisting{树链剖分_cjy.cpp}
+                                              
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Metis.tex:134: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.134 		\lstinputlisting{树链剖分_cjy.cpp}
+                                              
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Metis.tex:134: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.134 		\lstinputlisting{树链剖分_cjy.cpp}
+                                              
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Metis.tex:134: Undefined control sequence.
+\lst@GetLineInterval ...r \lst@GLI \lst@linerange 
+                                                  \@nil 
+l.134 		\lstinputlisting{树链剖分_cjy.cpp}
+                                              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Runaway argument?
+\@nil \lst@ifsensitive \else \let \lst@KeywordTest \lst@KEYWORDTEST \let \ETC.
+./Metis.tex:166: Paragraph ended before \lst@GLI was complete.
+<to be read again> 
+                   \par 
+l.166 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+./Metis.tex:168: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.168   （1
+            ）以 x[i] - x[j] <= c 为约束条件，j -> i : c，求最短...
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+./Metis.tex:168: Undefined control sequence.
+<recently read> �
+                 
+l.168 ...= c 为约束条件，j -> i : c，求最
+                                                  短路得到的是 x[i] <=...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./Metis.tex:169: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.169   （2
+            ）以 x[i] - x[j] >= c 为约束条件，j -> i : c，求最长...
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+./Metis.tex:169: Undefined control sequence.
+<recently read> �
+                 
+l.169 ...= c 为约束条件，j -> i : c，求最
+                                                  长路得到的时 x[i] >=...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./Metis.tex:170: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.170   /
+         / 若有 x[i] = x[j] 则 i <-0-> j\\
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+./Metis.tex:171: Undefined control sequence.
+<recently read> �
+                 
+l.171 2. 最
+            大闭合权子图\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Metis.tex:173: Undefined control sequence.
+<recently read> �
+                 
+l.173 3. 最
+            大密度子图：max{$\frac{|E'|}{|V'|}$}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./Metis.tex:174: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.174   （1
+            ）猜测答案 g 若最大流大于 EPS 则 g 合法\\
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+
+./Metis.tex:175: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.175   （2
+            ）s -> v: INF, u -> t : INF + g - deg[u], u -> v : 1.00\\
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+./Metis.tex:177: Undefined control sequence.
+<recently read> �
+                 
+l.177 ...�对称性建图，若 u 与 u' 在同一
+                                                  强连通分量中，则�...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Metis.tex:177: Undefined control sequence.
+<recently read> �
+                 
+l.177 ...�底向上（从 ind = 0 到 otd = 0）�
+                                                  �择删除\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Metis.tex:178: Undefined control sequence.
+<recently read> �
+                 
+l.178 5. 最
+            小割\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./Metis.tex:179: Package CJK Error: Invalid character code.
+
+See the CJK package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.179   （1
+            ）二分图最小点权覆盖集：s -> u : w[u], u -> v : INF,...
+The second byte of the CJK code is out of range.
+Do you use the right encoding scheme?
+
+./Metis.tex:179: Undefined control sequence.
+<recently read> �
+                 
+l.179   （1）二分图最
+                           小点权覆盖集：s -> u : w[u], u -> v : INF,...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (14.76189pt too wide) in paragraph at lines 167--180
+\C19/song/m/n/10.95/83 ^^_ ^^_ \C19/song/m/n/10.95/07 � \C19/song/m/n/10.95/43 � \C19/song/m/n/10.95/75 ^^? \C19/song/m/n/10.95/05 Z \C19/song/m/n/10.95/20 � \C19/song/m/n/10.95/76 Q \C19/song/m/n/10.95/75 � \C19/song/m/n/10.95/12 
+ \C19/song/m/n/10.95/02 6 \C19/song/m/n/10.95/76 R \C19/song/m/n/10.95/03 # \C19/song/m/n/10.95/28 � \C19/song/m/n/10.95/77 ^^N \C19/song/m/n/10.95/17 > \C19/song/m/n/10.95/20 � \C19/song/m/n/10.95/83 ^^_ \C19/song/m/n/10.95/19 � \OT1/cmtt/m/n/10.95 -> u : w[u], u -> v : INF,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--180
+
+ []
+
+(./SteinerTree_cjy.cpp
+./SteinerTree_cjy.cpp:5: TeX capacity exceeded, sorry [grouping levels=255].
+\lst@OrgOutput ->{
+                  \lst@RestoreOrigCatcodes \lst@ifec \lst@RestoreOrigExtende...
+l.5 #
+     include <queue>
+If you really absolutely need more capacity,
+you can ask a wizard to enlarge me.
+
+ 
+Here is how much of TeX's memory you used:
+ 16594 strings out of 493014
+ 298712 string characters out of 6133351
+ 448636 words of memory out of 5000000
+ 19756 multiletter control sequences out of 15000+600000
+ 35972 words of font info for 133 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 260i,7n,58p,10433b,1270s stack positions out of 5000i,500n,10000p,200000b,80000s
+./SteinerTree_cjy.cpp:5:  ==> Fatal error occurred, no output PDF file produced!

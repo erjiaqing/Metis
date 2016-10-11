@@ -12,7 +12,6 @@ long long extended_Euclid(long long a, long long b, long long &x, long long &y) 
 		return tmp;
 	}
 }
-
 long long China_Remainder(long long a[], long long b[], int n, long long &cir) { //a[]存放两两互质的除数  b[]存放余数
 	long long x, y, ans;
 	ans = 0; cir = 1;
@@ -24,10 +23,6 @@ long long China_Remainder(long long a[], long long b[], int n, long long &cir) {
 	}
 	return (cir + ans % cir) % cir;
 }
-
-//--------------------------------------------------------
-
-
 bool merge(long long &a1, long long &b1, long long a2, long long b2) { //num = b1(mod a1), num = b2(mod a2)
 	long long x, y;
 	long long d = extended_Euclid(a1, a2, x, y);
@@ -39,7 +34,6 @@ bool merge(long long &a1, long long &b1, long long a2, long long b2) { //num = b
 	a1 *= a2 / d;
 	return true; 
 }
-
 long long China_Remainder2(long long a[], long long b[], int n) { //a[]存放除数(不一定两两互质)  b[]存放余数
 	long long x, y, ans, cir;
 	cir = a[1]; ans = b[1];

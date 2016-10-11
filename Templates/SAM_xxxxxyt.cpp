@@ -1,13 +1,5 @@
-#include <cstring>
-#include <cstdio>
-#include <iostream>
-#include <algorithm>
-using namespace std;
-
 const int maxn = 351000;
-
 struct sam{
-	
 	int tot, lst;
 	struct node{
 		int indx[26], fa, lnth, rts;
@@ -17,7 +9,6 @@ struct sam{
 			memset(indx, -1, sizeof indx);
 		}
 	}nd[maxn];
-	
 	void init(){
 		tot = lst = 0;
 		nd[tot].init();
@@ -26,7 +17,6 @@ struct sam{
 		nd[++tot].init();
 		return tot;
 	}
-	
 	void insert(char ch){
 		int c = ch - 'a';
 		int newp = newnode(), p = lst;
@@ -54,16 +44,12 @@ struct sam{
 	}
 	
 }dict;
-
 bool cmp(int i, int j){
 	return dict.nd[i].lnth > dict.nd[j].lnth;
 }
-
 int n, ans[maxn], rk[maxn];
 char str[maxn];
-
 void work(){
-	
 	dict.init();
 	n = strlen(str);
 	for(int i = 0; i < n; ++i) dict.insert(str[i]);
@@ -78,9 +64,4 @@ void work(){
 	}
 	for(int i = n; i >= 1; --i) ans[i-1] = max(ans[i-1], ans[i]);
 	for(int i = 1; i <= n; ++i) printf("%d\n", ans[i]);
-}
-
-int main(){
-	while(~scanf("%s", str)) work();
-	return 0;
 }

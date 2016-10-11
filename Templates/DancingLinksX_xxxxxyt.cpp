@@ -1,19 +1,11 @@
-// 精确覆盖
 // HUST 1017
 // 给定一个 n 行 m 列的 0/1 矩阵，选择某些行使得每一列都恰有一个 1
-
-#include <bits/stdc++.h>
-using namespace std;
-
 const int MAXN = 1e3 + 5;
 const int MAXM = MAXN * MAXN;
 const int INF = 1e9;
-
 int ans;
 int chosen[MAXM];
-
 struct DancingLinks{
-	
 	int row, col, tot;
 	int up[MAXM], dn[MAXM], lf[MAXM], rg[MAXM];
 	int hd[MAXM], sz[MAXM];
@@ -90,11 +82,8 @@ struct DancingLinks{
 	}
 };
 DancingLinks dlx;
-
 int n, m;
-
 void work(){
-	
 	dlx.init(n, m);
 	for(int i = 1; i <= n; ++i){
 		int k, j;
@@ -106,22 +95,12 @@ void work(){
 	}
 	if(!dlx.dance(0)) puts("NO");
 }
-
-int main(){
-
-	while(scanf("%d%d", &n, &m) == 2) work();
-
-	return 0;
-}
-
 // 重复覆盖
 // 给定一个 n 行 m 列的 0/1 矩阵，选择某些行使得每一列至少有一个 1
 struct DancingLinks{
-	
 	int row, col, tot;
 	int up[MAXM], dn[MAXM], lf[MAXM], rg[MAXM];
 	int head[MAXM], sz[MAXM];
-	
 	void init(int _n, int _m){
 		row = _n, col = _m;
 		for(int i = 0; i <= col; ++i){
@@ -135,7 +114,6 @@ struct DancingLinks{
 		tot = col;
 		for(int i = 1; i <= row; ++i) head[i] = -1;
 	}
-	
 	void lnk(int r, int c){
 		++tot;
 		++sz[c];

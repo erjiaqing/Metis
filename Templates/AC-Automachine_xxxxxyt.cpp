@@ -1,12 +1,8 @@
 struct trie{
-
     int size, indx[maxs][26], word[maxs], fail[maxs];
     bool jump[maxs];
-
     int idx(char ff){return ff - 'a';}
-
     void insert(char s[]){
-
         int u = 0;
         for(int i = 0; s[i]; ++i){
             int k = idx(s[i]);
@@ -16,13 +12,10 @@ struct trie{
         word[u] = 1;
         jump[u] = true;
     }
-
     void get_fail(){
-
         queue<int> que;
         int head = 0, tail = 0;
         que.push(0);
-
         while(!que.empty()){
             int u = que.front();
             que.pop();
@@ -38,9 +31,7 @@ struct trie{
             }
         }
     }
-
     int query(char s[]){
-
         int rtn = 0, p = 0;
         int flag[maxs];
         memcpy(flag, word, sizeof flag);
