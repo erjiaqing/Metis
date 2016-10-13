@@ -1,5 +1,7 @@
 // POJ 1741
-// 询问一棵树中有多少对点距离不超过 k
+/*询问树上有多少对pair距离不超过k
+ 每次找重心 经过一些容斥
+ 求经过重心与不经过重心pair数*/
 typedef pair<int, int> pii;
 const int maxn = 1e4 + 5;
 vector<pii> mp[maxn];
