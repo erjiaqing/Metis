@@ -1,9 +1,3 @@
-double dot(point a, point b){
-	return a.x * b.x + a.y * b.y;
-}
-double det(point a, point b){
-	return a.x * b.y - a.y * b.x;
-}
 double area2(point pa, point pb){
 	if(pa.len() < pb.len()) swap(pa, pb);
 	if(pb.len() < EPS) return 0;
@@ -35,21 +29,9 @@ double area(point a, point b, point c){
 	S += area2(oc, oa) * sign(det(oc, oa));
 	return S;
 }
-
 void work(){
-	
-	k = k * k;
 	for(int i = 1; i <= n; ++i) scanf("%lf%lf", &p[i].x, &p[i].y);
-	scanf("%lf%lf", &_a.x, &_a.y);
-	scanf("%lf%lf", &_b.x, &_b.y);
-	o.x = (k * _a.x - _b.x) / (k - 1);
-	o.y = (k * _a.y - _b.y) / (k - 1);
-	r = ((k * (sqr(_a.x - _b.x) + sqr(_a.y - _b.y))) / sqr(1 - k));
-	if(sign(r) <= 0){
-		puts("0.0000000000");
-		return;
-	}
-	r = sqrt(r);
+	scanf("%lf%lf%lf", &o.x, &o.y, &r);
 	double ans = 0, tot = 0;
 	for(int i = 2; i <= n - 1; ++i){
 		int j = i + 1;
