@@ -1,13 +1,5 @@
 const double pi=acos(-1);
-const double eps=1e-12;
-double sqr(double x){
-	return x*x;
-}
-double sign(double x){
-	return (x>eps)-(x<-eps);
-}
-double ans[2333];
-int n;
+double ans[2333]; int n;
 struct P{
 	double x,y;
 	P(){}
@@ -46,8 +38,7 @@ struct circle{
 	double r;P o;
 	circle(){}
 	void scan(){
-		o.scan();
-		//scanf("%lf",&r);
+		o.scan();//scanf("%lf",&r);
 	}
 }cir[2333];
 struct arc{
