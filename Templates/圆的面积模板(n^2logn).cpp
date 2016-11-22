@@ -109,7 +109,7 @@ int main()
 				}else if(d+eps<sqr(cir[j].r+cir[i].r)){
 					double lambda=0.5*(1+(sqr(cir[i].r)-sqr(cir[j].r))/d);
 					P cp=cir[i].o+lambda*(cir[j].o-cir[i].o);
-					P nor((cir[j].o-cir[i].o).rev().zoom(sqrt(sqr(cir[i].r)-(cp-cir[i].o).sqrlen())));
+                    P nor((cir[j].o-cir[i].o).rev().zoom(sqrt(sqr(cir[i].r)-(cp-cir[i].o).sqrlen())));
 					P frm(cp+nor);
 					P to(cp-nor);
 					psh(atan2(frm-cir[i].o),frm,atan2(to-cir[i].o),to);
