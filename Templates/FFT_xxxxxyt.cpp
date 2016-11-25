@@ -1,37 +1,7 @@
+// 复数 递归
 const int maxn = 1e6 + 5;
 typedef complex<long double> cpb;
 int N;cpb a[maxn], aa[maxn], b[maxn], bb[maxn], c[maxn], cc[maxn];
-void fft(cpb x[], cpb xx[], int n, int step, int type){
-	if(n == 1){
-		xx[0] = x[0];
-		return;
-	}
-	int m = n >> 1;
-	fft(x, xx, m, step << 1, type);
-	fft(x + step, xx + m, m, step << 1, type);
-	cpb w = exp(cpb(0., PI * type / m));
-	cpb t = 1.;
-	for(int i = 0; i < m; ++i){
-		cpb t0 = xx[i];
-		cpb t1 = xx[i+m];
-		xx[i] = t0 + t * t1;
-		xx[i+m] = t0 - t * t1;
-		t *= w;
-	}
-}
-int main(){
-	int n, x;
-	scanf("%d", &n);
-	for(int i = 0; i < n; ++i) scanf("%d", &x), a[i] = cpb(x, 0.);
-	for(int i = 0; i < n; ++i) scanf("%d", &x), b[i] = cpb(x, 0.);
-	for(N = 1; N < n + n; N <<= 1);
-	fft(a, aa, N, 1, 1);
-	fft(b, bb, N, 1, 1);
-	for(int i = 0; i < N; ++i) cc[i] = aa[i] * bb[i];
-	fft(cc, c, N, 1, -1);
-	for(int i = 0; i < N; ++i) c[i] = c[i].real() / N;
-}
-// 复数 递归
 typedef complex<double> cpb;
 void fft(cpb x[], cpb xx[], int n, int step, int type){ // step 表示步长 代码后面举个例子说明一下好了
     if(n == 1){xx[0] = x[0]; return;}
@@ -54,7 +24,7 @@ int main(){
     b[].get();
     A = a.length();
     B = b.length();
-    for(N = 1; N < A + B; N <<= 1);
+f    for(N = 1; N < A + B; N <<= 1);
     fft(a, aa, N, 1, 1);
     fft(b, bb, N, 1, 1);
     for(int i = 0; i < N; ++i) cc[i] = aa[i] * bb[i];
