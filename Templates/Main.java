@@ -1,16 +1,18 @@
+//javac Main.java
+//java Main
 import java.io.*;
 import java.util.*;
 import java.math.*;
 public class Main{
 	public static BigInteger n,m;
 	public static Map<BigInteger,Integer> M = new HashMap();
-//	public static BigInteger dfs(BigInteger x){
-//		if(M.get(x)!=null)return M.get(x);
-//		if(x.mod(BigInteger.valueOf(2))==1){
-//		}else{
-//		}
-//		M.put();		
-//	}
+	public static BigInteger dfs(BigInteger x){
+		if(M.get(x)!=null)return M.get(x);
+		if(x.mod(BigInteger.valueOf(2))==1){
+		}else{
+		}
+		M.put();
+	}
     static int NNN = 1000000;
     static BigInteger N;
     static BigInteger M;
@@ -21,7 +23,8 @@ public class Main{
     static BigInteger[] num_step = new BigInteger[NNN];
 	public static void main(String []arg){
 		Scanner cin = new Scanner(System.in);
-		while(true){
+        while(cin.hasNext())
+		{
         int p = cin.nextInt();
         n = cin.nextBigInteger();
         m = cin.nextBigInteger();
@@ -78,4 +81,4 @@ public class Main{
 还有这样的hashset用法:
 static Collection c = new HashSet();
 if(c.contains(p) == false)
-
+static int[] a = new int[MAXN];
