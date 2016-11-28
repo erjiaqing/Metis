@@ -25,19 +25,15 @@ struct Splay{
 	void splay(int i){
 		while(nd[i].fa){
 			int j = nd[i].fa;
-			if(nd[j].fa == 0){
-				if(i == nd[j].ls) zig(i); else zag(i);
-			}else{
-				int k = nd[j].fa;
+			if(nd[j].fa == 0){if(i == nd[j].ls) zig(i); else zag(i);}
+			else{int k = nd[j].fa;
 				if(j == nd[k].ls){
 					if(i == nd[j].ls) zig(j), zig(i);
 					else zag(i), zig(i);
 				}else{
 					if(i == nd[j].rs) zag(j), zag(i);
 					else zig(i), zag(i);
-				}
-			}
-		}
+				}}}
 		rt = i;
 	}
 	int insert(int stat){
