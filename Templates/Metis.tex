@@ -92,7 +92,7 @@
 	
 	\begin{spacing}{0.3}	
 	%\columnseprule=0.5pt
-	\begin{multicols}{2}
+	\begin{multicols}{3}
 	
 	\tableofcontents
 	
@@ -695,33 +695,6 @@ bool check(int b1, int b2) {
     return 1;
 }
 \end{lstlisting}
-\subsubsection{三角形的内心}
-\begin{lstlisting}
-point incenter(const point &a, const point &b, const point &c) {
-	double p = (a - b).length() + (b - c).length() + (c - a).length();
-	return (a * (b - c).length() + b * (c - a).length() + c * (a - b).length()) / p;
-}
-\end{lstlisting}
-	
-\subsubsection{三角形的外心}
-\begin{lstlisting}
-point circumcenter(const point &a, const point &b, const point &c) {
-	point p = b - a, q = c - a, s(dot(p, p) / 2, dot(q, q) / 2); double d = det(p, q);
-	return a + point(det(s, point(p.y, q.y)), det(point(p.x, q.x), s)) / d;
-}
-\end{lstlisting}
-
-\subsubsection{三角形的垂心}
-\begin{lstlisting}
-point orthocenter(const point &a, const point &b, const point &c) {
-	return a + b + c - circumcenter(a, b, c) * 2.0;
-}
-\end{lstlisting}
-\subsubsection{费马点}
-    定义：到顶点距离之和最短的点\\
-    三角形~~~三内角均小于120°：对三角形三边的张角均为120°的点；p一内角大于等于120°：此钝角的顶点\\
-    四边形~~~凸四边形：对角线中点；凹四边形：凹点\\
-
 \subsection{三维操作}
 \begin{lstlisting}[language=C++]
 //平面法向量
@@ -881,8 +854,6 @@ int calc(int L, int H, int W, int x1, int y1, int z1, int x2, int y2, int z2) {
 	\subsection{圆交面积及重心}
 		时间复杂度: $n^2logn$
 		\lstinputlisting{circles-intersections.cpp}
-		
-	
 	
 		
 	\section{数据结构}
@@ -894,12 +865,101 @@ int calc(int L, int H, int W, int x1, int y1, int z1, int x2, int y2, int z2) {
 		\lstinputlisting{主席树_xxxxxyt.cpp}
 		\subsection{树链剖分 by cjy}
 		\lstinputlisting{树链剖分_cjy.cpp}
-		\subsection{树链剖分 by xyt}
-		\lstinputlisting{树链剖分_xxxxxyt.cpp}
 		\subsection{点分治}
 		\lstinputlisting{点分治_xxxxxyt.cpp}
 		\subsection{LCT}
-		\lstinputlisting{LCT_xxxxxyt.cpp}
+		\begin{lstlisting}[language=C++]
+struct LinkCutTree {
+    struct Node {
+        int value, max, inc, father, child[2];
+        bool rev;
+        Node() {}
+    }node[N];
+    const Node EMPTY;
+    void clear() {std::fill(node + 1, node + n + 1, EMPTY);}
+    void __inc(int x, int delta) {
+        if (x == 0) return;node[x].inc += delta;
+        node[x].value += delta;node[x].max += delta;
+    }
+    void update(int x) {
+        if (x == 0) return;
+        if (node[x].inc != 0) {
+            __inc(node[x].child[0], node[x].inc);
+            __inc(node[x].child[1], node[x].inc);
+            node[x].inc = 0;
+        }
+        if (node[x].rev == true) {
+            std::swap(node[x].child[0], node[x].child[1]);
+            node[node[x].child[0]].rev ^= true;
+            node[node[x].child[1]].rev ^= true;
+            node[x].rev = false;
+        }
+    }
+    void renew(int x) {
+        update(x); update(node[x].child[0]); update(node[x].child[1]);
+        node[x].max = std::max(node[x].value, std::max(node[node[x].child[0]].max, node[node[x].child[1]].max));
+    }
+    void change_value(int x, int value) {
+        splay(x); node[x].value = node[x].max = value; renew(x);
+    }
+    bool is_splay_father(int y, int x) {
+        return (y != 0) && (node[y].child[0] == x || node[y].child[1] == x);
+    }
+    void rotate(int x, int c) {
+        int y = node[x].father;
+        node[y].child[c ^ 1] = node[x].child[c];
+        if (node[x].child[c] != 0) node[node[x].child[c]].father = y;
+        node[x].father = node[y].father;
+        if (node[node[y].father].child[0] == y) node[node[x].father].child[0] = x;
+        else if(node[node[y].father].child[1]==py)node[node[x].father].child[1] = x;
+        node[x].child[c] = y; node[y].father = x; renew(y);
+    }
+    void splay(int x) {
+        if (x == 0) return; update(x);
+        while (is_splay_father(node[x].father, x)) {
+            int y = node[x].father, z = node[y].father;
+            if (is_splay_father(z, y)) {
+                update(z);update(y);update(x);
+                int c = (y == node[z].child[0]);
+                if (x == node[y].child[c]) rotate(x, c ^ 1);rotate(x, c);
+                else rotate(y, c);rotate(x, c);
+            } else {
+                update(y);update(x); rotate(x, x == node[y].child[0]); break;
+            }
+        }
+        renew(x);
+    }
+    int access(int x) {
+        int y = 0;
+        for ( ; x != 0; x = node[x].father) {
+            splay(x); node[x].child[1] = y; renew(y = x);
+        }
+        return y;
+    }
+    int get_root(int x) {
+        x = access(x);
+        while (true) {
+            update(x); if (node[x].child[0] == 0) break; x = node[x].child[0];
+        }
+        return x;
+    }
+    void make_root(int x) {node[access(x)].rev ^= true;splay(x);}
+    void link(int x, int y) {
+        make_root(x);node[x].father = y; access(x);
+    }
+    void cut(int x, int y) {
+        make_root(x); access(y); splay(y);
+        node[node[y].child[0]].father = 0; node[y].child[0] = 0;
+        renew(y);
+    }
+    void modify(int x, int y, int delta) {
+        make_root(x); access(y); splay(y);  __inc(y, delta);
+    }
+    int get_max(int x, int y) {
+        make_root(x); access(y); splay(y);p return node[y].max;
+    }
+};
+\end{lstlisting}
 
 	\section{字符串}
 		\subsection{串最小表示}
@@ -926,10 +986,10 @@ int calc(int L, int H, int W, int x1, int y1, int z1, int x2, int y2, int z2) {
 2. 最大闭合权子图\\
   s 向正权点连边，负权点向 t 连边，边权为点权绝对值，再按原图连边，边权为INF\\
 3. 最大密度子图：max{$\frac{|E'|}{|V'|}$}\\
-  （1）猜测答案 g 若最大流大于 EPS 则 g 合法\\
+  （1）猜测答案 g 若最大流大于 EPS 则 g 合法
   （2）s -> v: INF, u -> t : INF + g - deg[u], u -> v : 1.00\\
 4. 2-SAT\\
-  如果Ai与Aj不相容，那么如果选择了Ai，必须选择Aj' ；同样，如果选择了Aj，就必须选择Ai'：Ai => Aj'，Aj => Ai'（这样的两条边对称）\\
+  如果Ai与Aj不相容，那么如果选择了Ai，必须选择Aj' ；同样，如果选择了Aj，就必须选择Ai'：Ai => Aj'，Aj => Ai'（这样的两条边对称）
   输出方案：  求图的极大强连通子图 => 缩点并根据原图关系构造一个DAG => 拓扑排 => 自底（被指向的点）向上进行选择删除
 (选择当前$id[k][t]$及其后代结点并删除$id[k][t^1]$及其前代结点)\\
 5. 最小割\\
@@ -963,8 +1023,8 @@ int calc(int L, int H, int W, int x1, int y1, int z1, int x2, int y2, int z2) {
 		\lstinputlisting{KM-N^3.cpp}
 		\subsection{网络流}
 		\lstinputlisting{网络流_xxxxxyt.cpp}
-		\subsection{有gap优化的isap}
-		\lstinputlisting{有gap优化的isap.cpp}
+		%\subsection{有gap优化的isap}
+		%\lstinputlisting{有gap优化的isap.cpp}
 		\subsection{ZKW费用流}
 		使用条件：费用非负
 		\lstinputlisting{ZKW费用流.cpp}
@@ -1105,8 +1165,6 @@ ORE性质：$\forall x,y \in V \wedge (x,y) \notin E \ \ s.t. \ \ deg_x+deg_y \g
 \lstinputlisting{哈密尔顿.cpp}
 \subsection{度限制生成树}
 \lstinputlisting{度限制生成树.cpp}
-
-
 		
 	\section{数学}
 		\subsection{FFT}
@@ -1115,8 +1173,6 @@ ORE性质：$\forall x,y \in V \wedge (x,y) \notin E \ \ s.t. \ \ deg_x+deg_y \g
 		\lstinputlisting{NTT.cpp}
 		\subsection{中国剩余定理(含exgcd)}
 		\lstinputlisting{中国剩余定理.cpp}
-		
-
 
 	\section{数值}
 	\subsection{行列式取模}
@@ -1263,9 +1319,6 @@ int main() {
 	\subsection{直线下整点个数}
 	求$\displaystyle\sum_{i=0}^{n-1} \lfloor\frac{a+bi}{m}\rfloor$.
 	\lstinputlisting{直线下整点个数.cpp}
-	
-	
-	
 	
 	\section{其他}
 	\subsection{某年某月某日是星期几}
@@ -1824,17 +1877,19 @@ $x ^ 3 + px + q = 0$,
 \end{itemize}
 \end{multicols}
 
-\begin{multicols}{4}
-%\columnseprule=0.5pt
-\newcommand{\ud}{\mathrm{d}}
-\subsection{积分表}
-\input{积分表.tex}
-\end{multicols}
 
-\subsection{组合恒等式}
-\input{macros.tex}
-\input{ids1}
-\input{ids2}
-\input{ids3}
+%\begin{multicols}{4}
+%%\columnseprule=0.5pt
+%\newcommand{\ud}{\mathrm{d}}
+%\subsection{积分表}
+%\input{积分表.tex}
+%\end{multicols}
+
+
+%\subsection{组合恒等式}
+%\input{macros.tex}
+%\input{ids1}
+%\input{ids2}
+%\input{ids3}
 	\end{spacing}
 \end{document}

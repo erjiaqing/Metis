@@ -20,17 +20,6 @@ BigInteger	shiftRight(int n)
 String toString()
 String toString(int radix)
 static BigInteger valueOf(long val)
-
-static int	ROUND_CEILING
-static int	ROUND_DOWN
-static int	ROUND_FLOOR
-static int	ROUND_HALF_DOWN
-static int	ROUND_HALF_EVEN
-static int	ROUND_HALF_UP
-static int	ROUND_UNNECESSARY
-static int	ROUND_UP
-
-
 BigDecimal(BigInteger val)
 BigDecimal(double / int / String val)
 BigDecimal divide(BigDecimal divisor, int roundingMode)
