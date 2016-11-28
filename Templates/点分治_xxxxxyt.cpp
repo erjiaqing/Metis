@@ -2,22 +2,16 @@
 /*询问树上有多少对pair距离不超过k
  每次找重心 经过一些容斥
  求经过重心与不经过重心pair数*/
-typedef pair<int, int> pii;
 const int maxn = 1e4 + 5;
-vector<pii> mp[maxn];
-void add_edge(int u, int v, int d){
-	mp[u].push_back(make_pair(v, d));
-	mp[v].push_back(make_pair(u, d));
-}
-int n, ans, limit, gra, min_maxx;
-int sz[maxn];
+vector<pii> edge[maxn];
+void add_edge(int u, int v, int d){}
+int n, ans, limit, gra, min_maxx, sz[maxn];
 bool flag[maxn];
 vector<int> vec;
 void get_gra(int u, int fa, int nowsize){
-	sz[u] = 1;
-	int maxx = 0;
-	for(int l = 0; l < mp[u].size(); ++l){
-		int v = mp[u][l].first;
+	sz[u] = 1; int maxx = 0;
+	for(int l = 0; l < edge[u].size(); ++l){
+		int v = edge[u][l].first;
 		if(v == fa || flag[v]) continue;
 		get_gra(v, u, nowsize);
 		sz[u] += sz[v];
@@ -28,15 +22,14 @@ void get_gra(int u, int fa, int nowsize){
 }
 void get_dist(int u, int fa, int d){
 	vec.push_back(d);
-	for(int l = 0; l < mp[u].size(); ++l){
-		int v = mp[u][l].first;
+	for(int l = 0; l < edge[u].size(); ++l){
+		int v = edge[u][l].first;
 		if(v == fa || flag[v]) continue;
-		get_dist(v, u, d + mp[u][l].second);
+		get_dist(v, u, d + edge[u][l].second);
 	}
 }
 int calc(int u, int delta){
-	int rtn = 0;
-	vec.clear();
+	int rtn = 0; vec.clear();
 	get_dist(u, 0, 0);
 	sort(vec.begin(), vec.end());
 	int m = vec.size();
@@ -51,34 +44,18 @@ void devide(int u, int nowsize){
 	get_gra(u, 0, nowsize);
 	flag[u=gra] = true;
 	ans += calc(u, 0); // 加上经过重心的答案
-	for(int l = 0; l < mp[u].size(); ++l){ // 容斥掉同一棵子树中经过重心的答案
-		int v = mp[u][l].first;
+	for(int l = 0; l < edge[u].size(); ++l){ // 容斥
+		int v = edge[u][l].first;
 		if(flag[v]) continue;
-		ans -= calc(v, mp[u][l].second * 2);
+		ans -= calc(v, edge[u][l].second * 2);
 		devide(v, sz[v] > sz[u] ? nowsize - sz[u] : sz[v]);
 	}
 }
-void init(){
-	ans = 0;
-	for(int i = 1; i <= n; ++i) mp[i].clear();
-	memset(flag, 0, sizeof flag);
-}
 void work(){
-	
-	init();
-	for(int i = 1; i < n; ++i){
-		int u, v, d;
-		scanf("%d%d%d", &u, &v, &d);
+	memset(flag, 0, sizeof flag);
+	for(int i = 1, u, v, d; i < n; ++i)
+		scanf("%d%d%d", &u, &v, &d),
 		add_edge(u, v, d);
-	}
 	devide(1, n);
 	printf("%d\n", ans);
-}
-int main(){
-	while(true){
-		scanf("%d%d", &n, &limit);
-		if(n == 0) break;
-		work();
-	}
-	return 0;
 }
