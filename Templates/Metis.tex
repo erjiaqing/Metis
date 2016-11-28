@@ -100,7 +100,7 @@
 \begin{lstlisting}[language=C++]
 #pragma comment(linker, “/STACK:16777216”)//大小随便定
 \end{lstlisting}
-\subsection{运行命令}
+\subsubsection{运行命令}
 \begin{lstlisting}[language=C++]
 g++ A.cpp -o A -Wall -O2
 \end{lstlisting}
@@ -867,116 +867,24 @@ int calc(int L, int H, int W, int x1, int y1, int z1, int x2, int y2, int z2) {
   + (\overrightarrow{b} \cdot \overrightarrow{c}) |a|
 }$.
 	
-	\section{计算几何}
-	\subsection{半平面交$n^2$}
-	\lstinputlisting{半平面交n^2.cpp}
 	
-	\subsection{反演+直线类+圆类}
-	反演：$P->P' s.t. |OP|*|OP'|=r^2=K$，$O$为反演中心，$K$为反演幂，$r$为反演半径
-	性质1：过$O$的直线反演为过$O$的直线 性质2：过$O$的圆反演为不过O的直线
-	性质3：不过$O$的圆反演为不过$O$的圆 性质4：不过$O$的直线反演位过O的圆
-	其中2与4互逆
-	\lstinputlisting{反演+直线类+圆类.cpp}
-	
-	\subsection{三维凸包}
-		\lstinputlisting{三维凸包.cpp}
-	\subsection{三维变换}
+	\subsection{向量旋转}
+		\lstinputlisting{向量旋转.cpp}
+		\subsection{计算几何杂}
+		\lstinputlisting{计算几何杂.cpp}
+		\subsection{三维变换}
 		\lstinputlisting{三维变换.cpp}
 	\subsection{三维凸包的重心(输入为凸包)}
 		\lstinputlisting{三维凸包的重心(输入为凸包).cpp}
 	\subsection{点在多边形内判断}
 		\lstinputlisting{点在多边形内判断.cpp}
 	\subsection{圆交面积及重心}
+		时间复杂度: $n^2logn$
 		\lstinputlisting{circles-intersections.cpp}
-	\subsection{半平面交+点类}
-		\lstinputlisting{半平面交+点类.cpp}
-	\subsection{动态凸包}
-		\lstinputlisting{动态凸包.cpp}
-	\subsection{farmland}
-		\lstinputlisting{farmland.cpp}
-	\subsection{三角形的内心}
-		\lstinputlisting{三角形的内心.cpp}
-	\subsection{三角形的外心}
-		\lstinputlisting{三角形的外心.cpp}
-	\subsection{三角形的垂心}
-		\lstinputlisting{三角形的垂心.cpp}
-	
-	
-	
-	\section{数学}
-		\subsection{FFT}
-		\lstinputlisting{FFT_xxxxxyt.cpp}
-		\subsection{NTT}
-		\lstinputlisting{NTT.cpp}
-		\subsection{高斯消元算行列式}
-		\lstinputlisting{高斯消元算行列式.cpp}
-		\subsection{高斯消元 by pivot}
-		\lstinputlisting{高斯消元_pivot.cpp}
-		\subsection{中国剩余定理}
-		\lstinputlisting{中国剩余定理.cpp}
 		
-		\subsection{中国剩余定理}
-\begin{lstlisting}
-namespace chinese_remainder_theorem {
-	inline bool crt(int n, long long r[], long long m[], long long &remainder, long long &modular) {
-		remainder = modular = 1;
-		for (int i = 1; i <= n; ++i) {
-			long long x, y;
-			euclid(modular, m[i], x, y);
-			long long divisor = gcd(modular, m[i]);
-			if ((r[i] - remainder) % divisor) {
-				return false;
-			}
-			x *= (r[i] - remainder) / divisopr;
-			remainder += modular * x;
-			modular *= m[i] / divisor;
-			((remainder %= modular) += modular) %= modular;
-		}
-		return true;
-	}
-}
-\end{lstlisting}
-		
-		\subsection{Polya寻找等价类}
-		\lstinputlisting{Polya寻找等价类.cpp}
-		\subsection{拉格朗日插值}
-		\includegraphics{拉格朗日插值1.jpg}\\
-		\includegraphics{拉格朗日插值2.jpg} 
-		\subsection{求行列式的值}
-			行列式有很多性质，第$a$行$*k$加到第$b$行上去，行列式的值不变。\\
-			三角行列式的值等于对角线元素之积。\\
-			第$a$行与第$b$行互换，行列式的值取反。\\
-			常数＊行列式，可以把常数乘到某一行里去。\\
-			注意：全是整数并取模的话当然需要求逆元
-		\subsection{莫比乌斯}
-		$$\sum_{d|n}\mu(d)=[n==1]$$ 
-		$$ \mu(m)=\left\{
-		\begin{array}{rcl}
-		(-1)^r      &      & {m=p_1p_2...p_r}\\
-		0  &      & {p^2|n}
-		\end{array} \right.
-		$$
-		某个Mobius推导：\\
-		\includegraphics{Mobius.png}
-		$$\mu(n) = \begin{cases}
-	1 & \text{若}n=1\\
-	(-1)^k & \text{若}n\text{无平方数因子，且}n = p_1p_2\dots p_k\\
-	0 & \text{若}n\text{有大于}1\text{的平方数因数}
-\end{cases}$$
-$$\sum_{d|n}{\mu(d)} = \begin{cases}
-	1 & \text{若}n=1\\
-	0 & \text{其他情况}
-\end{cases}$$
-$$g(n) = \sum_{d|n}{f(d)} \Leftrightarrow f(n) = \sum_{d|n}{\mu(d)g(\frac{n}{d})}
-,       g(x) = \sum_{n=1}^{[x]}f(\frac{x}{n}) \Leftrightarrow f(x) = \sum_{n=1}^{[x]}{\mu(n)g(\frac{x}{n})}$$
-
-		\subsection{Cayley公式与森林计数}
-		Cayley公式是说，一个完全图$K_n$有$n^{n-2}$棵生成树，换句话说$n$个节点的带标号的无根树有$n^{n-2}$个。
-
-令$g[i]$表示点数为$i$的森林个数，$f[i]$表示点数为$i$的生成树计数$（f[i]=i^{i-2})$
-那么便有$$g[i]=\sum (g[i-j] \times cnr[i-1][j-1] \times f[j])$$
-$$g[i]=\sum \frac{g[i-j] \times fac[i-1] \times f[j]}{fac[j-1] \times fac[i-j]}=fac[i-1] \times \sum (\frac{f[j]}{fac[j-1]} \times \frac{g[i-j]}{fac[i-j]})$$
 	
+	
+		
 	\section{数据结构}
 		\subsection{KD Tree}
 		\lstinputlisting{KD-tree.cpp}
@@ -992,27 +900,13 @@ $$g[i]=\sum \frac{g[i-j] \times fac[i-1] \times f[j]}{fac[j-1] \times fac[i-j]}=
 		\lstinputlisting{点分治_xxxxxyt.cpp}
 		\subsection{LCT}
 		\lstinputlisting{LCT_xxxxxyt.cpp}
-	\section{计算几何}
-		\subsection{向量旋转}
-		\lstinputlisting{向量旋转.cpp}
-		\subsection{至少被i个圆覆盖的面积}
-		时间复杂度: $n^2logn$
-		\lstinputlisting{圆的面积.cpp}
-		\subsection{计算几何杂}
-		\lstinputlisting{计算几何杂.cpp}
-		\subsection{三维变换}
-		\lstinputlisting{三维变换.cpp}
+
 	\section{字符串}
-		\subsection{ex-KMP}
-		返回结果：$next_i = lcp(text, text_{i \dots n-1})$
-		\lstinputlisting{exkmp.cpp}
 		\subsection{串最小表示}
 		\lstinputlisting{串最小表示.cpp}
 		\subsection{Manacher}
 		\lstinputlisting{manacher_cjy.cpp}
-		\subsection{AC-Automachine by cjy}
-		\lstinputlisting{AC-Automachine_cjy.cpp}
-		\subsection{AC-Automachine by xyt}
+		\subsection{AC自动机}
 		\lstinputlisting{AC-Automachine_xxxxxyt.cpp}
 		\subsection{后缀数组}
 		\lstinputlisting{后缀数组_cjy.cpp}
@@ -1020,7 +914,7 @@ $$g[i]=\sum \frac{g[i-j] \times fac[i-1] \times f[j]}{fac[j-1] \times fac[i-j]}=
 		\lstinputlisting{扩展KMP.cpp}
 		\subsection{回文树}
 		\lstinputlisting{Palindromic_Tree.cpp}
-		\subsection{SAM by lss}
+		\subsection{后缀自动机}
 		\lstinputlisting{SAM_lss.cpp}
 	\section{图论}
 		\subsection{图论相关}
@@ -1035,7 +929,6 @@ $$g[i]=\sum \frac{g[i-j] \times fac[i-1] \times f[j]}{fac[j-1] \times fac[i-j]}=
   （1）猜测答案 g 若最大流大于 EPS 则 g 合法\\
   （2）s -> v: INF, u -> t : INF + g - deg[u], u -> v : 1.00\\
 4. 2-SAT\\
-  %利用对称性建图，若 u 与 u' 在同一强连通分量中，则无解，若有解输出方案，拓扑排序后自底向上（从 ind = 0 到 otd = 0）选择删除。
   如果Ai与Aj不相容，那么如果选择了Ai，必须选择Aj' ；同样，如果选择了Aj，就必须选择Ai'：Ai => Aj'，Aj => Ai'（这样的两条边对称）\\
   输出方案：  求图的极大强连通子图 => 缩点并根据原图关系构造一个DAG => 拓扑排 => 自底（被指向的点）向上进行选择删除
 (选择当前$id[k][t]$及其后代结点并删除$id[k][t^1]$及其前代结点)\\
@@ -1062,18 +955,17 @@ $$g[i]=\sum \frac{g[i-j] \times fac[i-1] \times f[j]}{fac[j-1] \times fac[i-j]}=
     	}
 	}
 \end{lstlisting}
-		\subsection{SteinerTree}
 		  \subsection{斯坦纳树(网格图连接一些确定点的最小生成树)}
 		\lstinputlisting{SteinerTree_cjy.cpp}
+		\subsection{Tarjan}
+		\lstinputlisting{tarjan.cpp}
 		\subsection{LCA}
 		\lstinputlisting{LCA_xxxxxyt.cpp}
 		\subsection{KM}
 		\lstinputlisting{KM.cpp}
 		\subsection{KM三次方}
 		\lstinputlisting{KM-N^3.cpp}
-		\subsection{网络流 by cjy}
-		\lstinputlisting{Dinic_cjy.cpp}
-		\subsection{网络流 by xyt}
+		\subsection{网络流}
 		\lstinputlisting{网络流_xxxxxyt.cpp}
 		\subsection{有gap优化的isap}
 		\lstinputlisting{有gap优化的isap.cpp}
@@ -1082,65 +974,7 @@ $$g[i]=\sum \frac{g[i-j] \times fac[i-1] \times f[j]}{fac[j-1] \times fac[i-j]}=
 		\lstinputlisting{ZKW费用流.cpp}
 		\subsection{最大密度子图}
 		\lstinputlisting{最大密度子图.cpp}
-		\subsection{Tarjan}
-		\lstinputlisting{tarjan.cpp}
-		
-		\subsection{K短路}
-	\subsubsection{可重复}
-	\lstinputlisting{k短路.cpp}
-
-	\subsubsection{不可重复}
-	\lstinputlisting{k短路不可重复.cpp}
-	\subsection{匈牙利}
-	\lstinputlisting{匈牙利.cpp}
-	\subsection{hopcroft-karp}
-	\lstinputlisting{hopcroft.cpp}
-	\subsection{带花树(任意图最大匹配)}
-	\lstinputlisting{带花树.cpp}
-	\subsection{仙人掌图判定}
-	条件是：1.是强连通图；2.每条边在仙人掌图中只属于一个强连通分量。//
-	仙人掌图的三个性质：1.仙人掌dfs图中不能有横向边，简单的理解为每个点只能出现在一个强联通分量中；//
-	2.low[v]<dfn[u],其中u为v的父节点；//
-	3.a[u]+b[u]<2，a[u]为u节点的儿子节点中有a[u]个low值小于u的dfn值，b[u]为u的逆向边条数。//
-	\lstinputlisting{仙人掌判定.cpp}
-	
-	\subsection{无向图最小割}
-\begin{lstlisting}
-//0base，g是图的邻接矩阵，复杂度O(n^3)
-#define typec int // type of res注意具体范围
-const typec inf = 0x3f3f3f3f; // max of res
-const typec maxw = 1000; // maximum edge weight
-typec g[V][V], w[V] ;
-int a[V], v[V], na[V];
-typec mincut(int n){
-	int i, j, pv, zj;
-	typec best = maxw * n * n;
-	for (i = 0; i < n; i++) v[i] = i;
-	while (n > 1) {
-		for (a[v[0]] = 1, i = 1; i < n; i++) {
-			a[v[i]] = 0; na[i - 1] = i;
-			w[i] = g[v[0]][v[i]];
-		}
-		for (pv = v[0], i = 1; i < n; i++ ) {
-			for (zj = -1, j = 1; j < n; j++ )
-				if (!a[v[j]] && (zj < 0 || w[j] > w[zj])) zj = j;
-			a[v[zj]] = 1;
-			if (i == n - 1) {
-				if (best > w[zj]) best = w[zj];
-				for (i=0; i<n; i++) g[v[i]][pv]=g[pv][v[i]]+=g[v[zj]][v[i]];
-				v[zj] = v[--n];
-				break;
-			}
-			pv = v[zj];
-			for (j = 1; j < n; j++) if(!a[v[j]]) w[j] += g[v[zj]][v[j]];
-		}
-	}
-	return best;
-}
-\end{lstlisting}
-\subsection{最小树形图}
-	\lstinputlisting{最小树形图.cpp}
-	\subsection{上下界网络流}
+			\subsection{上下界网络流}
 原图中边流量限制为(a,b)，增加一个新的源点S’，汇点T’，对于每个顶点，\\
 向S’连容量为所有流入它的边的下界和的边，向T’连容量为所有它流出的下界和的边，\\
 T’向S’连容量为无穷大的边，第一次跑S’ 到T’ 的网络流，判断S’流出的边是否满流，\\
@@ -1174,9 +1008,31 @@ $B(u,v)$表示边$(u,v)$流量的下界，$C(u,v)$表示边$(u,v)$流量的上�
 	\subsection{无向图全局最小割}
 	注意事项：处理重边时，应该对边权累加
 	\lstinputlisting{无向图全局最小割.cpp}
+
+		
+		\subsection{K短路}
+	\subsubsection{可重复}
+	\lstinputlisting{k短路.cpp}
+	\subsubsection{不可重复}
+	\lstinputlisting{k短路不可重复.cpp}
+	\subsection{匈牙利}
+	\lstinputlisting{匈牙利.cpp}
+	\subsection{hopcroft-karp}
+	\lstinputlisting{hopcroft.cpp}
+	\subsection{带花树(任意图最大匹配)}
+	\lstinputlisting{带花树.cpp}
+	\subsection{仙人掌图判定}
+	条件是：1.是强连通图；2.每条边在仙人掌图中只属于一个强连通分量。//
+	仙人掌图的三个性质：1.仙人掌dfs图中不能有横向边，简单的理解为每个点只能出现在一个强联通分量中；//
+	2.low[v]<dfn[u],其中u为v的父节点；//
+	3.a[u]+b[u]<2，a[u]为u节点的儿子节点中有a[u]个low值小于u的dfn值，b[u]为u的逆向边条数。//
+	\lstinputlisting{仙人掌判定.cpp}
+
+\subsection{最小树形图}
+	\lstinputlisting{最小树形图.cpp}
 	\subsection{有根树的同构}
 	\lstinputlisting{有根树的同构.cpp}
-	\subsection{弦图性质}
+	\subsection{弦图}
 \begin{itemize}
   % \item 团数 $\le$ 色数
   % \item 最大独立集数 $\le$ 最小团覆盖数
@@ -1191,10 +1047,63 @@ $B(u,v)$表示边$(u,v)$流量的下界，$C(u,v)$表示边$(u,v)$流量的上�
 \item 最大独立集：完美消除序列从前往后能选就选.
 \item 最小团覆盖：设最大独立集为 $\{p_1, p_2, \ldots, p_t\}$, 则 $\{p_1 \cup N(p_1), \ldots, p_t \cup N(p_t) \}$为最小团覆盖.  (最大独立集数 = 最小团覆盖数)
 \end{itemize}
-\subsection{弦图判定}
-\lstinputlisting{弦图的判定.cpp}
-\subsection{弦图求团数}
-\lstinputlisting{弦图求团数.cpp}
+\begin{lstlisting}
+//O(mlogn) 可以做到 O(n+m)
+#define maxn 1005
+#define maxm 2000005
+int head[maxn],heap[maxn],l[maxn],hz,Link[maxn];
+int vtx[maxm],next[maxm],tot,n,m,A[maxn];
+bool map[maxn][maxn];
+inline void Add(int a,int b){vtx[tot]=b; next[tot]=head[a]; head[a]=tot++;}
+inline void sink(int x){
+	int mid=x*2;
+	while (mid<=hz) {
+		if (mid+1<=hz && l[heap[mid+1]]>l[heap[mid]]) ++mid;
+		if (l[heap[x]]<l[heap[mid]]) {
+			swap(Link[heap[x]],Link[heap[mid]]);swap(heap[x],heap[mid]);
+		}else break;
+		x=mid;mid=x*2;
+	}
+}
+inline void up(int x) {
+	for (int mid=x/2;mid>0;mid=x/2) {
+		if (l[heap[mid]]<l[heap[x]]) {
+			swap(Link[heap[x]],Link[heap[mid]]);swap(heap[x],heap[mid]);
+		} else break;
+		x=mid;
+	}
+}
+int main() {
+	for (;scanf("%d%d",&n,&m) && (m+n);) {
+		tot=2;memset(map,false,sizeof(map));memset(head,0,sizeof(head));
+		for (int i=0;i<m;++i) {
+			int a,b;scanf("%d%d",&a,&b);--a;--b;
+			map[a][b]=map[b][a]=true;Add(a,b);Add(b,a);
+		}
+		memset(l,0,sizeof(l));hz=0;
+		for (int i=0;i<n;++i) {Link[i]=++hz;heap[hz]=i;}
+		for (int i=n;i>0;--i) {
+			int v=-1;int u=heap[1];
+			//序列的第i项就是u
+			Link[u]=-1;Link[heap[hz]]=1;
+			heap[1]=heap[hz--];sink(1);
+			for (int p=head[u];p;p=next[p])
+			if (Link[vtx[p]]!=-1) {++l[vtx[p]];up(Link[vtx[p]]);
+			} else {
+				if (v==-1) v=vtx[p];
+				else {
+					if (!map[v][vtx[p]]) {
+						printf("Imperfect\n");
+						//判定不是弦图
+						goto answer;
+					}
+				}
+			}
+		}
+	}
+	return 0;
+}
+\end{lstlisting}
 \subsection{哈密尔顿回路（ORE性质的图）}
 ORE性质：$\forall x,y \in V \wedge (x,y) \notin E \ \ s.t. \ \ deg_x+deg_y \geq n$返回结果：从顶点$1$出发的一个哈密尔顿回路.使用条件：$n \geq 3$
 \lstinputlisting{哈密尔顿.cpp}
@@ -1203,23 +1112,15 @@ ORE性质：$\forall x,y \in V \wedge (x,y) \notin E \ \ s.t. \ \ deg_x+deg_y \g
 
 
 		
+	\section{数学}
+		\subsection{FFT}
+		\lstinputlisting{FFT.cpp}
+		\subsection{NTT}
+		\lstinputlisting{NTT.cpp}
+		\subsection{中国剩余定理(含exgcd)}
+		\lstinputlisting{中国剩余定理.cpp}
 		
-		
-	\section{其他}
-		\subsection{整体二分}
-		\lstinputlisting{整体二分.cpp}
-		\subsection{Dancing Links(精确覆盖及重复覆盖)}
-		\lstinputlisting{DancingLinksX_xxxxxyt.cpp}
-		\subsection{序列莫队}
-		\lstinputlisting{序列莫队_xxxxxyt.cpp}
-		\subsection{模拟退火}
-		\lstinputlisting{模拟退火.cpp}
-		\subsection{Java}
-		\lstinputlisting{Main.java}
 
-	\section{Tips}
-		\lstinputlisting{tips.cpp}
-	
 
 	\section{数值}
 	\subsection{行列式取模}
@@ -1228,12 +1129,6 @@ ORE性质：$\forall x,y \in V \wedge (x,y) \notin E \ \ s.t. \ \ deg_x+deg_y \g
 	\lstinputlisting{最小二乘法.cpp}
 	\subsection{多项式求根}
 	\lstinputlisting{多项式求根.cpp}
-	\subsection{单纯形}
-	返回结果：$max\{c_{1 \times m} \cdot x_{m \times 1} \ | \ x_{m \times 1} \geq 0_{m \times 1}, a_{n \times m} \cdot x_{m \times 1} \leq b_{n \times 1}\}$
-
-	\lstinputlisting{单纯形.cpp}
-	\subsection{辛普森}
-	\lstinputlisting{辛普森.cpp}
 	\subsection{线性规划}
 \begin{lstlisting}[language=C++]
 //N[0]代表N中的元素个数，B[0]代表B中的元素个数。
@@ -1353,9 +1248,7 @@ int main() {
 	LinearProgramming test;
 	test.simplex("a.in", "a.out");
 }
-\end{lstlisting}
-	
-	
+\end{lstlisting}	
 	
 	\section{数论}
 	\subsection{离散对数}
@@ -1364,15 +1257,11 @@ int main() {
 	$x$为$p$的原根当且仅当对$p-1$任意质因子$k$有$x^{k}\neq 1(\text{mod } p)$.
 	\subsection{Miller Rabin and Rho}
 	\lstinputlisting{Miller.cpp}
-	\subsection{exgcd}
-	\lstinputlisting{exgcd.cpp}
 	\subsection{离散平方根}
 	\lstinputlisting{离散平方根.cpp}
 	\subsection{$O(m^2 \log(n))$求线性递推}
 	已知$a_0, a_1, ..., a_{m - 1}$$a_n = c_0 * a_{n - m} + ... + c_{m - 1} * a_{n - 1}$求$a_n = v_0 * a_0 + v_1 * a_1 + ... + v_{m - 1} * a_{m - 1}$
 	\lstinputlisting{线性递推.cpp}
-	\subsection{CRT}
-	\lstinputlisting{CRT.cpp}
 	\subsection{佩尔方程求根$x^2-n*y^2=1$}
 	\lstinputlisting{pell.cpp}
 	\subsection{直线下整点个数}
@@ -1398,20 +1287,19 @@ int main() {
 	\subsection{最大团搜索}
 	Int g[][]为图的邻接矩阵.MC(V)表示点集V的最大团.令Si={vi, vi+1, ..., vn}, mc[i]表示MC(Si).倒着算mc[i]，那么显然MC(V)=mc[1].此外有mc[i]=mc[i+1] or mc[i]=mc[i+1]+1.
 	\lstinputlisting{最大团搜索.cpp}
-	\subsection{DLX精确覆盖}
-	\lstinputlisting{DLX.cpp}
-	\subsection{DLX重复覆盖}
-	\lstinputlisting{DLX_multi.cpp}
-	\subsection{Java}
-	\lstinputlisting[language = java]{template.java}
-	\subsection{Java分数类}
-	\lstinputlisting[language = java]{fraction.java}
-	\subsection{Java Big}
+		\subsection{整体二分}
+		\lstinputlisting{整体二分.cpp}
+		\subsection{Dancing Links(精确覆盖及重复覆盖)}
+		\lstinputlisting{DancingLinksX_xxxxxyt.cpp}
+		\subsection{序列莫队}
+		\lstinputlisting{序列莫队_xxxxxyt.cpp}
+		\subsection{模拟退火}
+		\lstinputlisting{模拟退火.cpp}
+		\subsection{Java}
+		\lstinputlisting{Main.java}
+	\subsection{Java Rules}
 	\lstinputlisting[language = java]{biginteger.java}
-\subsection{关同步}
-\begin{lstlisting}[language=C++]
-    std::ios::sync_with_stdio(false);
-\end{lstlisting}
+
 	\subsection{crope}
 	\begin{lstlisting}
 #include <ext/rope>
@@ -1427,9 +1315,125 @@ a.erase(i, n);           // erase [i, i + n)
 	\end{multicols}
 
 	\begin{multicols}{2}%\tiny
-	\section{Hints}
 
-	\subsection{线性规划对偶}
+	
+
+\section{技巧}
+python对拍
+\begin{lstlisting}[language=C++]
+from os import system
+	for i in range(1,100000):
+		system("./std");
+		system("./force");
+		if system("diff a.out a.ans")<>0:
+            break
+		print i
+\end{lstlisting}
+
+关同步
+\begin{lstlisting}[language=C++]
+    std::ios::sync_with_stdio(false);
+\end{lstlisting}
+
+sstream读入
+\begin{lstlisting}[language=C++]
+    char s[];
+    gets(s);
+    stringstream ss;
+    ss << s;
+    int tmp;
+    while (ss >> tmp)
+    // << 向ss里插入信息; >> 从ss里取出前面的信息
+\end{lstlisting}
+
+二进制文件读入
+	fread(地址，sizeof(数据类型),个数，stdin) 读到文件结束!feof(stdin)
+\subsection{枚举子集}
+\begin{lstlisting}[language=C++]
+	for (int mask = (now - 1) & now; mask; mask = (mask - 1) & now)
+\end{lstlisting}
+\subsection{真正的释放STL容器内存空间}
+\lstinputlisting{truly-release-container-space.cpp}
+\subsection{无敌的大整数相乘取模}
+Time complexity $O(1)$.
+\lstinputlisting{O1-multiply-mod.cpp}
+\subsection{无敌的读入优化}
+\lstinputlisting{unbeatable-input-acceleration.cpp}
+\subsection{梅森旋转算法}
+High quality pseudorandom number generator, twice as efficient as rand() with \texttt{-O2}.
+C++11 required.
+\lstinputlisting{mersenne-twister.cpp}
+
+\section{提示}
+
+\subsection{控制cout输出实数精度}
+\lstinputlisting{control-cout-precision.cpp}
+\subsection{让make支持c++11}
+In .bashrc or whatever:
+\begin{verbatim}
+export CXXFLAGS='-std=c++11 -Wall'
+\end{verbatim}
+
+\subsection{线性规划转对偶}
+
+\begin{equation*}
+\begin{aligned}
+&\text{maximize }\mathbf{c}^{T}\mathbf{x}\\
+&\text{subject to }\mathbf{A}\mathbf{x} \leq \mathbf{b}, \mathbf{x} \geq 0
+\end{aligned}
+\Longleftrightarrow
+\begin{aligned}
+&\text{minimize }\mathbf{y}^{T}\mathbf{b}\\
+&\text{subject to }\mathbf{y}^{T}\mathbf{A} \geq \mathbf{c}^{T}, \mathbf{y} \geq 0
+\end{aligned}
+\end{equation*}
+
+\subsection{32-bit/64-bit随机素数}
+\begin{tabular}{|l|l|}
+\hline
+\texttt{32-bit} & \texttt{64-bit} \\
+\hline
+73550053 & 1249292846855685773 \\
+\hline
+148898719 & 1701750434419805569 \\
+\hline
+189560747 & 3605499878424114901 \\
+\hline
+459874703 & 5648316673387803781 \\
+\hline
+1202316001 & 6125342570814357977 \\
+\hline
+1431183547 & 6215155308775851301 \\
+\hline
+1438011109 & 6294606778040623451 \\
+\hline
+1538762023 & 6347330550446020547 \\
+\hline
+1557944263 & 7429632924303725207 \\
+\hline
+1981315913 & 8524720079480389849 \\
+\hline
+\end{tabular}
+
+\subsection{NTT 素数及其原根}
+\begin{tabular}{|l|l|}
+\hline
+\texttt{Prime} & \texttt{Primitive root} \\
+\hline
+1053818881 & 7 \\
+\hline
+1051721729 & 6 \\
+\hline
+1045430273 & 3 \\
+\hline
+1012924417 & 5 \\
+\hline
+1007681537 & 3 \\
+\hline
+\end{tabular}
+
+
+\subsection{线性规划对偶}
 	maximize $\bm{c}^T\bm{x}$, subject to $\bm{Ax} \leq \bm{b}$, $\bm{x} \geq 0$.\\
 	minimize $\bm{y}^T\bm{b}$, subject to $\bm{y}^T\bm{A} \geq \bm{c}^T$ , $\bm{y} \geq 0$.
 	\subsection{博弈论相关}
@@ -1491,7 +1495,24 @@ kirchhoff矩阵 = 度数矩阵（$i = j$, $d[i][j]$ = 度数） - 邻接矩阵�
 \subsection{最小覆盖构造解}
 从X中所有的未盖点出发扩展匈牙利树，标记树中的所有点，则X中的未标记点和Y中的已标记点组成了所求的最小覆盖。
 
+\subsection{拉格朗日插值}
+		$p_j(x) = \prod_{i\in{I_j}}\frac{x-x_i}{x_j-x_i}$
+		$L_n(x) = \sum_{j=1}^{n}y_ip_j(x)$
+		\subsection{求行列式的值}
+			行列式有很多性质，第$a$行$*k$加到第$b$行上去，行列式的值不变。\\
+			三角行列式的值等于对角线元素之积。\\
+			第$a$行与第$b$行互换，行列式的值取反。\\
+			常数＊行列式，可以把常数乘到某一行里去。\\
+			注意：全是整数并取模的话当然需要求逆元
+		\subsection{Cayley公式与森林计数}
+		Cayley公式是说，一个完全图$K_n$有$n^{n-2}$棵生成树，换句话说$n$个节点的带标号的无根树有$n^{n-2}$个。
+
+令$g[i]$表示点数为$i$的森林个数，$f[i]$表示点数为$i$的生成树计数$(f[i]=i^{i-2})$
+那么便有$$g[i]=\sum (g[i-j] \times cnr[i-1][j-1] \times f[j])$$
+$$g[i]=\sum \frac{g[i-j] \times fac[i-1] \times f[j]}{fac[j-1] \times fac[i-j]}=fac[i-1] \times \sum (\frac{f[j]}{fac[j-1]} \times \frac{g[i-j]}{fac[i-j]})$$
+
 \subsection{常用数学公式}
+
 \subsubsection{斐波那契数列}
 
 \begin{enumerate}
@@ -1728,120 +1749,6 @@ $x ^ 3 + px + q = 0$,
   当$n$是偶数时, 则有$a_n - \sum\limits_{1 \le i \le \frac{n}{2}} a_i a_{n - i} + \dfrac{1}{2} a_\frac{n}{2} (a_\frac{n}{2} + 1)$ 种不同的无根树
 \item Matrix-Tree定理: 对任意图$G$, 设mat[$i$][$i$] = $i$ 的度数, mat[$i$][$j$] = $i$与$j$之间边数的相反数, 则mat[$i$][$j$]的任意余子式的行列式就是该图的生成树个数
 \end{itemize}
-
-\section{技巧}
-python对拍
-\begin{lstlisting}[language=C++]
-from os import system
-	for i in range(1,100000):
-		system("./std");
-		system("./force");
-		if system("diff a.out a.ans")<>0:
-            break
-		print i
-\end{lstlisting}
-
-关同步
-\begin{lstlisting}[language=C++]
-    std::ios::sync_with_stdio(false);
-\end{lstlisting}
-
-sstream读入
-\begin{lstlisting}[language=C++]
-    char s[];
-    gets(s);
-    stringstream ss;
-    ss << s;
-    int tmp;
-    while (ss >> tmp)
-    // << 向ss里插入信息; >> 从ss里取出前面的信息
-\end{lstlisting}
-
-二进制文件读入
-	fread(地址，sizeof(数据类型),个数，stdin) 读到文件结束!feof(stdin)
-\subsection{枚举子集}
-\begin{lstlisting}[language=C++]
-	for (int mask = (now - 1) & now; mask; mask = (mask - 1) & now)
-\end{lstlisting}
-\subsection{真正的释放STL容器内存空间}
-\lstinputlisting{truly-release-container-space.cpp}
-\subsection{无敌的大整数相乘取模}
-Time complexity $O(1)$.
-\lstinputlisting{O1-multiply-mod.cpp}
-\subsection{无敌的读入优化}
-\lstinputlisting{unbeatable-input-acceleration.cpp}
-\subsection{梅森旋转算法}
-High quality pseudorandom number generator, twice as efficient as rand() with \texttt{-O2}.
-C++11 required.
-\lstinputlisting{mersenne-twister.cpp}
-
-\section{提示}
-
-\subsection{控制cout输出实数精度}
-\lstinputlisting{control-cout-precision.cpp}
-\subsection{让make支持c++11}
-In .bashrc or whatever:
-\begin{verbatim}
-export CXXFLAGS='-std=c++11 -Wall'
-\end{verbatim}
-
-\subsection{线性规划转对偶}
-
-\begin{equation*}
-\begin{aligned}
-&\text{maximize }\mathbf{c}^{T}\mathbf{x}\\
-&\text{subject to }\mathbf{A}\mathbf{x} \leq \mathbf{b}, \mathbf{x} \geq 0
-\end{aligned}
-\Longleftrightarrow
-\begin{aligned}
-&\text{minimize }\mathbf{y}^{T}\mathbf{b}\\
-&\text{subject to }\mathbf{y}^{T}\mathbf{A} \geq \mathbf{c}^{T}, \mathbf{y} \geq 0
-\end{aligned}
-\end{equation*}
-
-\subsection{32-bit/64-bit随机素数}
-\begin{tabular}{|l|l|}
-\hline
-\texttt{32-bit} & \texttt{64-bit} \\
-\hline
-73550053 & 1249292846855685773 \\
-\hline
-148898719 & 1701750434419805569 \\
-\hline
-189560747 & 3605499878424114901 \\
-\hline
-459874703 & 5648316673387803781 \\
-\hline
-1202316001 & 6125342570814357977 \\
-\hline
-1431183547 & 6215155308775851301 \\
-\hline
-1438011109 & 6294606778040623451 \\
-\hline
-1538762023 & 6347330550446020547 \\
-\hline
-1557944263 & 7429632924303725207 \\
-\hline
-1981315913 & 8524720079480389849 \\
-\hline
-\end{tabular}
-
-\subsection{NTT 素数及其原根}
-\begin{tabular}{|l|l|}
-\hline
-\texttt{Prime} & \texttt{Primitive root} \\
-\hline
-1053818881 & 7 \\
-\hline
-1051721729 & 6 \\
-\hline
-1045430273 & 3 \\
-\hline
-1012924417 & 5 \\
-\hline
-1007681537 & 3 \\
-\hline
-\end{tabular}
 
 \subsection{小知识}
 \begin{itemize}	

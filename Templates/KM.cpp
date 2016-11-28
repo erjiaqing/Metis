@@ -14,7 +14,6 @@ bool search_path(int u){
 	}
 	return false;
 }
-
 int KM()
 {
 	for (int i = 0; i < n; i++){
@@ -29,7 +28,6 @@ int KM()
 			memset(sx, 0, sizeof(sx));
 			memset(sy, 0, sizeof(sy));
 			if (search_path(u)) break;
-			
 			int inc = len * len;
 			for (int i = 0; i < n; i++)
             if (sx[i])
@@ -47,7 +45,6 @@ int KM()
     if (match[i] >= 0) sum += weight[match[i]][i];
 	return sum;
 }
-
 int main()
 {
 	memset(weight, 0, sizeof(weight));
