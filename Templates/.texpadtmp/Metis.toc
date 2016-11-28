@@ -35,7 +35,7 @@
 \contentsline {section}{\numberline {2}数据结构}{8}
 \contentsline {subsection}{\numberline {2.1}KD Tree}{8}
 \contentsline {subsection}{\numberline {2.2}Splay}{9}
-\contentsline {subsection}{\numberline {2.3}主席树 by xyt}{10}
+\contentsline {subsection}{\numberline {2.3}主席树}{10}
 \contentsline {subsection}{\numberline {2.4}树链剖分 by cjy}{10}
 \contentsline {subsection}{\numberline {2.5}树链剖分 by xyt}{11}
 \contentsline {subsection}{\numberline {2.6}点分治}{11}
@@ -71,13 +71,13 @@
 \contentsline {subsubsection}{\numberline {4.14.2}不可重复}{19}
 \contentsline {subsection}{\numberline {4.15}匈牙利}{19}
 \contentsline {subsection}{\numberline {4.16}hopcroft-karp}{19}
-\contentsline {subsection}{\numberline {4.17}带花树(任意图最大匹配)}{20}
+\contentsline {subsection}{\numberline {4.17}带花树(任意图最大匹配)}{19}
 \contentsline {subsection}{\numberline {4.18}仙人掌图判定}{20}
 \contentsline {subsection}{\numberline {4.19}最小树形图}{20}
-\contentsline {subsection}{\numberline {4.20}有根树的同构}{21}
+\contentsline {subsection}{\numberline {4.20}有根树的同构}{20}
 \contentsline {subsection}{\numberline {4.21}弦图}{21}
 \contentsline {subsection}{\numberline {4.22}哈密尔顿回路（ORE性质的图）}{21}
-\contentsline {subsection}{\numberline {4.23}度限制生成树}{22}
+\contentsline {subsection}{\numberline {4.23}度限制生成树}{21}
 \contentsline {section}{\numberline {5}数学}{22}
 \contentsline {subsection}{\numberline {5.1}FFT}{22}
 \contentsline {subsection}{\numberline {5.2}NTT}{22}
@@ -86,15 +86,15 @@
 \contentsline {subsection}{\numberline {6.1}行列式取模}{23}
 \contentsline {subsection}{\numberline {6.2}最小二乘法}{23}
 \contentsline {subsection}{\numberline {6.3}多项式求根}{23}
-\contentsline {subsection}{\numberline {6.4}线性规划}{24}
+\contentsline {subsection}{\numberline {6.4}线性规划}{23}
 \contentsline {section}{\numberline {7}数论}{24}
 \contentsline {subsection}{\numberline {7.1}离散对数}{24}
-\contentsline {subsection}{\numberline {7.2}原根}{25}
-\contentsline {subsection}{\numberline {7.3}Miller Rabin and Rho}{25}
+\contentsline {subsection}{\numberline {7.2}原根}{24}
+\contentsline {subsection}{\numberline {7.3}Miller Rabin and Rho}{24}
 \contentsline {subsection}{\numberline {7.4}离散平方根}{25}
 \contentsline {subsection}{\numberline {7.5}$O(m^2 \qopname \relax o{log}(n))$求线性递推}{25}
-\contentsline {subsection}{\numberline {7.6}佩尔方程求根$x^2-n*y^2=1$}{26}
-\contentsline {subsection}{\numberline {7.7}直线下整点个数}{26}
+\contentsline {subsection}{\numberline {7.6}佩尔方程求根$x^2-n*y^2=1$}{25}
+\contentsline {subsection}{\numberline {7.7}直线下整点个数}{25}
 \contentsline {section}{\numberline {8}其他}{26}
 \contentsline {subsection}{\numberline {8.1}某年某月某日是星期几}{26}
 \contentsline {subsection}{\numberline {8.2}枚举k子集}{26}
@@ -104,24 +104,24 @@
 \contentsline {subsection}{\numberline {8.6}极大团计数}{27}
 \contentsline {subsection}{\numberline {8.7}最大团搜索}{27}
 \contentsline {subsection}{\numberline {8.8}整体二分}{27}
-\contentsline {subsection}{\numberline {8.9}Dancing Links(精确覆盖及重复覆盖)}{28}
+\contentsline {subsection}{\numberline {8.9}Dancing Links(精确覆盖及重复覆盖)}{27}
 \contentsline {subsection}{\numberline {8.10}序列莫队}{28}
-\contentsline {subsection}{\numberline {8.11}模拟退火}{29}
+\contentsline {subsection}{\numberline {8.11}模拟退火}{28}
 \contentsline {subsection}{\numberline {8.12}Java}{29}
-\contentsline {subsection}{\numberline {8.13}Java Rules}{30}
+\contentsline {subsection}{\numberline {8.13}Java Rules}{29}
 \contentsline {subsection}{\numberline {8.14}crope}{30}
 \contentsline {section}{\numberline {9}技巧}{30}
 \contentsline {subsection}{\numberline {9.1}枚举子集}{30}
 \contentsline {subsection}{\numberline {9.2}真正的释放STL容器内存空间}{30}
 \contentsline {subsection}{\numberline {9.3}无敌的大整数相乘取模}{30}
 \contentsline {subsection}{\numberline {9.4}无敌的读入优化}{30}
-\contentsline {subsection}{\numberline {9.5}梅森旋转算法}{31}
-\contentsline {section}{\numberline {10}提示}{31}
-\contentsline {subsection}{\numberline {10.1}控制cout输出实数精度}{31}
-\contentsline {subsection}{\numberline {10.2}让make支持c++11}{31}
-\contentsline {subsection}{\numberline {10.3}线性规划转对偶}{31}
-\contentsline {subsection}{\numberline {10.4}32-bit/64-bit随机素数}{31}
-\contentsline {subsection}{\numberline {10.5}NTT 素数及其原根}{31}
+\contentsline {subsection}{\numberline {9.5}梅森旋转算法}{30}
+\contentsline {section}{\numberline {10}提示}{30}
+\contentsline {subsection}{\numberline {10.1}控制cout输出实数精度}{30}
+\contentsline {subsection}{\numberline {10.2}让make支持c++11}{30}
+\contentsline {subsection}{\numberline {10.3}线性规划转对偶}{30}
+\contentsline {subsection}{\numberline {10.4}32-bit/64-bit随机素数}{30}
+\contentsline {subsection}{\numberline {10.5}NTT 素数及其原根}{30}
 \contentsline {subsection}{\numberline {10.6}线性规划对偶}{31}
 \contentsline {subsection}{\numberline {10.7}博弈论相关}{31}
 \contentsline {subsection}{\numberline {10.8}无向图最小生成树计数}{31}
@@ -133,13 +133,13 @@
 \contentsline {subsubsection}{\numberline {10.13.1}斐波那契数列}{31}
 \contentsline {subsubsection}{\numberline {10.13.2}错排公式}{31}
 \contentsline {subsubsection}{\numberline {10.13.3}莫比乌斯函数}{31}
-\contentsline {subsubsection}{\numberline {10.13.4}五边形数定理}{32}
-\contentsline {subsubsection}{\numberline {10.13.5}树的计数}{32}
-\contentsline {subsubsection}{\numberline {10.13.6}欧拉公式}{32}
-\contentsline {subsubsection}{\numberline {10.13.7}皮克定理}{32}
-\contentsline {subsection}{\numberline {10.14}平面几何公式}{32}
-\contentsline {subsubsection}{\numberline {10.14.1}三角形和四边形的费马点}{32}
-\contentsline {subsubsection}{\numberline {10.14.2}四边形}{32}
+\contentsline {subsubsection}{\numberline {10.13.4}五边形数定理}{31}
+\contentsline {subsubsection}{\numberline {10.13.5}树的计数}{31}
+\contentsline {subsubsection}{\numberline {10.13.6}欧拉公式}{31}
+\contentsline {subsubsection}{\numberline {10.13.7}皮克定理}{31}
+\contentsline {subsection}{\numberline {10.14}平面几何公式}{31}
+\contentsline {subsubsection}{\numberline {10.14.1}三角形和四边形的费马点}{31}
+\contentsline {subsubsection}{\numberline {10.14.2}四边形}{31}
 \contentsline {subsubsection}{\numberline {10.14.3}棱台}{32}
 \contentsline {subsubsection}{\numberline {10.14.4}圆台}{32}
 \contentsline {subsubsection}{\numberline {10.14.5}球台}{32}
@@ -152,8 +152,8 @@
 \contentsline {subsubsection}{\numberline {10.15.5}抛物线}{32}
 \contentsline {subsubsection}{\numberline {10.15.6}重心}{32}
 \contentsline {subsubsection}{\numberline {10.15.7}向量恒等式}{32}
-\contentsline {subsubsection}{\numberline {10.15.8}常用几何公式}{33}
-\contentsline {subsubsection}{\numberline {10.15.9}树的计数}{33}
-\contentsline {subsection}{\numberline {10.16}小知识}{33}
-\contentsline {subsection}{\numberline {10.17}积分表}{34}
+\contentsline {subsubsection}{\numberline {10.15.8}常用几何公式}{32}
+\contentsline {subsubsection}{\numberline {10.15.9}树的计数}{32}
+\contentsline {subsection}{\numberline {10.16}小知识}{32}
+\contentsline {subsection}{\numberline {10.17}积分表}{33}
 \contentsline {subsection}{\numberline {10.18}组合恒等式}{34}

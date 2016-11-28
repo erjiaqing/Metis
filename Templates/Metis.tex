@@ -938,10 +938,6 @@ int calc(int L, int H, int W, int x1, int y1, int z1, int x2, int y2, int z2) {
 
 
 \subsection{欧拉回路}
-判定一个图是否存在欧拉通路或欧拉回路比较容易，这里提供两种不同的判定法则。\\
-定理1：一个图有欧拉回路当且仅当它是连通的（即不包括0度的结点）且每个结点都有偶数度。\\
-定理2：一个图有欧拉通路当且仅当它是连通的且除两个结点外，其他结点都有偶数度。 \\
-定理3：在定理2的条件下，含奇数度的两个结点中，一个必为欧拉通路的起点，另一个必为终点。
 \begin{lstlisting}[language=C++]
 	void dfs(int x)
 	{
@@ -1114,7 +1110,7 @@ ORE性质：$\forall x,y \in V \wedge (x,y) \notin E \ \ s.t. \ \ deg_x+deg_y \g
 		
 	\section{数学}
 		\subsection{FFT}
-		\lstinputlisting{FFT.cpp}
+		\lstinputlisting{FFT_xxxxxyt.cpp}
 		\subsection{NTT}
 		\lstinputlisting{NTT.cpp}
 		\subsection{中国剩余定理(含exgcd)}
@@ -1280,7 +1276,7 @@ int main() {
 	\lstinputlisting{环状最长公共子串.cpp}
 	\subsection{LL*LLmodLL}
 	\lstinputlisting{LLmod.cpp}
-	\subsection{曼哈顿最小生成树}
+	\subsection{曼哈顿距离最小生成树}
 	\lstinputlisting{曼哈顿最小生成树.cpp}
 	\subsection{极大团计数}
 	\lstinputlisting{极大团计数.cpp}
