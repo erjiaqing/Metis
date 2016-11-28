@@ -57,7 +57,7 @@ struct DancingLinks{
 		remove(c); // 当前消去第c列
 		for(int i = dn[c]; i != c; i = dn[i]){ // 第c列是由第i行覆盖的
 			chosen[dpth] = posr[i];
-			for(int j = rg[i]; j != i; j = rg[j]) remove(posc[j]); // 删除第i行能覆盖的其余列 因为它们只能被覆盖一次
+			for(int j = rg[i]; j != i; j = rg[j]) remove(posc[j]);
 			if(dance(dpth + 1)) return true;
 			for(int j = lf[i]; j != i; j = lf[j]) resume(posc[j]);
 		}
@@ -116,7 +116,7 @@ struct DancingLinks{
 		for(int i = rg[0]; i != 0; i = rg[i]) if(sz[i] < sz[c]) c = i;
 		for(int i = dn[c]; i != c; i = dn[i]){ // 枚举c列是被哪行覆盖
 			remove(i);
-			for(int j = rg[i]; j != i; j = rg[j]) remove(j); // 删除可被i行覆盖的列 因为不需要再考虑它们的覆盖问题
+			for(int j = rg[i]; j != i; j = rg[j]) remove(j); 
 			dance(d + 1);
 			for(int j = lf[i]; j != i; j = lf[j]) resume(j);
 			resume(i);
