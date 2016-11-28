@@ -92,10 +92,11 @@
 \contentsline {subsubsection}{\numberline {7.15.1}可重复}{27}
 \contentsline {subsubsection}{\numberline {7.15.2}不可重复}{28}
 \contentsline {section}{\numberline {8}其他}{28}
-\contentsline {subsection}{\numberline {8.1}Dancing Links(精确覆盖及重复覆盖)}{28}
-\contentsline {subsection}{\numberline {8.2}序列莫队}{29}
-\contentsline {subsection}{\numberline {8.3}模拟退火}{29}
-\contentsline {subsection}{\numberline {8.4}Java}{30}
+\contentsline {subsection}{\numberline {8.1}整体二分}{28}
+\contentsline {subsection}{\numberline {8.2}Dancing Links(精确覆盖及重复覆盖)}{28}
+\contentsline {subsection}{\numberline {8.3}序列莫队}{29}
+\contentsline {subsection}{\numberline {8.4}模拟退火}{30}
+\contentsline {subsection}{\numberline {8.5}Java}{30}
 \contentsline {section}{\numberline {9}Tips}{31}
 \contentsline {section}{\numberline {10}图论}{31}
 \contentsline {subsection}{\numberline {10.1}匈牙利}{31}
@@ -110,21 +111,21 @@
 \contentsline {subsubsection}{\numberline {10.9.1}无源汇的上下界可行流}{33}
 \contentsline {subsubsection}{\numberline {10.9.2}有源汇的上下界可行流}{33}
 \contentsline {subsubsection}{\numberline {10.9.3}有源汇的上下界最大流}{33}
-\contentsline {subsubsection}{\numberline {10.9.4}有源汇的上下界最小流}{33}
-\contentsline {subsection}{\numberline {10.10}一般图最大匹配}{33}
+\contentsline {subsubsection}{\numberline {10.9.4}有源汇的上下界最小流}{34}
+\contentsline {subsection}{\numberline {10.10}一般图最大匹配}{34}
 \contentsline {subsection}{\numberline {10.11}无向图全局最小割}{34}
-\contentsline {subsection}{\numberline {10.12}有根树的同构}{34}
+\contentsline {subsection}{\numberline {10.12}有根树的同构}{35}
 \contentsline {subsection}{\numberline {10.13}弦图性质}{35}
 \contentsline {subsection}{\numberline {10.14}弦图判定}{35}
 \contentsline {subsection}{\numberline {10.15}弦图求团数}{35}
-\contentsline {subsection}{\numberline {10.16}哈密尔顿回路（ORE性质的图）}{35}
+\contentsline {subsection}{\numberline {10.16}哈密尔顿回路（ORE性质的图）}{36}
 \contentsline {subsection}{\numberline {10.17}度限制生成树}{36}
-\contentsline {section}{\numberline {11}数值}{36}
-\contentsline {subsection}{\numberline {11.1}行列式取模}{36}
+\contentsline {section}{\numberline {11}数值}{37}
+\contentsline {subsection}{\numberline {11.1}行列式取模}{37}
 \contentsline {subsection}{\numberline {11.2}最小二乘法}{37}
 \contentsline {subsection}{\numberline {11.3}多项式求根}{37}
 \contentsline {subsection}{\numberline {11.4}单纯形}{37}
-\contentsline {subsection}{\numberline {11.5}辛普森}{37}
+\contentsline {subsection}{\numberline {11.5}辛普森}{38}
 \contentsline {subsection}{\numberline {11.6}线性规划}{38}
 \contentsline {section}{\numberline {12}数论}{38}
 \contentsline {subsection}{\numberline {12.1}离散对数}{38}
@@ -142,15 +143,15 @@
 \contentsline {section}{\numberline {14}其他}{40}
 \contentsline {subsection}{\numberline {14.1}某年某月某日是星期几}{40}
 \contentsline {subsection}{\numberline {14.2}枚举k子集}{40}
-\contentsline {subsection}{\numberline {14.3}环状最长公共子串}{40}
+\contentsline {subsection}{\numberline {14.3}环状最长公共子串}{41}
 \contentsline {subsection}{\numberline {14.4}LL*LLmodLL}{41}
 \contentsline {subsection}{\numberline {14.5}曼哈顿最小生成树}{41}
-\contentsline {subsection}{\numberline {14.6}极大团计数}{41}
+\contentsline {subsection}{\numberline {14.6}极大团计数}{42}
 \contentsline {subsection}{\numberline {14.7}最大团搜索}{42}
 \contentsline {subsection}{\numberline {14.8}DLX精确覆盖}{42}
-\contentsline {subsection}{\numberline {14.9}DLX重复覆盖}{42}
+\contentsline {subsection}{\numberline {14.9}DLX重复覆盖}{43}
 \contentsline {subsection}{\numberline {14.10}Java}{43}
-\contentsline {subsection}{\numberline {14.11}Java分数类}{43}
+\contentsline {subsection}{\numberline {14.11}Java分数类}{44}
 \contentsline {subsection}{\numberline {14.12}Java Big}{44}
 \contentsline {subsection}{\numberline {14.13}关同步}{44}
 \contentsline {subsection}{\numberline {14.14}crope}{44}
@@ -161,9 +162,9 @@
 \contentsline {subsection}{\numberline {15.4}最小覆盖构造解}{44}
 \contentsline {subsection}{\numberline {15.5}常用数学公式}{44}
 \contentsline {subsubsection}{\numberline {15.5.1}斐波那契数列}{44}
-\contentsline {subsubsection}{\numberline {15.5.2}错排公式}{44}
-\contentsline {subsubsection}{\numberline {15.5.3}莫比乌斯函数}{44}
-\contentsline {subsubsection}{\numberline {15.5.4}五边形数定理}{44}
+\contentsline {subsubsection}{\numberline {15.5.2}错排公式}{45}
+\contentsline {subsubsection}{\numberline {15.5.3}莫比乌斯函数}{45}
+\contentsline {subsubsection}{\numberline {15.5.4}五边形数定理}{45}
 \contentsline {subsubsection}{\numberline {15.5.5}树的计数}{45}
 \contentsline {subsubsection}{\numberline {15.5.6}欧拉公式}{45}
 \contentsline {subsubsection}{\numberline {15.5.7}皮克定理}{45}
@@ -180,8 +181,8 @@
 \contentsline {subsubsection}{\numberline {15.7.3}三次方程求根公式}{45}
 \contentsline {subsubsection}{\numberline {15.7.4}椭圆}{45}
 \contentsline {subsubsection}{\numberline {15.7.5}抛物线}{45}
-\contentsline {subsubsection}{\numberline {15.7.6}重心}{45}
-\contentsline {subsubsection}{\numberline {15.7.7}向量恒等式}{45}
+\contentsline {subsubsection}{\numberline {15.7.6}重心}{46}
+\contentsline {subsubsection}{\numberline {15.7.7}向量恒等式}{46}
 \contentsline {subsubsection}{\numberline {15.7.8}常用几何公式}{46}
 \contentsline {subsubsection}{\numberline {15.7.9}树的计数}{46}
 \contentsline {section}{\numberline {16}技巧}{46}
@@ -194,8 +195,8 @@
 \contentsline {subsection}{\numberline {17.1}控制cout输出实数精度}{46}
 \contentsline {subsection}{\numberline {17.2}让make支持c++11}{46}
 \contentsline {subsection}{\numberline {17.3}线性规划转对偶}{46}
-\contentsline {subsection}{\numberline {17.4}32-bit/64-bit随机素数}{46}
-\contentsline {subsection}{\numberline {17.5}NTT 素数及其原根}{46}
+\contentsline {subsection}{\numberline {17.4}32-bit/64-bit随机素数}{47}
+\contentsline {subsection}{\numberline {17.5}NTT 素数及其原根}{47}
 \contentsline {subsection}{\numberline {17.6}小知识}{47}
 \contentsline {subsection}{\numberline {17.7}积分表}{47}
 \contentsline {subsection}{\numberline {17.8}组合恒等式}{48}

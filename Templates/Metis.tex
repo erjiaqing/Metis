@@ -1003,6 +1003,11 @@ $$g[i]=\sum \frac{g[i-j] \times fac[i-1] \times f[j]}{fac[j-1] \times fac[i-j]}=
 		\subsection{三维变换}
 		\lstinputlisting{三维变换.cpp}
 	\section{字符串}
+		\subsection{ex-KMP}
+		返回结果：$next_i = lcp(text, text_{i \dots n-1})$
+		\lstinputlisting{exkmp.cpp}
+		\subsection{串最小表示}
+		\lstinputlisting{串最小表示.cpp}
 		\subsection{Manacher}
 		\lstinputlisting{manacher_cjy.cpp}
 		\subsection{AC-Automachine by cjy}
@@ -1037,10 +1042,7 @@ $$g[i]=\sum \frac{g[i-j] \times fac[i-1] \times f[j]}{fac[j-1] \times fac[i-j]}=
 5. 最小割\\
 
 （1）二分图最小点权覆盖集：s -> u : w[u], u -> v : INF, v -> t : w[v]\\
-  \subsection{斯坦纳树(网格图连接一些确定点的最小生成树)}
-$mask:0->2^n$\\
-	枚举$mask$的子集更新 $mask':f[i][mask]=max(f[i][mask'] + f[i][mask - mask'])$\\
-	最短路更新	$f[j][mask] = f[i][mask] + dis[i][j];$
+
 
 \subsection{欧拉回路}
 判定一个图是否存在欧拉通路或欧拉回路比较容易，这里提供两种不同的判定法则。\\
@@ -1061,6 +1063,7 @@ $mask:0->2^n$\\
 	}
 \end{lstlisting}
 		\subsection{SteinerTree}
+		  \subsection{斯坦纳树(网格图连接一些确定点的最小生成树)}
 		\lstinputlisting{SteinerTree_cjy.cpp}
 		\subsection{LCA}
 		\lstinputlisting{LCA_xxxxxyt.cpp}
@@ -1075,6 +1078,7 @@ $mask:0->2^n$\\
 		\subsection{有gap优化的isap}
 		\lstinputlisting{有gap优化的isap.cpp}
 		\subsection{ZKW费用流}
+		使用条件：费用非负
 		\lstinputlisting{ZKW费用流.cpp}
 		\subsection{最大密度子图}
 		\lstinputlisting{最大密度子图.cpp}
@@ -1082,335 +1086,24 @@ $mask:0->2^n$\\
 		\lstinputlisting{tarjan.cpp}
 		
 		\subsection{K短路}
-		\lstinputlisting{k短路.cpp}
-		
-		\subsection{K短路}
-\subsubsection{可重复}
-\begin{lstlisting}[language=C++]
-#define for_each(it, v) for (vector<Edge*>::iterator it = (v).begin(); it != (v).end(); ++it)
-const int MAX_N = 10000, MAX_M = 50000, MAX_K = 10000, INF = 1000000000;
-struct Edge {
-	int from, to, weight;
-};
-struct HeapNode {
-	Edge* edge;
-	int depth;
-	HeapNode* child[4];
-	//child[0..1] for heap G
-	//child[2..3] for heap out edge
-};
-int n, m, k, s, t, dist[MAX_N];
-Edge* edge[MAX_M], prev[MAX_N];
-vector<Edge*> graph[MAX_N], graphR[MAX_N];
-HeapNode* nullNode, heapTop[MAX_N];
-HeapNode* createHeap(HeapNode* curNode, HeapNode* newNode) {
-	if (curNode == nullNode) return newNode;
-	HeapNode* rootNode = new HeapNode;
-	memcpy(rootNode, curNode, sizeof(HeapNode));
-	if (newNode->edge->weight < curNode->edge->weight) {
-		rootNode->edge = newNode->edge;
-		rootNode->child[2] = newNode->child[2];
-		rootNode->child[3] = newNode->child[3];
-		newNode->edge = curNode->edge;
-		newNode->child[2] = curNode->child[2];
-		newNode->child[3] = curNode->child[3];
-	}
-	if (rootNode->child[0]->depth < rootNode->child[1]->depth)
-		rootNode->child[0] = createHeap(rootNode->child[0], newNode);
-	else
-		rootNode->child[1] = createHeap(rootNode->child[1], newNode);
-	rootNode->depth=max(rootNode->child[0]->depth, rootNode->child[1]->depth)+1;
-	return rootNode;
-}
-bool heapNodeMoreThan(HeapNode* node1, HeapNode* node2) {
-	return node1->edge->weight > node2->edge->weight;
-}
-int main() {
-	scanf("%d%d%d", &n, &m, &k); scanf("%d%d", &s, &t);
-	s--, t--;
-	while (m--) {
-		Edge* newEdge = new Edge;
-		int i, j, w; scanf("%d%d%d", &i, &j, &w); i--, j--;
-		newEdge->from = i; newEdge->to = j; newEdge->weight = w;
-		graph[i].push_back(newEdge); graphR[j].push_back(newEdge);
-	}
-	//Dijkstra
-	queue<int> dfsOrder;
-	memset(dist, -1, sizeof(dist));
-	typedef pair<int, pair<int, Edge*> > DijkstraQueueItem;
-	priority_queue<DijkstraQueueItem, vector<DijkstraQueueItem>, greater<DijkstraQueueItem> > dq;
-	dq.push(make_pair(0, make_pair(t, (Edge*) NULL)));
-	while (!dq.empty()) {
-		int d = dq.top().first, i = dq.top().second.first;
-		Edge* edge = dq.top().second.second;
-		dq.pop(); if (dist[i] != -1)	continue;
-		dist[i] = d; prev[i] = edge;
-		dfsOrder.push(i);
-		for_each(it, graphR[i]) dq.push(make_pair(d+(*it)->weight, make_pair((*it)->from, *it)));
-	}
-	//Create edge heap
-	nullNode = new HeapNode;
-	nullNode->depth = 0;
-	nullNode->edge = new Edge;
-	nullNode->edge->weight = INF;
-	fill(nullNode->child, nullNode->child + 4, nullNode);
-	while (!dfsOrder.empty()) {
-		int i = dfsOrder.front();  dfsOrder.pop();
-		if (prev[i] == NULL) heapTop[i] = nullNode;
-		else heapTop[i] = heapTop[prev[i]->to];
-		vector<HeapNode*> heapNodeList;
-		for_each(it, graph[i])	{
-			int j = (*it)->to; if (dist[j] == -1)	continue;
-			(*it)->weight += dist[j] - dist[i];
-			if (prev[i] != *it) {
-				HeapNode* curNode = new HeapNode;
-				fill(curNode->child, curNode->child + 4, nullNode);
-				curNode->depth = 1; curNode->edge = *it;
-				heapNodeList.push_back(curNode);
-			}
-		}
-		if (!heapNodeList.empty()) {   //Create heap out
-			make_heap(heapNodeList.begin(), heapNodeList.end(), heapNodeMoreThan);
-			int size = heapNodeList.size();
-			for (int p = 0; p < size; p++) {
-				heapNodeList[p]->child[2] = 2 * p + 1 < size ? heapNodeList[2 * p + 1] : nullNode;
-				heapNodeList[p]->child[3] = 2 * p + 2 < size ? heapNodeList[2 * p + 2] : nullNode;
-			}
-			heapTop[i] = createHeap(heapTop[i], heapNodeList.front());
-		}
-	}
-	//Walk on DAG
-	typedef pair<long long, HeapNode*> DAGQueueItem;
-	priority_queue<DAGQueueItem, vector<DAGQueueItem>, greater<DAGQueueItem> > aq;
-	if (dist[s] == -1) printf("NO\n");
-	else {
-		printf("%d\n", dist[s]);
-		if (heapTop[s] != nullNode)
-			aq.push(make_pair(dist[s] + heapTop[s]->edge->weight, heapTop[s]));
-	}
-	k--;
-	while (k--) {
-		if (aq.empty()) {printf("NO\n"); continue;}
-		long long d = aq.top().first;
-		HeapNode* curNode = aq.top().second; aq.pop();
-		printf("%I64d\n", d);
-		if (heapTop[curNode->edge->to] != nullNode)
-			aq.push(make_pair(d + heapTop[curNode->edge->to]->edge->weight, heapTop[curNode->edge->to]));
-		for (int i = 0; i < 4; i++)
-			if (curNode->child[i] != nullNode)
-				aq.push(make_pair(d - curNode->edge->weight + curNode->child[i]->edge->weight, curNode->child[i]));
-	}
-	return 0;
-}
-\end{lstlisting}
-\subsubsection{不可重复}
-\begin{lstlisting}[language=C++]
-int Num[10005][205], Path[10005][205], dev[10005];
-int from[10005], value[10005], dist[205];
-int Next[205], Graph[205][205];
-bool forbid[205], hasNext[10005][205];
-int N, M, K, s, t, tot, cnt;
-struct cmp {
-	bool operator() (const int &a, const int &b) {
-		int *i, *j;
-		if(value[a] != value[b]) return value[a] > value[b];
-		for(i = Path[a], j = Path[b]; (*i) == (*j); i ++, j ++);
-		return (*i) > (*j);
-	}
-};
-void Check(int idx, int st, int *path, int &res) {
-	int i, j;
-	for(i = 0; i < N; i ++) {dist[i] = 1000000000; Next[i] = t;}
-	dist[t] = 0; forbid[t] = true; j = t;
-	while(1) {
-		for(i = 0; i < N; i ++)
-			if(!forbid[i] && (i != st || !hasNext[idx][j]) && (dist[j] + Graph[i][j] < dist[i] || dist[j] + Graph[i][j] == dist[i] && j < Next[i])) {
-				Next[i] = j; dist[i] = dist[j] + Graph[i][j];
-			}
-		j = -1;
-		for(i = 0; i < N; i ++) if(!forbid[i] && (j == -1 || dist[i] < dist[j])) j = i;
-		if(j == -1) break; forbid[j] = 1; if(j == st) break;
-	}
-	res += dist[st];
-	for(i = st; i != t; i = Next[i], path ++) (*path) = i;
-	(*path) = i;
-}
-int main() {
-	int i, j, k, l;
-	while(scanf("%d%d%d%d%d", &N, &M, &K, &s, &t) && N) {
-		priority_queue <int, vector <int>, cmp> Q;
-		for(i = 0; i < N; i ++)
-			for(j = 0; j < N; j ++) Graph[i][j] = 1000000000;
-		for(i = 0; i < M; i ++) {
-			scanf("%d%d%d", &j, &k, &l); Graph[j - 1][k - 1] = l;
-		}
-		s --; t --;
-		memset(forbid, false, sizeof(forbid));
-		memset(hasNext[0], false, sizeof(hasNext[0]));
-		Check(0, s, Path[0], value[0]);
-		dev[0] = from[0] = Num[0][0] = 0;
-		Q.push(0);
-		cnt = tot = 1;
-		for(i = 0; i < K; i ++) {
-			if(Q.empty()) break;
-			l = Q.top(); Q.pop();
-			for(j = 0; j <= dev[l]; j ++) Num[l][j] = Num[from[l]][j];
-			for(; Path[l][j] != t; j ++) {
-				memset(hasNext[tot], false, sizeof(hasNext[tot]));
-				Num[l][j] = tot ++;
-			}
-			for(j=0; Path[l][j]!=t;j++) hasNext[Num[l][j]][Path[l][j+1]]=true;
-			for(j = dev[l]; Path[l][j] != t; j ++) {
-				memset(forbid, false, sizeof(forbid));
-				value[cnt] = 0;
-				for(k = 0; k < j; k ++) {
-					forbid[Path[l][k]] = true; Path[cnt][k] = Path[l][k];
-					value[cnt] += Graph[ Path[l][k] ][ Path[l][k + 1] ];
-				}
-				Check(Num[l][j], Path[l][j], &Path[cnt][j], value[cnt]);
-				if(value[cnt] > 2000000) continue;
-				dev[cnt] = j; from[cnt] = l;
-				Q.push(cnt); cnt ++;
-			}
-		}
-		if(i < K || value[l] > 2000000) printf("None\n");
-		else {
-			for(i = 0; Path[l][i] != t; i ++) printf("%d-", Path[l][i] + 1);
-			printf("%d\n", t + 1);
-		}
-	}
-}
-\end{lstlisting}
+	\subsubsection{可重复}
+	\lstinputlisting{k短路.cpp}
 
-		
-		
-		
-	\section{其他}
-		\subsection{Dancing Links(精确覆盖及重复覆盖)}
-		\lstinputlisting{DancingLinksX_xxxxxyt.cpp}
-		\subsection{序列莫队}
-		\lstinputlisting{序列莫队_xxxxxyt.cpp}
-		\subsection{模拟退火}
-		\lstinputlisting{模拟退火.cpp}
-		\subsection{Java}
-		\lstinputlisting{Main.java}
-
-	\section{Tips}
-		\lstinputlisting{tips.cpp}
-	
-
-	\section{图论}
+	\subsubsection{不可重复}
+	\lstinputlisting{k短路不可重复.cpp}
 	\subsection{匈牙利}
 	\lstinputlisting{匈牙利.cpp}
 	\subsection{hopcroft-karp}
 	\lstinputlisting{hopcroft.cpp}
-	\subsection{二分图最大权匹配}
-	\lstinputlisting{二分图最大权匹配.cpp}
 	\subsection{带花树(任意图最大匹配)}
-\begin{lstlisting}
-//n全局变量，ans是匹配的点数，即匹配数两倍
-const int N = 240;
-int n, Next[N], f[N], mark[N], visited [N], Link[N], Q[N], head , tail;
-vector <int > E[N];
-int getf(int x) {return f[x] == x ? x : f[x] = getf(f[x]);}
-void merge(int x, int y) {x = getf(x); y = getf(y); if (x != y) f[x] = y;}
-int LCA(int x, int y) {
-	static int flag = 0;
-	flag ++;
-	for (; ; swap(x, y)) if (x != -1) {
-		x = getf(x);
-		if (visited [x] == flag) return x;
-		visited [x] = flag;
-		if (Link[x] != -1) x = Next[Link[x]];
-		else x = -1;
-	}
-}
-void go(int a, int p) {
-	while (a != p) {
-		int b = Link[a], c = Next[b];
-		if (getf(c) != p) Next[c] = b;
-		if (mark[b] == 2) mark[Q[tail ++] = b] = 1;
-		if (mark[c] == 2) mark[Q[tail ++] = c] = 1;
-		merge(a, b); merge (b, c); a = c;
-	}
-}
-void find(int s) {
-	for (int i = 0; i < n; i++) {
-		Next[i] = -1; f[i] = i;
-		mark[i] = 0; visited [i] = -1;
-	}
-	head = tail = 0; Q[tail ++] = s; mark[s] = 1;
-	for (; head < tail && Link[s] == -1; )
-		for (int i = 0, x = Q[head ++]; i < (int) E[x]. size (); i++)
-			if (Link[x]!=E[x][i]&&getf(x)!=getf(E[x][i])&&mark[E[x][i]]!=2) {
-				int y = E[x][i];
-				if (mark[y] == 1) {
-					int p = LCA(x, y);
-					if (getf(x) != p) Next[x] = y;
-					if (getf(y) != p) Next[y] = x;
-					go(x, p);
-					go(y, p);
-				} else if (Link[y] == -1) {
-					Next[y] = x;
-					for (int j = y; j != -1; ) {
-						int k = Next[j];
-						int tmp = Link[k];
-						Link[j] = k;
-						Link[k] = j;
-						j = tmp;
-					}
-					break;
-				} else {
-					Next[y] = x;
-					mark[Q[tail ++] = Link[y]] = 1;
-					mark[y] = 2;
-				}
-			}
-}
-int main () {
-	for (int i = 0; i < n; i++) Link[i] = -1;
-	for (int i = 0; i < n; i++) if (Link[i] == -1) find(i);
-	int ans = 0;
-	for (int i = 0; i < n; i++) ans += Link[i] != -1;
-}
-\end{lstlisting}
+	\lstinputlisting{带花树.cpp}
 	\subsection{仙人掌图判定}
-条件是：1.是强连通图；2.每条边在仙人掌图中只属于一个强连通分量。//
-仙人掌图的三个性质：1.仙人掌dfs图中不能有横向边，简单的理解为每个点只能出现在一个强联通分量中；//
-2.low[v]<dfn[u],其中u为v的父节点；//
-3.a[u]+b[u]<2，a[u]为u节点的儿子节点中有a[u]个low值小于u的dfn值，b[u]为u的逆向边条数。//
-\begin{lstlisting}[language=C++]
-bool tarjan(int x) {
-	dfn[x] = low[x] = ++cnt;
-	stack[++top] = x; ins[x] = 1;
-	int num = 0;
-	for (int now = g[x]; now; now = pre[now]) {
-		int y = nex[now];
-		if (!dfn[y]) {
-			if (!tarjan(y)) return 0;
-			if (low[y] > dfn[x]) return 0;
-			if (low[y] < dfn[x]) num++;
-			low[x] = min(low[x], low[y]);
-		} else if (ins[y]) {
-			num++;
-			low[x] = min(low[x], dfn[y]);
-		} else return 0;
-	}
-	if (num >= 2) return 0;
-	if (low[x] == dfn[x]) {
-		while (stack[top] != x) {
-			int y = stack[top];
-			ins[y] = 0;
-			stack[top--] = 0;
-		}
-		ins[x] = 0;
-		stack[top--] = 0;
-	}
-	return 1;
-}
-\end{lstlisting}
+	条件是：1.是强连通图；2.每条边在仙人掌图中只属于一个强连通分量。//
+	仙人掌图的三个性质：1.仙人掌dfs图中不能有横向边，简单的理解为每个点只能出现在一个强联通分量中；//
+	2.low[v]<dfn[u],其中u为v的父节点；//
+	3.a[u]+b[u]<2，a[u]为u节点的儿子节点中有a[u]个low值小于u的dfn值，b[u]为u的逆向边条数。//
+	\lstinputlisting{仙人掌判定.cpp}
 	
-	\subsection{最小树形图}
 	\subsection{无向图最小割}
 \begin{lstlisting}
 //0base，g是图的邻接矩阵，复杂度O(n^3)
@@ -1445,10 +1138,8 @@ typec mincut(int n){
 	return best;
 }
 \end{lstlisting}
+\subsection{最小树形图}
 	\lstinputlisting{最小树形图.cpp}
-	\subsection{zkw费用流}
-	使用条件：费用非负
-	%\lstinputlisting{zkw.cpp}
 	\subsection{上下界网络流}
 原图中边流量限制为(a,b)，增加一个新的源点S’，汇点T’，对于每个顶点，\\
 向S’连容量为所有流入它的边的下界和的边，向T’连容量为所有它流出的下界和的边，\\
@@ -1480,10 +1171,6 @@ $B(u,v)$表示边$(u,v)$流量的下界，$C(u,v)$表示边$(u,v)$流量的上�
 	\item 按照\textbf{无源汇的上下界可行流}的方法，建立超级源点$S^*$与超级汇点$T^*$，求一遍$S^* \rightarrow T^*$的最大流，但是注意这一次不加上汇点$T$到源点$S$的这条边，即不使之改为无源汇的网络去求解。求完后，再加上那条汇点$T$到源点$S$上界$\infty$的边。因为这条边下界为$0$，所以$S^*$，$T^*$无影响，再直接求一次$S^* \rightarrow T^*$的最大流。若超级源点$S^*$出发的边全部满流，则$T \rightarrow S$边上的流量即为原图的最小流，否则无解。
 \end{enumerate}
 
-
-
-	\subsection{一般图最大匹配}
-	\lstinputlisting{一般图最大匹配.cpp}
 	\subsection{无向图全局最小割}
 	注意事项：处理重边时，应该对边权累加
 	\lstinputlisting{无向图全局最小割.cpp}
@@ -1514,6 +1201,25 @@ ORE性质：$\forall x,y \in V \wedge (x,y) \notin E \ \ s.t. \ \ deg_x+deg_y \g
 \subsection{度限制生成树}
 \lstinputlisting{度限制生成树.cpp}
 
+
+		
+		
+		
+	\section{其他}
+		\subsection{整体二分}
+		\lstinputlisting{整体二分.cpp}
+		\subsection{Dancing Links(精确覆盖及重复覆盖)}
+		\lstinputlisting{DancingLinksX_xxxxxyt.cpp}
+		\subsection{序列莫队}
+		\lstinputlisting{序列莫队_xxxxxyt.cpp}
+		\subsection{模拟退火}
+		\lstinputlisting{模拟退火.cpp}
+		\subsection{Java}
+		\lstinputlisting{Main.java}
+
+	\section{Tips}
+		\lstinputlisting{tips.cpp}
+	
 
 	\section{数值}
 	\subsection{行列式取模}
@@ -1674,12 +1380,7 @@ int main() {
 	\lstinputlisting{直线下整点个数.cpp}
 	
 	
-	\section{字符串}
-	\subsection{ex-KMP}
-	返回结果：$next_i = lcp(text, text_{i \dots n-1})$
-	\lstinputlisting{exkmp.cpp}
-	\subsection{串最小表示}
-	\lstinputlisting{串最小表示.cpp}
+	
 	
 	\section{其他}
 	\subsection{某年某月某日是星期几}
