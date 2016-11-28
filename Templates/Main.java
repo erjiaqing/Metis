@@ -78,7 +78,91 @@ public class Main{
     }
 }
 }
+//读入优化
+public class Main{
+    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    PrintWriter writer = new PrintWriter(System.out);
+    StringTokenizer tokenizer = null;
+    void solve() throws Exception {
+    }
+    void run()throws Exception{
+        try{
+            while (true) {
+                solve();
+            }
+        }
+        catch(Exception e){
+        }
+        finally{
+            reader.close();
+            writer.close();
+        }
+    }
+    String next()throws Exception{
+        for(;tokenizer == null || !tokenizer.hasMoreTokens();){
+            tokenizer = new StringTokenizer(reader.readLine());
+        }
+        return tokenizer.nextToken();
+    }
+    int nextInt()throws Exception{
+        return Integer.parseInt(next());
+    }
+    double nextDouble()throws Exception{
+        return Double.parseDouble(next());
+    }
+    BigInteger nextBigInteger()throws Exception{
+        return new BigInteger(next());
+    }
+    public static void main(String args[])throws Exception{
+        (new Main()).run();
+    }
+}
+static int[] a = new int[MAXN];
 还有这样的hashset用法:
 static Collection c = new HashSet();
 if(c.contains(p) == false)
-static int[] a = new int[MAXN];
+//读入优化
+public class Main {
+    BigInteger Zero = BigInteger.valueOf(0);
+    BigInteger[][] a = new BigInteger[50][50];
+    public void run() {
+        out = new PrintWriter(System.out);
+        in = new BufferedReader(new InputStreamReader(System.in));
+        String s;
+        for ( ; ; ) {
+            try {
+                s = next();
+                BigInteger ans = new BigInteger(s);
+                ans = ans.add(Zero);
+                ans = ans.subtract(Zero);
+                ans = ans.multiply(ans);
+                ans = ans.divide(ans);
+                String t = ans.toString();
+                int dig = t.length();
+                if (ans.compareTo(Zero) == 1) {
+                    out.println(">");
+                } else if (ans.compareTo(Zero) == 0) {
+                    out.println("=");
+                } else if (ans.compareTo(Zero) == -1) {
+                    out.println("<");
+                }
+            }
+            catch (RuntimeException e) {break;}
+        }
+        out.close();
+    }
+    public static void main(String[] args) {new Main().run();}
+    public StringTokenizer token = null;
+    public BufferedReader in;
+    public PrintWriter out;
+    public String next() {
+        while (token == null || !token.hasMoreTokens()) {
+            try {token = new StringTokenizer(in.readLine());}
+            catch (IOException e) {throw new RuntimeException(e);}
+        }
+        return token.nextToken();
+    }
+    public int nextInt() {return Integer.parseInt(next());}
+    public double nextDouble() {return Double.parseDouble(next());}
+    public BigInteger nextBigInteger() {return new BigInteger(next());}
+}

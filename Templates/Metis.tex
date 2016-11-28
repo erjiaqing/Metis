@@ -914,6 +914,29 @@ int calc(int L, int H, int W, int x1, int y1, int z1, int x2, int y2, int z2) {
 		\lstinputlisting{高斯消元_pivot.cpp}
 		\subsection{中国剩余定理}
 		\lstinputlisting{中国剩余定理.cpp}
+		
+		\subsection{中国剩余定理}
+\begin{lstlisting}
+namespace chinese_remainder_theorem {
+	inline bool crt(int n, long long r[], long long m[], long long &remainder, long long &modular) {
+		remainder = modular = 1;
+		for (int i = 1; i <= n; ++i) {
+			long long x, y;
+			euclid(modular, m[i], x, y);
+			long long divisor = gcd(modular, m[i]);
+			if ((r[i] - remainder) % divisor) {
+				return false;
+			}
+			x *= (r[i] - remainder) / divisopr;
+			remainder += modular * x;
+			modular *= m[i] / divisor;
+			((remainder %= modular) += modular) %= modular;
+		}
+		return true;
+	}
+}
+\end{lstlisting}
+		
 		\subsection{Polya寻找等价类}
 		\lstinputlisting{Polya寻找等价类.cpp}
 		\subsection{拉格朗日插值}
@@ -1007,9 +1030,36 @@ $$g[i]=\sum \frac{g[i-j] \times fac[i-1] \times f[j]}{fac[j-1] \times fac[i-j]}=
   （1）猜测答案 g 若最大流大于 EPS 则 g 合法\\
   （2）s -> v: INF, u -> t : INF + g - deg[u], u -> v : 1.00\\
 4. 2-SAT\\
-  利用对称性建图，若 u 与 u' 在同一强连通分量中，则无解，若有解输出方案，拓扑排序后自底向上（从 ind = 0 到 otd = 0）选择删除\\
+  %利用对称性建图，若 u 与 u' 在同一强连通分量中，则无解，若有解输出方案，拓扑排序后自底向上（从 ind = 0 到 otd = 0）选择删除。
+  如果Ai与Aj不相容，那么如果选择了Ai，必须选择Aj' ；同样，如果选择了Aj，就必须选择Ai'：Ai => Aj'，Aj => Ai'（这样的两条边对称）\\
+  输出方案：  求图的极大强连通子图 => 缩点并根据原图关系构造一个DAG => 拓扑排 => 自底（被指向的点）向上进行选择删除
+(选择当前$id[k][t]$及其后代结点并删除$id[k][t^1]$及其前代结点)\\
 5. 最小割\\
-  （1）二分图最小点权覆盖集：s -> u : w[u], u -> v : INF, v -> t : w[v]\\
+
+（1）二分图最小点权覆盖集：s -> u : w[u], u -> v : INF, v -> t : w[v]\\
+  \subsection{斯坦纳树(网格图连接一些确定点的最小生成树)}
+$mask:0->2^n$\\
+	枚举$mask$的子集更新 $mask':f[i][mask]=max(f[i][mask'] + f[i][mask - mask'])$\\
+	最短路更新	$f[j][mask] = f[i][mask] + dis[i][j];$
+
+\subsection{欧拉回路}
+判定一个图是否存在欧拉通路或欧拉回路比较容易，这里提供两种不同的判定法则。\\
+定理1：一个图有欧拉回路当且仅当它是连通的（即不包括0度的结点）且每个结点都有偶数度。\\
+定理2：一个图有欧拉通路当且仅当它是连通的且除两个结点外，其他结点都有偶数度。 \\
+定理3：在定理2的条件下，含奇数度的两个结点中，一个必为欧拉通路的起点，另一个必为终点。
+\begin{lstlisting}[language=C++]
+	void dfs(int x)
+	{
+    	int y;
+   	 	for (int p=hd[x]; p != -1; p=ed[p].next) if (!ed[p].vst) {
+       	 	y = ed[p].b;
+        	ed[p].vst = 1;
+        	ed[p ^ 1].vst = 1;     //如果是有向图则不要这句
+        	dfs(y);
+        	res[v--] = y + 1;p
+    	}
+	}
+\end{lstlisting}
 		\subsection{SteinerTree}
 		\lstinputlisting{SteinerTree_cjy.cpp}
 		\subsection{LCA}
@@ -1033,6 +1083,208 @@ $$g[i]=\sum \frac{g[i-j] \times fac[i-1] \times f[j]}{fac[j-1] \times fac[i-j]}=
 		
 		\subsection{K短路}
 		\lstinputlisting{k短路.cpp}
+		
+		\subsection{K短路}
+\subsubsection{可重复}
+\begin{lstlisting}[language=C++]
+#define for_each(it, v) for (vector<Edge*>::iterator it = (v).begin(); it != (v).end(); ++it)
+const int MAX_N = 10000, MAX_M = 50000, MAX_K = 10000, INF = 1000000000;
+struct Edge {
+	int from, to, weight;
+};
+struct HeapNode {
+	Edge* edge;
+	int depth;
+	HeapNode* child[4];
+	//child[0..1] for heap G
+	//child[2..3] for heap out edge
+};
+int n, m, k, s, t, dist[MAX_N];
+Edge* edge[MAX_M], prev[MAX_N];
+vector<Edge*> graph[MAX_N], graphR[MAX_N];
+HeapNode* nullNode, heapTop[MAX_N];
+HeapNode* createHeap(HeapNode* curNode, HeapNode* newNode) {
+	if (curNode == nullNode) return newNode;
+	HeapNode* rootNode = new HeapNode;
+	memcpy(rootNode, curNode, sizeof(HeapNode));
+	if (newNode->edge->weight < curNode->edge->weight) {
+		rootNode->edge = newNode->edge;
+		rootNode->child[2] = newNode->child[2];
+		rootNode->child[3] = newNode->child[3];
+		newNode->edge = curNode->edge;
+		newNode->child[2] = curNode->child[2];
+		newNode->child[3] = curNode->child[3];
+	}
+	if (rootNode->child[0]->depth < rootNode->child[1]->depth)
+		rootNode->child[0] = createHeap(rootNode->child[0], newNode);
+	else
+		rootNode->child[1] = createHeap(rootNode->child[1], newNode);
+	rootNode->depth=max(rootNode->child[0]->depth, rootNode->child[1]->depth)+1;
+	return rootNode;
+}
+bool heapNodeMoreThan(HeapNode* node1, HeapNode* node2) {
+	return node1->edge->weight > node2->edge->weight;
+}
+int main() {
+	scanf("%d%d%d", &n, &m, &k); scanf("%d%d", &s, &t);
+	s--, t--;
+	while (m--) {
+		Edge* newEdge = new Edge;
+		int i, j, w; scanf("%d%d%d", &i, &j, &w); i--, j--;
+		newEdge->from = i; newEdge->to = j; newEdge->weight = w;
+		graph[i].push_back(newEdge); graphR[j].push_back(newEdge);
+	}
+	//Dijkstra
+	queue<int> dfsOrder;
+	memset(dist, -1, sizeof(dist));
+	typedef pair<int, pair<int, Edge*> > DijkstraQueueItem;
+	priority_queue<DijkstraQueueItem, vector<DijkstraQueueItem>, greater<DijkstraQueueItem> > dq;
+	dq.push(make_pair(0, make_pair(t, (Edge*) NULL)));
+	while (!dq.empty()) {
+		int d = dq.top().first, i = dq.top().second.first;
+		Edge* edge = dq.top().second.second;
+		dq.pop(); if (dist[i] != -1)	continue;
+		dist[i] = d; prev[i] = edge;
+		dfsOrder.push(i);
+		for_each(it, graphR[i]) dq.push(make_pair(d+(*it)->weight, make_pair((*it)->from, *it)));
+	}
+	//Create edge heap
+	nullNode = new HeapNode;
+	nullNode->depth = 0;
+	nullNode->edge = new Edge;
+	nullNode->edge->weight = INF;
+	fill(nullNode->child, nullNode->child + 4, nullNode);
+	while (!dfsOrder.empty()) {
+		int i = dfsOrder.front();  dfsOrder.pop();
+		if (prev[i] == NULL) heapTop[i] = nullNode;
+		else heapTop[i] = heapTop[prev[i]->to];
+		vector<HeapNode*> heapNodeList;
+		for_each(it, graph[i])	{
+			int j = (*it)->to; if (dist[j] == -1)	continue;
+			(*it)->weight += dist[j] - dist[i];
+			if (prev[i] != *it) {
+				HeapNode* curNode = new HeapNode;
+				fill(curNode->child, curNode->child + 4, nullNode);
+				curNode->depth = 1; curNode->edge = *it;
+				heapNodeList.push_back(curNode);
+			}
+		}
+		if (!heapNodeList.empty()) {   //Create heap out
+			make_heap(heapNodeList.begin(), heapNodeList.end(), heapNodeMoreThan);
+			int size = heapNodeList.size();
+			for (int p = 0; p < size; p++) {
+				heapNodeList[p]->child[2] = 2 * p + 1 < size ? heapNodeList[2 * p + 1] : nullNode;
+				heapNodeList[p]->child[3] = 2 * p + 2 < size ? heapNodeList[2 * p + 2] : nullNode;
+			}
+			heapTop[i] = createHeap(heapTop[i], heapNodeList.front());
+		}
+	}
+	//Walk on DAG
+	typedef pair<long long, HeapNode*> DAGQueueItem;
+	priority_queue<DAGQueueItem, vector<DAGQueueItem>, greater<DAGQueueItem> > aq;
+	if (dist[s] == -1) printf("NO\n");
+	else {
+		printf("%d\n", dist[s]);
+		if (heapTop[s] != nullNode)
+			aq.push(make_pair(dist[s] + heapTop[s]->edge->weight, heapTop[s]));
+	}
+	k--;
+	while (k--) {
+		if (aq.empty()) {printf("NO\n"); continue;}
+		long long d = aq.top().first;
+		HeapNode* curNode = aq.top().second; aq.pop();
+		printf("%I64d\n", d);
+		if (heapTop[curNode->edge->to] != nullNode)
+			aq.push(make_pair(d + heapTop[curNode->edge->to]->edge->weight, heapTop[curNode->edge->to]));
+		for (int i = 0; i < 4; i++)
+			if (curNode->child[i] != nullNode)
+				aq.push(make_pair(d - curNode->edge->weight + curNode->child[i]->edge->weight, curNode->child[i]));
+	}
+	return 0;
+}
+\end{lstlisting}
+\subsubsection{不可重复}
+\begin{lstlisting}[language=C++]
+int Num[10005][205], Path[10005][205], dev[10005];
+int from[10005], value[10005], dist[205];
+int Next[205], Graph[205][205];
+bool forbid[205], hasNext[10005][205];
+int N, M, K, s, t, tot, cnt;
+struct cmp {
+	bool operator() (const int &a, const int &b) {
+		int *i, *j;
+		if(value[a] != value[b]) return value[a] > value[b];
+		for(i = Path[a], j = Path[b]; (*i) == (*j); i ++, j ++);
+		return (*i) > (*j);
+	}
+};
+void Check(int idx, int st, int *path, int &res) {
+	int i, j;
+	for(i = 0; i < N; i ++) {dist[i] = 1000000000; Next[i] = t;}
+	dist[t] = 0; forbid[t] = true; j = t;
+	while(1) {
+		for(i = 0; i < N; i ++)
+			if(!forbid[i] && (i != st || !hasNext[idx][j]) && (dist[j] + Graph[i][j] < dist[i] || dist[j] + Graph[i][j] == dist[i] && j < Next[i])) {
+				Next[i] = j; dist[i] = dist[j] + Graph[i][j];
+			}
+		j = -1;
+		for(i = 0; i < N; i ++) if(!forbid[i] && (j == -1 || dist[i] < dist[j])) j = i;
+		if(j == -1) break; forbid[j] = 1; if(j == st) break;
+	}
+	res += dist[st];
+	for(i = st; i != t; i = Next[i], path ++) (*path) = i;
+	(*path) = i;
+}
+int main() {
+	int i, j, k, l;
+	while(scanf("%d%d%d%d%d", &N, &M, &K, &s, &t) && N) {
+		priority_queue <int, vector <int>, cmp> Q;
+		for(i = 0; i < N; i ++)
+			for(j = 0; j < N; j ++) Graph[i][j] = 1000000000;
+		for(i = 0; i < M; i ++) {
+			scanf("%d%d%d", &j, &k, &l); Graph[j - 1][k - 1] = l;
+		}
+		s --; t --;
+		memset(forbid, false, sizeof(forbid));
+		memset(hasNext[0], false, sizeof(hasNext[0]));
+		Check(0, s, Path[0], value[0]);
+		dev[0] = from[0] = Num[0][0] = 0;
+		Q.push(0);
+		cnt = tot = 1;
+		for(i = 0; i < K; i ++) {
+			if(Q.empty()) break;
+			l = Q.top(); Q.pop();
+			for(j = 0; j <= dev[l]; j ++) Num[l][j] = Num[from[l]][j];
+			for(; Path[l][j] != t; j ++) {
+				memset(hasNext[tot], false, sizeof(hasNext[tot]));
+				Num[l][j] = tot ++;
+			}
+			for(j=0; Path[l][j]!=t;j++) hasNext[Num[l][j]][Path[l][j+1]]=true;
+			for(j = dev[l]; Path[l][j] != t; j ++) {
+				memset(forbid, false, sizeof(forbid));
+				value[cnt] = 0;
+				for(k = 0; k < j; k ++) {
+					forbid[Path[l][k]] = true; Path[cnt][k] = Path[l][k];
+					value[cnt] += Graph[ Path[l][k] ][ Path[l][k + 1] ];
+				}
+				Check(Num[l][j], Path[l][j], &Path[cnt][j], value[cnt]);
+				if(value[cnt] > 2000000) continue;
+				dev[cnt] = j; from[cnt] = l;
+				Q.push(cnt); cnt ++;
+			}
+		}
+		if(i < K || value[l] > 2000000) printf("None\n");
+		else {
+			for(i = 0; Path[l][i] != t; i ++) printf("%d-", Path[l][i] + 1);
+			printf("%d\n", t + 1);
+		}
+	}
+}
+\end{lstlisting}
+
+		
+		
+		
 	\section{其他}
 		\subsection{Dancing Links(精确覆盖及重复覆盖)}
 		\lstinputlisting{DancingLinksX_xxxxxyt.cpp}
@@ -1054,27 +1306,182 @@ $$g[i]=\sum \frac{g[i-j] \times fac[i-1] \times f[j]}{fac[j-1] \times fac[i-j]}=
 	\lstinputlisting{hopcroft.cpp}
 	\subsection{二分图最大权匹配}
 	\lstinputlisting{二分图最大权匹配.cpp}
+	\subsection{带花树(任意图最大匹配)}
+\begin{lstlisting}
+//n全局变量，ans是匹配的点数，即匹配数两倍
+const int N = 240;
+int n, Next[N], f[N], mark[N], visited [N], Link[N], Q[N], head , tail;
+vector <int > E[N];
+int getf(int x) {return f[x] == x ? x : f[x] = getf(f[x]);}
+void merge(int x, int y) {x = getf(x); y = getf(y); if (x != y) f[x] = y;}
+int LCA(int x, int y) {
+	static int flag = 0;
+	flag ++;
+	for (; ; swap(x, y)) if (x != -1) {
+		x = getf(x);
+		if (visited [x] == flag) return x;
+		visited [x] = flag;
+		if (Link[x] != -1) x = Next[Link[x]];
+		else x = -1;
+	}
+}
+void go(int a, int p) {
+	while (a != p) {
+		int b = Link[a], c = Next[b];
+		if (getf(c) != p) Next[c] = b;
+		if (mark[b] == 2) mark[Q[tail ++] = b] = 1;
+		if (mark[c] == 2) mark[Q[tail ++] = c] = 1;
+		merge(a, b); merge (b, c); a = c;
+	}
+}
+void find(int s) {
+	for (int i = 0; i < n; i++) {
+		Next[i] = -1; f[i] = i;
+		mark[i] = 0; visited [i] = -1;
+	}
+	head = tail = 0; Q[tail ++] = s; mark[s] = 1;
+	for (; head < tail && Link[s] == -1; )
+		for (int i = 0, x = Q[head ++]; i < (int) E[x]. size (); i++)
+			if (Link[x]!=E[x][i]&&getf(x)!=getf(E[x][i])&&mark[E[x][i]]!=2) {
+				int y = E[x][i];
+				if (mark[y] == 1) {
+					int p = LCA(x, y);
+					if (getf(x) != p) Next[x] = y;
+					if (getf(y) != p) Next[y] = x;
+					go(x, p);
+					go(y, p);
+				} else if (Link[y] == -1) {
+					Next[y] = x;
+					for (int j = y; j != -1; ) {
+						int k = Next[j];
+						int tmp = Link[k];
+						Link[j] = k;
+						Link[k] = j;
+						j = tmp;
+					}
+					break;
+				} else {
+					Next[y] = x;
+					mark[Q[tail ++] = Link[y]] = 1;
+					mark[y] = 2;
+				}
+			}
+}
+int main () {
+	for (int i = 0; i < n; i++) Link[i] = -1;
+	for (int i = 0; i < n; i++) if (Link[i] == -1) find(i);
+	int ans = 0;
+	for (int i = 0; i < n; i++) ans += Link[i] != -1;
+}
+\end{lstlisting}
+	\subsection{仙人掌图判定}
+条件是：1.是强连通图；2.每条边在仙人掌图中只属于一个强连通分量。//
+仙人掌图的三个性质：1.仙人掌dfs图中不能有横向边，简单的理解为每个点只能出现在一个强联通分量中；//
+2.low[v]<dfn[u],其中u为v的父节点；//
+3.a[u]+b[u]<2，a[u]为u节点的儿子节点中有a[u]个low值小于u的dfn值，b[u]为u的逆向边条数。//
+\begin{lstlisting}[language=C++]
+bool tarjan(int x) {
+	dfn[x] = low[x] = ++cnt;
+	stack[++top] = x; ins[x] = 1;
+	int num = 0;
+	for (int now = g[x]; now; now = pre[now]) {
+		int y = nex[now];
+		if (!dfn[y]) {
+			if (!tarjan(y)) return 0;
+			if (low[y] > dfn[x]) return 0;
+			if (low[y] < dfn[x]) num++;
+			low[x] = min(low[x], low[y]);
+		} else if (ins[y]) {
+			num++;
+			low[x] = min(low[x], dfn[y]);
+		} else return 0;
+	}
+	if (num >= 2) return 0;
+	if (low[x] == dfn[x]) {
+		while (stack[top] != x) {
+			int y = stack[top];
+			ins[y] = 0;
+			stack[top--] = 0;
+		}
+		ins[x] = 0;
+		stack[top--] = 0;
+	}
+	return 1;
+}
+\end{lstlisting}
+	
 	\subsection{最小树形图}
+	\subsection{无向图最小割}
+\begin{lstlisting}
+//0base，g是图的邻接矩阵，复杂度O(n^3)
+#define typec int // type of res注意具体范围
+const typec inf = 0x3f3f3f3f; // max of res
+const typec maxw = 1000; // maximum edge weight
+typec g[V][V], w[V] ;
+int a[V], v[V], na[V];
+typec mincut(int n){
+	int i, j, pv, zj;
+	typec best = maxw * n * n;
+	for (i = 0; i < n; i++) v[i] = i;
+	while (n > 1) {
+		for (a[v[0]] = 1, i = 1; i < n; i++) {
+			a[v[i]] = 0; na[i - 1] = i;
+			w[i] = g[v[0]][v[i]];
+		}
+		for (pv = v[0], i = 1; i < n; i++ ) {
+			for (zj = -1, j = 1; j < n; j++ )
+				if (!a[v[j]] && (zj < 0 || w[j] > w[zj])) zj = j;
+			a[v[zj]] = 1;
+			if (i == n - 1) {
+				if (best > w[zj]) best = w[zj];
+				for (i=0; i<n; i++) g[v[i]][pv]=g[pv][v[i]]+=g[v[zj]][v[i]];
+				v[zj] = v[--n];
+				break;
+			}
+			pv = v[zj];
+			for (j = 1; j < n; j++) if(!a[v[j]]) w[j] += g[v[zj]][v[j]];
+		}
+	}
+	return best;
+}
+\end{lstlisting}
 	\lstinputlisting{最小树形图.cpp}
 	\subsection{zkw费用流}
 	使用条件：费用非负
 	%\lstinputlisting{zkw.cpp}
 	\subsection{上下界网络流}
-$B(u,v)$表示边$(u,v)$流量的下界，$C(u,v)$表示边$(u,v)$流量的上界，$F(u,v)$表示边$(u,v)$的流量。设$G(u,v) = F(u,v) - B(u,v)$，显然有$0 \leq G(u,v) \leq C(u,v)-B(u,v)$
+原图中边流量限制为(a,b)，增加一个新的源点S’，汇点T’，对于每个顶点，\\
+向S’连容量为所有流入它的边的下界和的边，向T’连容量为所有它流出的下界和的边，\\
+T’向S’连容量为无穷大的边，第一次跑S’ 到T’ 的网络流，判断S’流出的边是否满流，\\
+即可判断是否有可行解，然后再跑S 到T的网络流，总流量为两次之和。
+
+$B(u,v)$表示边$(u,v)$流量的下界，$C(u,v)$表示边$(u,v)$流量的上界，$F(u,v)$表示边$(u,v)$的流量。设$G(u,v) = F(u,v) - B(u,v)$，显然有
+	$$0 \leq G(u,v) \leq C(u,v)-B(u,v)$$
+
 \subsubsection{无源汇的上下界可行流}
+
 建立超级源点$S^*$和超级汇点$T^*$，对于原图每条边$(u,v)$在新网络中连如下三条边：$S^* \rightarrow v$，容量为$B(u,v)$；$u \rightarrow T^*$，容量为$B(u,v)$；$u \rightarrow v$，容量为$C(u,v) - B(u,v)$。最后求新网络的最大流，判断从超级源点$S^*$出发的边是否都满流即可，边$(u,v)$的最终解中的实际流量为$G(u,v)+B(u,v)$。
+
 \subsubsection{有源汇的上下界可行流}
+
 从汇点$T$到源点$S$连一条上界为$\infty$，下界为$0$的边。按照\textbf{无源汇的上下界可行流}一样做即可，流量即为$T \rightarrow S$边上的流量。
+
 \subsubsection{有源汇的上下界最大流}
+
 \begin{enumerate}
 	\item 在\textbf{有源汇的上下界可行流}中，从汇点$T$到源点$S$的边改为连一条上界为$\infty$，下届为$x$的边。$x$满足二分性质，找到最大的$x$使得新网络存在\textbf{无源汇的上下界可行流}即为原图的最大流。
 	\item 从汇点$T$到源点$S$连一条上界为$\infty$，下界为$0$的边，变成无源汇的网络。按照\textbf{无源汇的上下界可行流}的方法，建立超级源点$S^*$和超级汇点$T^*$，求一遍$S^* \rightarrow T^*$的最大流，再将从汇点$T$到源点$S$的这条边拆掉，求一次$S \rightarrow T$的最大流即可。
 \end{enumerate}
+
 \subsubsection{有源汇的上下界最小流}
+
 \begin{enumerate}
 	\item 在\textbf{有源汇的上下界可行流}中，从汇点$T$到源点$S$的边改为连一条上界为$x$，下界为$0$的边。$x$满足二分性质，找到最小的$x$使得新网络存在\textbf{无源汇的上下界可行流}即为原图的最小流。
 	\item 按照\textbf{无源汇的上下界可行流}的方法，建立超级源点$S^*$与超级汇点$T^*$，求一遍$S^* \rightarrow T^*$的最大流，但是注意这一次不加上汇点$T$到源点$S$的这条边，即不使之改为无源汇的网络去求解。求完后，再加上那条汇点$T$到源点$S$上界$\infty$的边。因为这条边下界为$0$，所以$S^*$，$T^*$无影响，再直接求一次$S^* \rightarrow T^*$的最大流。若超级源点$S^*$出发的边全部满流，则$T \rightarrow S$边上的流量即为原图的最小流，否则无解。
 \end{enumerate}
+
+
+
 	\subsection{一般图最大匹配}
 	\lstinputlisting{一般图最大匹配.cpp}
 	\subsection{无向图全局最小割}
@@ -1121,6 +1528,126 @@ ORE性质：$\forall x,y \in V \wedge (x,y) \notin E \ \ s.t. \ \ deg_x+deg_y \g
 	\lstinputlisting{单纯形.cpp}
 	\subsection{辛普森}
 	\lstinputlisting{辛普森.cpp}
+	\subsection{线性规划}
+\begin{lstlisting}[language=C++]
+//N[0]代表N中的元素个数，B[0]代表B中的元素个数。
+//读入格式：首先两个数n, m，表示未知数的数量和约束的数量。接下来一行n个数，为目标函数的系数。然后m行，每行m+1个数，表示一个约束。前m个数是系数，最后一个是常数项。
+//输出格式：如果无解，只有一行"Infeasible"。如果解可以无穷大，只有一行"Unbounded"。否则，第一行为最大的目标函数值，接下来是每个未知数的值。
+const double eps = 1e-10;
+const int MAXSIZE = 2000, oo = 19890709;
+double v, A[MAXSIZE+1][MAXSIZE+1], tA[MAXSIZE+1][MAXSIZE+1];
+double b[MAXSIZE+1], tb[MAXSIZE+1], c[MAXSIZE+1], tc[MAXSIZE+1];
+int n, m, N[MAXSIZE+1+1], B[MAXSIZE+1+1];
+class LinearProgramming {
+	void read() {
+		scanf("%d%d", &n, &m);
+		for(int i=1; i<=n; i++) scanf("%lf", &c[i]);
+		for(int i=1; i<=m; i++) {
+			for(int j=1; j<=n; j++) scanf("%lf", &A[n+i][j]);
+			scanf("%lf", &b[n+i]);
+		}
+	}
+	void pivot(int l, int e) {
+		tb[e] = b[l]/A[l][e]; tA[e][l] = 1/A[l][e];
+		for(int i=1; i<=N[0]; i++) if (N[i] != e) tA[e][N[i]] = A[l][N[i]]/A[l][e];
+		for(int i=1; i<=B[0]; i++) {
+			tb[B[i]] = b[B[i]]-A[B[i]][e]*tb[e]; tA[B[i]][l] = -A[B[i]][e]*tA[e][l];
+			for(int j=1; j<=N[0]; j++)
+				if (N[j] != e) tA[B[i]][N[j]] = A[B[i]][N[j]]-tA[e][N[j]]*A[B[i]][e];
+		}
+		v += tb[e]*c[e]; tc[l] = -tA[e][l]*c[e];
+		for(int i=1; i<=N[0]; i++) if (N[i] != e) tc[N[i]] = c[N[i]]-tA[e][N[i]]*c[e];
+		for(int i=1; i<=N[0]; i++) if (N[i] == e) N[i] = l;
+		for(int i=1; i<=B[0]; i++) if (B[i] == l) B[i] = e;
+		for(int i=1; i<=B[0]; i++) {
+			for(int j=1; j<=N[0]; j++) A[B[i]][N[j]] = tA[B[i]][N[j]];
+			b[B[i]] = tb[B[i]];
+		}
+		for(int i=1; i<=N[0]; i++) c[N[i]] = tc[N[i]];
+	}
+	bool opt() { //false stands for unbounded
+		while (true) {
+			int l, e; double maxUp = -1;//不能是0！
+			for(int ie=1; ie<=N[0]; ie++) {
+				int te = N[ie]; if (c[te] <= eps) continue;  //eps or 0
+				double delta = oo; int tl = MAXSIZE+1;
+				for(int i=1; i<=B[0]; i++)
+					if (A[B[i]][te] > eps) {  //eps or 0
+						double temp = b[B[i]]/A[B[i]][te];
+						if (delta == oo || temp < delta || temp == delta && B[i] < tl) {
+							delta = temp; tl = B[i];
+						}
+					}
+				if (tl == MAXSIZE+1) return false;
+				if (delta*c[te] > maxUp) {
+					maxUp = delta*c[te]; l = tl; e = te;
+				}
+			}
+			if (maxUp == -1) break; pivot(l, e);
+		}
+		return true;
+	}
+	void delete0() {
+		int p;
+		for(p=1; p<=B[0]; p++) if (B[p] == 0) break;
+		if (p <= B[0]) pivot(0, N[1]);
+		for(p=1; p<=N[0]; p++) if (N[p] == 0) break;
+		for(int i=p; i<N[0]; i++) N[i] = N[i+1];
+		N[0]--;
+	}
+	bool initialize() {
+		N[0] = B[0] = 0;
+		for(int i=1; i<=n; i++) N[++N[0]] = i;
+		for(int i=1; i<=m; i++) B[++B[0]] = n+i;
+		v = 0; int l = B[1];
+		for(int i=2; i<=B[0]; i++) if (b[B[i]] < b[l]) l = B[i];
+		if (b[l] >= 0) return true;
+		double origC[MAXSIZE+1];
+		memcpy(origC, c, sizeof(double)*(n+m+1));
+		N[++N[0]] = 0;
+		for(int i=1; i<=B[0]; i++) A[B[i]][0] = -1;
+		memset(c, 0, sizeof(double)*(n+m+1));
+		c[0] = -1; pivot(l, 0);
+		opt();//unbounded????
+		if (v < -eps) return false;//eps
+		delete0();
+		memcpy(c, origC, sizeof(double)*(n+m+1));
+		bool inB[MAXSIZE+1];
+		memset(inB, false, sizeof(bool)*(n+m+1));
+		for(int i=1; i<=B[0]; i++) inB[B[i]] = true;
+		for(int i=1; i<=n+m; i++)
+			if (inB[i] && c[i] != 0) {
+				v += c[i]*b[i];
+				for(int j=1; j<=N[0]; j++) c[N[j]] -= A[i][N[j]]*c[i];
+				c[i] = 0;
+			}
+		return true;
+	}
+	public: void simplex(string inputName, string outputName) {
+		freopen(inputName.c_str(), "r", stdin);
+		freopen(outputName.c_str(), "w", stdout);
+		read();
+		if (!initialize()) {
+			printf("Infeasible\n");
+			return;
+		}
+		if (!opt()) {
+			printf("Unbounded\n");
+			return
+		} else printf("Max value is %lf\n", v);
+		bool inN[MAXSIZE+1];
+		memset(inN, false, sizeof(bool)*(n+m+1));
+		for(int i=1; i<=N[0]; i++) inN[N[i]] = true;
+		for(int i=1; i<=n; i++)
+			if (inN[i]) printf("x%d = %lf\n", i, 0.0);
+			else printf("x%d = %lf\n", i, b[i]);
+	}
+};
+int main() {
+	LinearProgramming test;
+	test.simplex("a.in", "a.out");
+}
+\end{lstlisting}
 	
 	
 	
@@ -1252,6 +1779,17 @@ a.erase(i, n);           // erase [i, i + n)
 		设该游戏Sg函数为奇数格棋子数的Xor和S。
 		如果S=0，则先手必败，否则必胜。
 \end{enumerate}
+
+
+
+
+\subsection{无向图最小生成树计数}
+kirchhoff矩阵 = 度数矩阵（$i = j$, $d[i][j]$ = 度数） - 邻接矩阵（i、j之间有边， $a[i][j] = 1$)\\
+不同的生成树个数等于任意n - 1主子式行列式的绝对值
+
+\subsection{最小覆盖构造解}
+从X中所有的未盖点出发扩展匈牙利树，标记树中的所有点，则X中的未标记点和Y中的已标记点组成了所求的最小覆盖。
+
 \subsection{常用数学公式}
 \subsubsection{斐波那契数列}
 
@@ -1491,6 +2029,39 @@ $x ^ 3 + px + q = 0$,
 \end{itemize}
 
 \section{技巧}
+python对拍
+\begin{lstlisting}[language=C++]
+from os import system
+	for i in range(1,100000):
+		system("./std");
+		system("./force");
+		if system("diff a.out a.ans")<>0:
+            break
+		print i
+\end{lstlisting}
+
+关同步
+\begin{lstlisting}[language=C++]
+    std::ios::sync_with_stdio(false);
+\end{lstlisting}
+
+sstream读入
+\begin{lstlisting}[language=C++]
+    char s[];
+    gets(s);
+    stringstream ss;
+    ss << s;
+    int tmp;
+    while (ss >> tmp)
+    // << 向ss里插入信息; >> 从ss里取出前面的信息
+\end{lstlisting}
+
+二进制文件读入
+	fread(地址，sizeof(数据类型),个数，stdin) 读到文件结束!feof(stdin)
+\subsection{枚举子集}
+\begin{lstlisting}[language=C++]
+	for (int mask = (now - 1) & now; mask; mask = (mask - 1) & now)
+\end{lstlisting}
 \subsection{真正的释放STL容器内存空间}
 \lstinputlisting{truly-release-container-space.cpp}
 \subsection{无敌的大整数相乘取模}
@@ -1572,7 +2143,10 @@ export CXXFLAGS='-std=c++11 -Wall'
 \end{tabular}
 
 \subsection{小知识}
-\begin{itemize}
+\begin{itemize}	
+
+\item lowbit 取出最低位的1
+
 \item 勾股数: 设正整数$n$的质因数分解为$n = \prod p_i ^ {a_i}$,
   则$x^2+y^2=n$有整数解的充要条件是$n$中不存在形如$p_i \equiv 3\pmod{4}$且指数$a_i$为奇数的质因数$p_i$.
   $(\frac{a - b}{2})^2 + ab = (\frac{a + b}{2})^2$.
