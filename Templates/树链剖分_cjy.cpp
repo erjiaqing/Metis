@@ -1,14 +1,6 @@
 const int N = 800005;
 int n, m, Max, b[N], edge_pos[N], path[N];
-int tot, id[N * 2], nxt[N * 2], lst[N], val[N * 2];
 int fa[N], siz[N], dep[N], hvy[N], top[N], pos[N];
-struct Tree {
-	int l, r;
-	int mn, mx, sgn;
-} h[N * 4];
-void Add(int x, int y, int z) {
-	id[++tot] = y; nxt[tot] = lst[x]; lst[x] = tot; val[tot] = z;
-}
 void dfs1(int x, int Fa) {
 	fa[x] = Fa;
 	siz[x] = 1;
@@ -51,20 +43,18 @@ void work(int x, int y) {
 	if (dep[X] >= dep[Y]) {
 		Negate(1, pos[X], pos[x]);
 		work(fa[X], y);
-	}
-	else {
+	} else {
 		Negate(1, pos[Y], pos[y]);
 		work(x, fa[Y]);
 	}
 }
 int main() {
-	tot = 1; memset(lst, 0, sizeof(lst));
+	tot = 1; memset(lst, 0, sizeof(lst)); //!!!tot = 1;
 	memset(hvy, 0, sizeof(hvy));
-	(Add_edge)
+	(Add_edge) //val[] = value
 	dep[0] = 0; dfs1(1, 0); //the root is 1
 	m = 0; dfs2(1, 1);
 	build(1, 1, n);
 	Change(1, edge_pos[x], y); //change one edge's valve directly in Tree
 	work(x, y); //change value of a chain
-	return 0;
 }
