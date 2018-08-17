@@ -522,7 +522,7 @@ int diameter2(vector<Point>& points) {
 typedef long long LL;
 const double eps = 1e-10, inf = 10000;
 const int N = 20005;
-#define zero(a) fabs(a) < eps
+#define zero(a) (fabs(a) < eps)
 struct Point{
     double x, y;
 } p[N * 2];
@@ -1639,7 +1639,8 @@ $V - E + F = 2 - 2G$
 \subsubsection{皮克定理}
 
 给定顶点坐标均是整点（或正方形格点）的简单多边形，其面积$A$ 和内部格点数目$i$、边上格点数目$b$的关系：
-	$$A = i + \frac{b}{2} - 1$$
+	$$A = i + \frac{b}{2} - 1$$
+
 
 \subsection{平面几何公式}
 \subsubsection{三角形和四边形的费马点}
@@ -1841,7 +1842,8 @@ $x ^ 3 + px + q = 0$,
   但如果遇到一个素数, 则需要检查$\frac{n + 1}{2} - \sqrt{n}$个整数
 \item 牛顿迭代:
   $x_1 = x_0 - \frac{f(x_0)}{f^\prime(x_0)}$
-\item 球与盒子的动人故事: ($n$个球, $m$个盒子, $S$为第二类斯特林数)\\ 球同, 盒同, 无空: dp; 球同, 盒同, 可空: dp;球同, 盒不同, 无空: $\binom{n - 1}{m - 1}$;球同, 盒不同, 可空: $\binom{n + m - 1}{n - 1}$;
+\item 球与盒子的动人故事: ($n$个球, $m$个盒子, $S$为第二类斯特林数)\\
+ 球同, 盒同, 无空: dp; 球同, 盒同, 可空: dp;球同, 盒不同, 无空: $\binom{n - 1}{m - 1}$;球同, 盒不同, 可空: $\binom{n + m - 1}{n - 1}$;
       球不同, 盒同, 无空: $S(n, m)$;
       球不同, 盒同, 可空: $\sum_{k = 1}^{m} S(n, k)$;
       球不同, 盒不同, 无空: $m! S(n, m)$;
