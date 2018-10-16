@@ -20,7 +20,7 @@ void manacher(char *s) {
 	int mx = 0, id;
 	for (int i = 1; i <= l; ++i) {
 		if (mx >= i) len[i] = min(mx - i, len[id * 2 - i]); else len[i] = 0;
-		for (; s[i - len[i]] == s[i + len[i] + 1]; len[i]++);
+		for (; s[i - len[i] - 1] == s[i + len[i] + 1]; len[i]++);
 		if (i + len[i] > mx) mx = len[i] + i, id = i;
 	}
 }
